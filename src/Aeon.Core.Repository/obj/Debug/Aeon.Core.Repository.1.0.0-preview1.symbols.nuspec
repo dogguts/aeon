@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Aeon.Core.Repository</id>
+    <version>1.0.0-preview1</version>
+    <title>Aeon Core Repository</title>
+    <authors>bart.verthe@gmail.com</authors>
+    <owners>bart.verthe@gmail.com</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Repository pattern in dotnet core</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="2.1.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/bin/Debug/netstandard2.0/Aeon.Core.Repository.pdb" target="lib/netstandard2.0/Aeon.Core.Repository.pdb" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/bin/Debug/netstandard2.0/Aeon.Core.Repository.dll" target="lib/netstandard2.0/Aeon.Core.Repository.dll" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/bin/Debug/netstandard2.0/Aeon.Core.Repository.xml" target="lib/netstandard2.0/Aeon.Core.Repository.xml" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IReadonlyRepositoryAsync`.cs" target="src/Aeon.Core.Repository/Infrastructure/IReadonlyRepositoryAsync`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IReadonlyRepository`.cs" target="src/Aeon.Core.Repository/Infrastructure/IReadonlyRepository`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IRepositoryFilter`.cs" target="src/Aeon.Core.Repository/Infrastructure/IRepositoryFilter`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IRepositoryInclude`.cs" target="src/Aeon.Core.Repository/Infrastructure/IRepositoryInclude`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IRepositorySort`.cs" target="src/Aeon.Core.Repository/Infrastructure/IRepositorySort`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IRepository`.cs" target="src/Aeon.Core.Repository/Infrastructure/IRepository`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Infrastructure/IUnitOfWork.cs" target="src/Aeon.Core.Repository/Infrastructure/IUnitOfWork.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/RepositoryFilter`.cs" target="src/Aeon.Core.Repository/RepositoryFilter`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/RepositoryInclude`.cs" target="src/Aeon.Core.Repository/RepositoryInclude`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/RepositorySort`.cs" target="src/Aeon.Core.Repository/RepositorySort`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Repository`.cs" target="src/Aeon.Core.Repository/Repository`.cs" />
+    <file src="/home/dogguts/Dropbox/Projects/Pantheon/aeon/src/Aeon.Core.Repository/Aeon.Core.Repository.csproj" target="src/Aeon.Core.Repository/Aeon.Core.Repository.csproj" />
+  </files>
+</package>
