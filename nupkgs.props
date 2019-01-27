@@ -5,5 +5,12 @@
         <PackageVersion>$(VersionPrefix)-$(VersionSuffix)</PackageVersion>
         <IncludeSymbols>true</IncludeSymbols>
         <IncludeSource>true</IncludeSource>
+
+        <Authors>dogguts</Authors>
+        <Description>Preview of repository pattern library for EF core.</Description>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageTags>dotnet repository pattern</PackageTags>
+        <PackageProjectUrl>https://github.com/dogguts/aeon</PackageProjectUrl>
+
     </PropertyGroup>
 </Project>
