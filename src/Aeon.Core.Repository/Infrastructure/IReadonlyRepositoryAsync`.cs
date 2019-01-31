@@ -7,7 +7,7 @@ namespace Aeon.Core.Repository.Infrastructure {
     /// Defines the basic functionality for a asynchronous readonly repository
     /// </summary>
     /// <typeparam name="T">The entity type this asynchronous readonly repository handles</typeparam>
-    public interface IReadonlyRepositoryAsync<T> {
+    public interface IReadonlyRepositoryAsync<T> where T : class {
 
         /// <summary>
         /// Asynchronously gets an entity with the given primary key values.

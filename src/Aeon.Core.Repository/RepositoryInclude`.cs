@@ -7,91 +7,97 @@ using Aeon.Core.Repository.Infrastructure;
 #pragma warning disable 1591 //docs are in interface specifications
 
 namespace Aeon.Core.Repository {
-    /// <summary>
-    /// Represents the navigation properties to include.
-    /// </summary>
-    /// <typeparam name="T">The type of entity containing the navigation properties</typeparam>
-    public class RepositoryInclude<T> : IRepositoryInclude<T> {
+    public class RepositoryInclude<T> : IRepositoryInclude<T>, IRepositoryIncludable<T> where T : class {
+        private List<IRepositoryIncludable<T>> _includes = new List<IRepositoryIncludable<T>>();
+
         public RepositoryInclude() { }
         public RepositoryInclude(IRepositoryInclude<T> repositoryInclude) {
             if (repositoryInclude != null) {
-                _includes = new List<RepositoryIncludeRoot<T>>(repositoryInclude.Includes);
+                _includes = new List<IRepositoryIncludable<T>>(repositoryInclude.Includes);
             }
         }
-        internal List<RepositoryIncludeRoot<T>> _includes { get; private set; } = new List<RepositoryIncludeRoot<T>>();
+
+        internal IRepositoryIncludable<T> AddInclude(IRepositoryIncludable<T> inc) {
+            _includes.Add(inc);
+            return inc;
+        }
+
         public IEnumerable<string> IncludePaths => _includes.Select(i => i.ToString());
+        public IReadOnlyList<IRepositoryIncludable<T>> Includes => _includes;
 
-        public IReadOnlyList<RepositoryIncludeRoot<T>> Includes => _includes;
+        public String Name { get; set; }
 
-        // public List<Expression<Func<T, object>>> Includes { get; } = new List<Expression<Func<T, object>>>();
-        // public List<string> IncludeStrings { get; } = new List<string>();
+        public IRepositoryIncludable<T> Previous => throw new NotImplementedException();
     }
 
-    /// <summary>
-    /// Creates a new first level include
-    /// </summary>
-    public static class RepositoryIncludeExtensions {
-        public static RepositoryIncludeExpression<P> Include<T, P>(this RepositoryInclude<T> repository, Expression<Func<T, P>> expr) {
-            var root = new RepositoryIncludeRoot<T>();
-            repository._includes.Add(root);
-            return root.Include<P>(expr);
-        }
-        public static RepositoryIncludeExpression<P> Include<T, P>(this RepositoryInclude<T> repository, Expression<Func<T, ICollection<P>>> expr) {
-            var root = new RepositoryIncludeRoot<T>();
-            repository._includes.Add(root);
-            return root.Include<P>(expr);
-        }
+    public interface IRepositoryIncludable<out T> where T : class {
+        String Name { get; set; }
+        IRepositoryIncludable<T> Previous { get; }
     }
 
-    /// <summary>
-    /// First level include definition
-    /// </summary>
-    /// <typeparam name="T">The type of entity containing the navigation properties</typeparam>
-    public class RepositoryIncludeRoot<T> : RepositoryIncludeExpression {
-        public RepositoryIncludeExpression<P> Include<P>(Expression<Func<T, P>> expr) {
-            return Set(expr);
-        }
-        public RepositoryIncludeExpression<P> Include<P>(Expression<Func<T, ICollection<P>>> expr) {
-            return Set(expr);
-        }
+    public interface IRepositoryIncludable<out T, out P> : IRepositoryIncludable<T> where T : class {
     }
 
-    public abstract class RepositoryIncludeExpression {
-        protected string Name;
-        protected RepositoryIncludeExpression Child;
+
+    public interface IRepositoryIncludeExpression<T, out P> : IRepositoryIncludable<T, P> where T : class {
+        IRepositoryIncludable<T> Next { get; set; }
+    }
+
+    public class RepositoryIncludeExpression<T, P> : IRepositoryIncludeExpression<T, P> where T : class {
+        public IRepositoryIncludable<T> Previous { get; private set; }
+
+        public RepositoryIncludeExpression(IRepositoryIncludable<T> previous) {
+            Previous = previous;
+            Name = Previous.Name;
+
+            //Next = _queryable;
+        }
+
+        public String Name { get; set; }
+        //public Expression Expression { get; set; }
 
         public override string ToString() {
-            return (Name + "." + Child?.ToString()).TrimEnd('.');
+            return (Name + "." + Next?.ToString()).TrimEnd('.');
         }
 
-        private RepositoryIncludeExpression<P> Set<P>(Expression body) {
-            Name = (body as MemberExpression)?.Member?.Name;
-            var nextInclude = new RepositoryIncludeExpression<P>();
-            Child = nextInclude;
-            return nextInclude;
+        public IRepositoryIncludable<T> Next { get; set; }
+    }
+
+    public static class RepositoryIncludeExtensions {
+        public static IRepositoryIncludable<TEntity, TProperty> Include<TEntity, TProperty>(this IRepositoryIncludable<TEntity> source, Expression<Func<TEntity, TProperty>> navigationPropertyPath) where TEntity : class {
+            Console.WriteLine((navigationPropertyPath.Body as MemberExpression)?.Member?.Name);
+
+            // find root (in case of Include after ThenInclude)
+            while (!(source is RepositoryInclude<TEntity>)) {
+                source = source.Previous;
+            }
+
+            var sourceO = (RepositoryInclude<TEntity>)source;
+
+            var rootInc = new RepositoryIncludeExpression<TEntity, TProperty>(source) { Name = (navigationPropertyPath.Body as MemberExpression)?.Member?.Name ?? "!!" };
+            sourceO.AddInclude(rootInc);
+
+            return rootInc;
         }
 
-        protected RepositoryIncludeExpression<P> Set<T, P>(Expression<Func<T, P>> expr) {
-            return Set<P>(expr.Body);
+        public static IRepositoryIncludable<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(this IRepositoryIncludable<TEntity, TPreviousProperty> source, Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath) where TEntity : class {
+            var sourceInt = (IRepositoryIncludeExpression<TEntity, TPreviousProperty>)source;
+
+            var inc = new RepositoryIncludeExpression<TEntity, TProperty>(sourceInt) { Name = (navigationPropertyPath.Body as MemberExpression)?.Member?.Name ?? "!!" }; //, navigationPropertyPath.Body);
+            sourceInt.Next = inc;
+            return inc;
         }
-        protected RepositoryIncludeExpression<P> Set<T, P>(Expression<Func<T, ICollection<P>>> expr) {
-            return Set<P>(expr.Body);
+
+        public static IRepositoryIncludable<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(this IRepositoryIncludable<TEntity, IEnumerable<TPreviousProperty>> source, Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath) where TEntity : class {
+            var sourceInt = (IRepositoryIncludeExpression<TEntity, IEnumerable<TPreviousProperty>>)source;
+
+            var inc = new RepositoryIncludeExpression<TEntity, TProperty>(source) { Name = (navigationPropertyPath.Body as MemberExpression)?.Member?.Name ?? "!!" }; //, navigationPropertyPath.Body);
+            sourceInt.Next = inc;
+            return inc;
         }
     }
 
-    /// <summary>
-    /// Subsequent include definition
-    /// </summary>
-    /// <typeparam name="T">The type of entity containing the navigation properties</typeparam>
-    public class RepositoryIncludeExpression<T> : RepositoryIncludeExpression {
 
-        public RepositoryIncludeExpression<P> ThenInclude<P>(Expression<Func<T, P>> expr) {
-            return Set(expr);
-        }
-        public RepositoryIncludeExpression<P> ThenInclude<P>(Expression<Func<T, ICollection<P>>> expr) {
-            return Set(expr);
-        }
-    }
 
 }
 
