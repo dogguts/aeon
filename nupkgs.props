@@ -1,13 +1,13 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <VersionPrefix>1.0.0</VersionPrefix>
-        <VersionSuffix>preview1</VersionSuffix>
-        <PackageVersion>$(VersionPrefix)-$(VersionSuffix)</PackageVersion>
+        <!-- <VersionSuffix>preview2</VersionSuffix> -->
+        <PackageVersion>$(VersionPrefix)</PackageVersion> <!-- -$(VersionSuffix) -->
         <IncludeSymbols>true</IncludeSymbols>
         <IncludeSource>true</IncludeSource>
 
         <Authors>dogguts</Authors>
-        <Description>Preview of repository pattern library for EF core.</Description>
+        <Description>Generic Repository pattern library for EF core.</Description>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageTags>dotnet repository pattern</PackageTags>
         <PackageProjectUrl>https://github.com/dogguts/aeon</PackageProjectUrl>

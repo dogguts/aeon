@@ -27,6 +27,7 @@ namespace Aeon.Core.Repository {
 
         public String Name { get; set; }
 
+        //TODO: internal?
         public IRepositoryIncludable<T> Previous => throw new NotImplementedException();
     }
 
