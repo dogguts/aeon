@@ -66,8 +66,6 @@ namespace Aeon.Core.Repository {
 
     public static class RepositoryIncludeExtensions {
         public static IRepositoryIncludable<TEntity, TProperty> Include<TEntity, TProperty>(this IRepositoryIncludable<TEntity> source, Expression<Func<TEntity, TProperty>> navigationPropertyPath) where TEntity : class {
-            Console.WriteLine((navigationPropertyPath.Body as MemberExpression)?.Member?.Name);
-
             // find root (in case of Include after ThenInclude)
             while (!(source is RepositoryInclude<TEntity>)) {
                 source = source.Previous;

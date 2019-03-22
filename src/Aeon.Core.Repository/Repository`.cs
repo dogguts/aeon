@@ -37,10 +37,11 @@ namespace Aeon.Core.Repository {
 
         private IQueryable<T> WithIncludes(IRepositoryInclude<T> includes) {
             var queryWithIncludes = _dbSet.AsQueryable();
-            //   including all expression includes
-            queryWithIncludes = includes?.IncludePaths?.Aggregate(queryWithIncludes,
-                    (current, include) => current.Include(include)) ?? queryWithIncludes;
-
+            if (includes != null) {
+                //   including all expression includes
+                queryWithIncludes = includes?.IncludePaths?.Aggregate(queryWithIncludes,
+                        (current, include) => current.Include(include)) ?? queryWithIncludes;
+            }
             // // query including string includes
             // queryWithIncludes = includes?.IncludeStrings?.Aggregate(queryWithIncludes,
             //       (current, include) => current.Include(include)) ?? queryWithIncludes;
@@ -138,20 +139,11 @@ namespace Aeon.Core.Repository {
             {(System.ComponentModel.ListSortDirection.Descending ,false ),"ThenByDescending"}
         };
 
-        private static void DynamicOrderBy(ref IQueryable<T> query, string propertyName, ListSortDirection direction, bool isFirst) {
-            string sortCall = sortCallSelection[(direction, isFirst)];  //listSortDirection == ListSortDirection.Descending ? "OrderByDescending" : "OrderBy";
-            var type = typeof(T);
-            var property = type.GetProperty(propertyName);
-            //o
-            var parameter = Expression.Parameter(type, "o");
+        private static void DynamicOrderBy(ref IQueryable<T> query, Expression<Func<T, object>> expression, ListSortDirection direction, bool isFirst) {
+            string sortCall = sortCallSelection[(direction, isFirst)];
 
-            //   o.Property
-            var propertyAccess = Expression.MakeMemberAccess(parameter, property);
-            // o => o.Property
-            var orderByExpression = Expression.Lambda(propertyAccess, parameter);
-
-            var resultExpression = Expression.Call(typeof(Queryable), sortCall, new Type[] { type, property.PropertyType },
-                                                  query.Expression, Expression.Quote(orderByExpression));
+            var resultExpression = Expression.Call(typeof(Queryable), sortCall, new Type[] { typeof(T), typeof(object) },
+                                                  query.Expression, Expression.Quote(expression));
 
             query = query.Provider.CreateQuery<T>(resultExpression);
         }
@@ -194,7 +186,7 @@ namespace Aeon.Core.Repository {
             if (sorts != null) {
                 bool isFirstSort = true;
                 foreach (var sort in sorts.Sorts) {
-                    DynamicOrderBy(ref queryWithCriteria, sort.Member, sort.Direction, isFirstSort);
+                    DynamicOrderBy(ref queryWithCriteria, sort.KeySelector, sort.Direction, isFirstSort);
                     isFirstSort = false;
                 }
             }
@@ -225,15 +217,8 @@ namespace Aeon.Core.Repository {
 
             if (filter == null) throw new ArgumentNullException(nameof(filter));
 
-            // IQueryable including all expression includes
-            IQueryable<T> queryWithIncludes = WithIncludes(filter);//(filter.IncludePaths?.Count() > 0 ? WithIncludes(filter) : _dbSet);
-
-            // var queryWithIncludes = filter?.Includes?.Aggregate(_dbSet.AsQueryable(),
-            //         (current, include) => current.Include(include)) ?? _dbSet.AsQueryable();
-
-            // // query including string includes
-            // queryWithIncludes = filter?.IncludeStrings?.Aggregate(queryWithIncludes,
-            //       (current, include) => current.Include(include)) ?? queryWithIncludes;
+            // expression includes
+            IQueryable<T> queryWithIncludes = WithIncludes(filter);
 
             // return the result filtered by Criteria
             IQueryable<T> queryWithCriteria;
@@ -247,8 +232,7 @@ namespace Aeon.Core.Repository {
             if (sorts != null) {
                 bool isFirstSort = true;
                 foreach (var sort in sorts.Sorts) {
-                    //TODO: (Repository) throw (custom) exception when sort.Member == null
-                    DynamicOrderBy(ref queryWithCriteria, sort.Member, sort.Direction, isFirstSort);
+                    DynamicOrderBy(ref queryWithCriteria, sort.KeySelector, sort.Direction, isFirstSort);
                     isFirstSort = false;
                 }
             }
