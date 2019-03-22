@@ -10,7 +10,7 @@
                 "msbuild",
                 "build.proj",
                 "/property:GenerateFullPaths=true",
-                "/t:build"
+                "/t:Build"
             ],
             "type": "shell",
             "group": "build",

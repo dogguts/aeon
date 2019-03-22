@@ -106,9 +106,9 @@ namespace Aeon.Core.Repository {
             var criteria = Expression.Lambda<Func<T, bool>>(predicate, entityParameter);
 
             var filter = new RepositoryFilter<T>(criteria, includes);
-            var withFilter = await GetWithFilterAsync(filter);
+            var (Data, Total) = await GetWithFilterAsync(filter);
 
-            return withFilter.Data.FirstOrDefault();
+            return Data.FirstOrDefault();
         }
 
         public virtual T Get(IRepositoryInclude<T> includes, params object[] keyValues) {
@@ -132,7 +132,7 @@ namespace Aeon.Core.Repository {
             return AllAsync(includes).Result;
         }
 
-        private static IDictionary<(System.ComponentModel.ListSortDirection direction, bool isFirst), string> sortCallSelection = new Dictionary<(System.ComponentModel.ListSortDirection, bool), string>(){
+        private static readonly IDictionary<(System.ComponentModel.ListSortDirection direction, bool isFirst), string> sortCallSelection = new Dictionary<(System.ComponentModel.ListSortDirection, bool), string>(){
             {(System.ComponentModel.ListSortDirection.Ascending ,true ),"OrderBy"},
             {(System.ComponentModel.ListSortDirection.Descending ,true ),"OrderByDescending"},
             {(System.ComponentModel.ListSortDirection.Ascending ,false ),"ThenBy"},
@@ -185,8 +185,8 @@ namespace Aeon.Core.Repository {
             // sort result by sort
             if (sorts != null) {
                 bool isFirstSort = true;
-                foreach (var sort in sorts.Sorts) {
-                    DynamicOrderBy(ref queryWithCriteria, sort.KeySelector, sort.Direction, isFirstSort);
+                foreach (var (Direction, KeySelector) in sorts.Sorts) {
+                    DynamicOrderBy(ref queryWithCriteria, KeySelector, Direction, isFirstSort);
                     isFirstSort = false;
                 }
             }
@@ -231,8 +231,8 @@ namespace Aeon.Core.Repository {
             // sort result by sort
             if (sorts != null) {
                 bool isFirstSort = true;
-                foreach (var sort in sorts.Sorts) {
-                    DynamicOrderBy(ref queryWithCriteria, sort.KeySelector, sort.Direction, isFirstSort);
+                foreach (var (Direction, KeySelector) in sorts.Sorts) {
+                    DynamicOrderBy(ref queryWithCriteria, KeySelector, Direction, isFirstSort);
                     isFirstSort = false;
                 }
             }

@@ -8,6 +8,7 @@
             <IncludeSymbols>true</IncludeSymbols>
             <IncludeSource>true</IncludeSource>
         </BuildProject>
+        <BuildTest Include="tests/**/*.csproj"/>
     </ItemGroup>
     <PropertyGroup>
         <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
@@ -18,9 +19,17 @@
         <IncludeSource>true</IncludeSource>
     </PropertyGroup>
     <!-- build -->
-    <Target Name="build">
+    <Target Name="Build" DependsOnTargets="BuildProjects;BuildTests">
+        
+    </Target>
+    <Target Name="BuildProjects">
         <MSBuild Projects="@(BuildProject)" Properties="Configuration=$(Configuration)"></MSBuild>
     </Target>
+    <Target Name="BuildTests">
+        <MSBuild Projects="@(BuildTest)" Properties="Configuration=$(Configuration)"></MSBuild>
+    </Target>
+
+
     <!-- pack -->
     <Target Name="pack" DependsOnTargets="clean" Outputs="%(BuildProject.Identity)">
         <MSBuild Projects="@(BuildProject)" Properties="Configuration=$(Configuration);PackageOutputPath=$(PackageOutputPath)/;PackageId=%(PackageId);Title=%(Title);Description=%(Description);" Targets="pack"></MSBuild>
@@ -28,5 +37,6 @@
     <!-- clean -->
     <Target Name="clean">
         <MSBuild Projects="@(BuildProject)" Properties="Configuration=$(Configuration)" Targets="clean"></MSBuild>
+        <MSBuild Projects="@(BuildTest)" Properties="Configuration=$(Configuration)" Targets="clean"></MSBuild>
     </Target>
 </Project>
