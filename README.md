@@ -2,7 +2,7 @@
 # Aeon [![Nuget](https://img.shields.io/nuget/v/Aeon.Core.Repository.svg)](https://www.nuget.org/packages/Aeon.Core.Repository)
 A generic repository pattern implementation for ef core/netstandard2.0
 
-Documentation coming soon
+[Provisory Documentation](https://github.com/dogguts/aeon/wiki)
 # Builds
 | Release |  |
 |--|--|
