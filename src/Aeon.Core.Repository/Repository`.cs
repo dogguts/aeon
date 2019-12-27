@@ -75,10 +75,8 @@ namespace Aeon.Core.Repository {
 
             //  if (keyProperties.Count != keyValues.Length) TODO: throw exception
 
-            // (p) =>
-            var entityParameter = Expression.Parameter(typeof(T), "p");
 
-            //var keyValuesConstant = Expression.Constant(keyValues);
+            var entityParameter = Expression.Parameter(typeof(T), "p");
 
             BinaryExpression predicate = null;
 
@@ -87,19 +85,12 @@ namespace Aeon.Core.Repository {
 
 
                 var leftExpr = Expression.Property(entityParameter, property.Name);
-                /* 
-                                var leftExpr = Expression.Call(
-                                                                PropertyMethod.MakeGenericMethod(property.ClrType),
-                                                                entityParameter,
-                                                                Expression.Constant(property.Name, typeof(string)));
-                */
 
-                var rightExpr = Expression.Convert(Expression.Constant(keyValues[i]), property.ClrType);
+                object keyValuePart = keyValues[i];
+                Expression<Func<object>> closure = () => keyValuePart;
+                var rightExpr = Expression.Convert(closure.Body, leftExpr.Type);
 
-                var equalsExpression =
-                                    Expression.Equal(
-                                        leftExpr,
-                                        rightExpr);
+                var equalsExpression = Expression.Equal(leftExpr, rightExpr);
 
                 predicate = predicate == null ? equalsExpression : Expression.AndAlso(predicate, equalsExpression);
             }
