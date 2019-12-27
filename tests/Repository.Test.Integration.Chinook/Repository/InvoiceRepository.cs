@@ -17,7 +17,7 @@ namespace Chinook.Repository {
         /// </summary>
         public IEnumerable<Invoice> GetByWeekDays(params DayOfWeek[] daysOfWeek) {
 
-            var r = _dbSet.Where(p => daysOfWeek.Contains(p.InvoiceDate.DayOfWeek))
+            var r = _dbQuery.Where(p => daysOfWeek.Contains(p.InvoiceDate.DayOfWeek))
                                     .Include(p => p.InvoiceLine)
                                     .Include(p => p.Customer).ThenInclude(m => m.SupportRep)
                                     .AsEnumerable();

@@ -1,0 +1,12 @@
+@using VM = Chinook.ViewModel.ListItem;    
+@model IEnumerable<VM.TrackListItem> 
+    
+<div class="list-group list-group-flush">
+    @foreach(var track in Model){
+        <vc:track-list-item data="@track"></vc:track-list-item>
+    }
+</div>
+
+@for (var i=0;i<10-Model.Count();i++){
+    <vc:track-list-item data="@(null)"></vc:track-list-item>
+}

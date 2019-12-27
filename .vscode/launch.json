@@ -1,11 +1,22 @@
 {
-   // Use IntelliSense to find out which attributes exist for C# debugging
-   // Use hover for the description of the existing attributes
-   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-   "version": "0.2.0",
-   "configurations": [
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
         {
             "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "dotnet build (example)",
+            "program": "${workspaceFolder}/example/Chinook/src/console1/bin/Debug/netcoreapp2.1/console1.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/example/Chinook/src/console1/",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": ".NET Core Launch (Test.Integration)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -23,6 +34,6 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:pickProcess}"
-        }
-    ,]
+        },
+    ]
 }

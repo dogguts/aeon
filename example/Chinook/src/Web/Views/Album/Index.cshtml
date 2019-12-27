@@ -1,0 +1,29 @@
+@model Chinook.ViewModel.AlbumViewModel
+ 
+<div class="row">
+    <div >
+        <img width="200" class="m-2 ml-4  d-none d-sm-block" src="@(Url.Action("Image","Album", new { id = Model.AlbumId }))">
+    </div>
+    <div class="col">
+        <h2>@Model.Name</h2>
+        @Model.ArtistName
+        <p style="white-space: pre-line">
+            @Html.Raw(Model.Summary)
+        </p>
+        <p class="text-muted"> 
+            @Model.Tracks.Count() tracks • 
+            @String.Join(" ", Model.Tracks.Select(t=>t.GenreName).Distinct()) • 
+            @Model.Tracks.Select(t=>t.Duration).Aggregate(TimeSpan.Zero, (t1, t2) => t1 + t2).ToString("h\\:mm\\:ss")
+        </p>
+    </div>
+</div>
+ 
+
+<h4>Tracks</h4>
+<div class=" m-2">
+    <div class="list-group container">
+    @foreach(var track in @Model.Tracks){
+        <vc:track-list-item data="@track"></vc:track-list-item>
+    }
+    </div>
+</div>

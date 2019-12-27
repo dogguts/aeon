@@ -12,7 +12,7 @@ namespace Aeon.Core.Repository.Infrastructure {
         /// <summary>
         /// Sort specifications
         /// </summary>
-        /// <value></value> 
+        /// <value>The sort specification; a List of sort directions with their sort expression</value> 
         IList<(ListSortDirection Direction, Expression<Func<T, object>> KeySelector)> Sorts { get; set; }
     }
 }

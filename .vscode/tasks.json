@@ -4,13 +4,28 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "msbuild",
             "command": "dotnet",
             "args": [
                 "msbuild",
                 "build.proj",
                 "/property:GenerateFullPaths=true",
                 "/t:Build"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "dotnet build (example)",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "example/Chinook",
+                "/property:GenerateFullPaths=true",
             ],
             "type": "shell",
             "group": "build",

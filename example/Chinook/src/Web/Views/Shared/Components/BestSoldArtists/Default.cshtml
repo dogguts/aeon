@@ -1,0 +1,31 @@
+@using VM = Chinook.ViewModel.ListItem;    
+@model IEnumerable<VM.ArtistListItem> 
+
+
+
+
+<div class="list-group list-group-flush">
+@foreach(var artist in Model){
+  <vc:artist-list-item data="@artist"></vc:artist-list-item>
+  <!-- <a href="#" class="list-group-item list-group-item-action">
+        <img width="32" class="rounded-circle"  src="/Artist/Image/?id=@(artist.ArtistId)">
+        <strong>@(artist.Name)</strong>
+  </a> -->
+}
+
+@for (var i=0;i<10-Model.Count();i++){
+  <vc:artist-list-item data="@(null)"></vc:artist-list-item>
+     <!-- <a class="list-group-item ">
+        <strong>&nbsp;</strong>
+        <br/>
+        <span>&nbsp;</span>
+    </a> -->
+}
+</div>
+
+
+
+ 
+
+
+

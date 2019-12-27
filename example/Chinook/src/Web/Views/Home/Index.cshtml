@@ -1,0 +1,81 @@
+@*model Chinook.ViewModel.HomeViewModel *@
+
+@section header {
+    <style type="text/css">
+        .list-group-item {
+            padding: 0.3rem;
+        }
+    </style>
+    <script type="text/javascript">
+    function reloadBest(name, days){
+        var url = `/Home/${name}/?timeframe=${days}`;
+        var kebab = name.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/\s+/g, '-').toLowerCase();
+         document.getElementById(kebab).innerHTML = '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>';
+         fetch(url)
+                .then((response) => {
+                    return response.text();
+                })
+                .then((result) => {
+                    document.getElementById(kebab).innerHTML = result;
+                });
+    }
+
+    function reloadBestSoldAlbums(days) {
+        reloadBest('BestSoldAlbums',days);
+    }
+    function reloadBestSoldTracks(days) {
+        reloadBest('BestSoldTracks',days);
+    }    
+    function reloadBestSoldArtists(days) {
+        reloadBest('BestSoldArtists',days);
+    }    
+    </script>
+}
+
+<div class="d-flex flex-wrap justify-content-around">
+<div class="card">
+	<h5 class="card-header">
+		<div class="d-flex justify-content-between">
+			<div class="p-2">Best sold albums</div>
+			<div class="p-2">
+				<vc:time-frame on-client-click="reloadBestSoldAlbums" />
+			</div>
+		</div>
+	</h5>
+	<div class="card-body" id="best-sold-albums">
+		<vc:best-sold-albums timeframe="30"/>
+	</div>
+</div>
+
+   
+<div class="card">
+	<h5 class="card-header">
+		<div class="d-flex justify-content-between">
+			<div class="p-2">Best sold tracks</div>
+			<div class="p-2">
+				<vc:time-frame on-client-click="reloadBestSoldTracks" />
+			</div>
+		</div>
+	</h5>
+	<div class="card-body" id="best-sold-tracks">
+		<vc:best-sold-tracks timeframe="30"/>
+	</div>
+</div>
+
+
+<div class="card">
+	<h5 class="card-header">
+		<div class="d-flex justify-content-between">
+			<div class="p-2">Best sold artists</div>
+			<div class="p-2">
+				<vc:time-frame on-client-click="reloadBestSoldArtists" />
+			</div>
+		</div>
+	</h5>
+	<div class="card-body" id="best-sold-artists">
+		<vc:best-sold-artists timeframe="30"/>
+	</div>
+</div>
+
+
+</div>

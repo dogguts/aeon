@@ -1,0 +1,58 @@
+@model Chinook.ViewModel.ArtistViewModel
+ 
+@section action {
+  <li class="nav-item dropdown">
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admin
+    </button>
+    <div class="dropdown-menu">
+        <h6 class="dropdown-header">Artist</h6>
+        <a class="dropdown-item" href="@(Url.Action("Edit","Artist", new { area="Admin", id = Model.ArtistId }))">Edit</a>
+        <a class="dropdown-item" href="@(Url.Action("Create","Artist", new { area="Admin", id = Model.ArtistId }))">Create</a>
+        <h6 class="dropdown-header">Album</h6>
+        <a class="dropdown-item" href="@(Url.Action("Create","Album", new { area="Admin", artistId = Model.ArtistId }))">Add</a>
+    </div> 
+  </li>
+}
+
+<div class="row">
+    <div >
+        <img width="200" class="m-2 ml-4 rounded-circle d-none d-sm-block" src="@(Url.Action("Image","Artist", new { id = Model.ArtistId }))">
+    </div>
+    <div class="col">
+        <h2>@Model.Name</h2>
+        <p style="white-space: pre-line">
+            @Html.Raw(Model.Bio)
+        </p>
+    </div>
+</div>
+
+<h4>Albums</h4>
+<div class="d-flex flex-wrap">
+@foreach(var album in @Model.Albums.Take(10)){
+    <vc:album-card-item data="@album" css-class=""></vc:album-card-item>
+}
+
+@if (Model.Albums.Count() > 10) {
+    <div class="card m-2" style="width: 12rem;" id="MoreAlbums">
+        <div class="card-body"></div>
+         <div class="card-footer text-right">
+            <a onclick="javascript:$('#MoreAlbums').addClass('d-none');$('.HiddenAlbum').removeClass('d-none HiddenAlbum')" class="btn btn-primary">@(Model.Albums.Count()-10) More</a>
+        </div>
+    </div>
+
+    @foreach(var album in @Model.Albums.Skip(10)){
+        <vc:album-card-item data="@album" css-class="d-none HiddenAlbum"></vc:album-card-item>
+    }
+
+}
+</div>
+
+<h4>Tracks</h4>
+<div class="d-flex m-2">
+    <div class="list-group">
+    @foreach(var track in @Model.TopTracks){
+        <vc:track-list-item data="@track"></vc:track-list-item>
+    }
+    </div>
+</div>

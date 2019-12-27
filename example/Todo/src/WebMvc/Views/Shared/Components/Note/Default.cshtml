@@ -1,0 +1,21 @@
+@using TodoApp.WebMvc.Views.Shared.Components
+@model TodoApp.ViewModel.Note_ListItem
+    <div class="note w-sm-50 w-md-33 w-lg-25">
+        <div class="note-inner" style="background-color: #@(Model.Category.Color)"> 
+
+            <div style="border-bottom:1px dotted silver;margin:1px" class="noteHeader">
+                <span><i class="@Model.Category.Icon"></i>&nbsp;<span class="note-text">@(Model.Title)</span></span>
+                <span class="command-items">
+                     <i class="fas fa-shapes command-note-category" data-id="@Model.Id" data-category-id="@Model.Category.Id"></i>
+                     <i class="fas fa-edit command-note-edit" data-id="@Model.Id"></i>
+                     <i class="fas fa-trash-alt command-note-delete" data-id="@Model.Id"></i>
+                </span>
+            </div>
+        <ul>
+            @foreach (var item in Model.Items){
+                @(await Component.InvokeAsync<NoteItem>(item));
+            }
+            <li class="command-item-add" data-id="@Model.Id" style="color:gray"><i class="far fa-plus-square"></i>&nbsp;<i>Add Item</i></li>
+        </ul>
+        </div>
+    </div>

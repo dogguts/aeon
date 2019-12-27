@@ -8,7 +8,7 @@ using Aeon.Core.Repository.Infrastructure;
 
 namespace Aeon.Core.Repository {
     public class RepositoryInclude<T> : IRepositoryInclude<T>, IRepositoryIncludable<T> where T : class {
-        private List<IRepositoryIncludable<T>> _includes = new List<IRepositoryIncludable<T>>();
+        private readonly List<IRepositoryIncludable<T>> _includes = new List<IRepositoryIncludable<T>>();
 
         public RepositoryInclude() { }
         public RepositoryInclude(IRepositoryInclude<T> repositoryInclude) {

@@ -1,0 +1,9 @@
+@using VM = Chinook.ViewModel.ListItem;    
+@model (VM.AlbumListItem Album, string CssClass)
+ 
+<div class="card m-2 card-item @Model.CssClass" style="width: 12rem;" onclick="location.assign('@(Url.Action("Index","Album", new { id = Model.Album.AlbumId }))');">
+  <img class="card-img-top " src="@(Url.Action("Image","Album", new { id = Model.Album.AlbumId }))">
+  <div class="card-body p-1">
+    <p class="card-text text-truncate">@Model.Album.Name</p>
+  </div>
+</div>

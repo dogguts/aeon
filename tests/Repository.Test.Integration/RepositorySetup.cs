@@ -17,7 +17,7 @@ namespace Chinook.Repository.Integration.Tests {
         new ConsoleLoggerProvider((category, level) => level == LogLevel.Warning, true) /* level == LogLevel.Information */
         });
 
-        private SqliteConnection connection;
+        private readonly SqliteConnection connection;
 
         public ServiceProvider ServiceProvider { get; private set; }
 
@@ -51,6 +51,7 @@ namespace Chinook.Repository.Integration.Tests {
             dbContext.Database.EnsureCreated();
 
             //Add some predefined records  
+            dbContext.Artist.Add(new Model.Artist() { Name = "AC/DC" });
             dbContext.MediaType.Add(new Model.MediaType() { Name = "MP3" });
             dbContext.SaveChanges();
         }

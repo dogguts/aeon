@@ -1,0 +1,10 @@
+@model TodoApp.ViewModel.NoteItem_ListItem
+<li data-id="@Model.Id" class="note-item">
+        <input id="box@(Model.Id)" type="checkbox" class="command-item-check" data-id="@Model.Id" @((Model.Completed ?? false) ?  "checked":"")/>
+        <label for="box@(Model.Id)" class="item-text">@Model.Title</label>
+        <span class="command-items">
+        <i class="fas fa-edit command-item-edit" data-id="@Model.Id"></i>
+        <i class="fas fa-trash-alt command-item-delete" data-id="@Model.Id"></i>
+        </span>
+</li>
+        

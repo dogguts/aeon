@@ -1,0 +1,26 @@
+@using VM = Chinook.ViewModel.ListItem;    
+@model VM.TrackListItem 
+
+@if (Model != null){ 
+    <a href="@(Url.Action("Index","Track", new { id = Model.TrackId }))" class="list-group-item list-group-item-action">
+        <div class="container">
+            <div class="row">
+                <img style="width:48px;height:48px" src="/Album/Image/?id=@(Model.AlbumId)">
+                <div class="col">
+                    <strong>@(Model.Name)</strong>
+                    <br/>
+                    <div >@Model.ArtistName - @Model.AlbumName</div>
+                </div>
+                <div class="align-top pl-2">
+                    @Model.Duration.ToString("mm\\:ss\\.ff")
+                </div>
+            </div>
+        </div>
+    </a> 
+} else {
+    <a class="list-group-item ">
+        <strong>&nbsp;</strong>
+        <br/>
+        <span>&nbsp;</span>
+    </a>
+}

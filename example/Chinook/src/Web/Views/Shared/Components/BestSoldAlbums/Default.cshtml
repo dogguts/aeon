@@ -1,0 +1,12 @@
+@using VM = Chinook.ViewModel.ListItem;    
+@model IEnumerable<VM.AlbumListItem> 
+
+<div class="list-group list-group-flush">
+@foreach(var album in Model) {
+	<vc:album-list-item data="@album"></vc:album-list-item>
+}
+
+@for (var i=0;i<10-Model.Count();i++){
+    <vc:album-list-item data="@(null)"></vc:album-list-item>
+}
+</div>

@@ -1,0 +1,8 @@
+@model (string OnClientClick, List<(int days,string name)> TimeFrames)
+ 
+
+<div class="btn-group" role="group" aria-label="Basic example">
+    @foreach(var point in Model.TimeFrames){
+        <button type="button" onclick="@(Model.OnClientClick)('@point.days')" class="btn btn-light btn-sm">@point.name</button>
+    }
+</div>

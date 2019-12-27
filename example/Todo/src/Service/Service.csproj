@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ViewModel/ViewModel.csproj" />
+    <ProjectReference Include="../Mapping/Mapping.csproj" />
+    <ProjectReference Include="../Model/Model.csproj" />
+    <ProjectReference Include="../Repository/Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup> 
+    <PackageReference Include="Aeon.Core.Repository" Version="1.0.2" />
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+  </ItemGroup>
+</Project>

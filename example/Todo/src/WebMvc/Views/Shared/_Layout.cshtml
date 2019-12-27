@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css">
+    <link rel="stylesheet" href="~/lib/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-iconpicker/dist/css/bootstrap-iconpicker.css" />
+    
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+        <img src="/images/logo.svg" alt="Logo" style="height:40px;float:left"> 
+
+        <div style="float:left"> 
+        <span style="color:#f28b82;float:left">T</span>
+        <span style="color:#fbbc04;float:left">o</span>
+        <span style="color:#fff475;float:left">d</span>
+        <span style="color:#ccff90;float:left">o</span>
+        <span style="color:#a7ffeb;float:left">A</span>
+        <span style="color:#cbf0f8;float:left">p</span>
+        <span style="color:#fdcfe8;float:left">p</span>
+        <span>&nbsp;- @ViewData["Title"]</span>
+        </div>
+
+
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="@Url.RouteUrl(new {controller="Home"})">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@Url.RouteUrl(new {controller="Category"})">Categories</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    @RenderBody()
+</div>
+ 
+
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/popper.js/umd/popper.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/bootbox.js/bootbox.js"></script>
+    <script src="~/lib/jquery.isotope/isotope.pkgd.js"></script>
+    <script src="~/lib/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+    <script src="~/lib/bootstrap-iconpicker/dist/js/bootstrap-iconpicker-iconset-all.min.js"></script>
+    <script src="~/lib/bootstrap-iconpicker/dist/js/bootstrap-iconpicker.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

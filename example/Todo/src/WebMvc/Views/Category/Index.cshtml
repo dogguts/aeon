@@ -1,0 +1,46 @@
+@using TodoApp.WebMvc.Views.Shared.Components;
+
+@model IList<TodoApp.ViewModel.Category>;
+
+@{
+    ViewData["Title"] = "Categories";
+}
+  
+
+<div >
+    <table id="example1" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Icon</th>
+                <th>Color</th>
+                <th>Deleted</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+            <td><i class="fas @Html.DisplayFor(modelItem => item.Icon)"></i>&nbsp; @Html.DisplayFor(modelItem => item.Icon)</td>
+            <td><i class="fas fa-circle" style="color:#@Html.DisplayFor(modelItem => item.Color)"></i>&nbsp;#@Html.DisplayFor(modelItem => item.Color)</td>
+            <td>@Html.DisplayFor(modelItem => item.Deleted.Value)</td>
+            <td><a href="@Url.Action("Edit",new {id=item.Id})">Edit</a> | <a href="@Url.Action("Delete",new {id=item.Id})">Delete</a></td> 
+            
+            </tr>
+
+        }
+    </table>
+</div>
+ 
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+        });
+    </script>
+}
+
+

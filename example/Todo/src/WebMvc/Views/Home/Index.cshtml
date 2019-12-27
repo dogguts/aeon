@@ -1,0 +1,364 @@
+﻿@using TodoApp.WebMvc.Views.Shared.Components;
+
+@model IList<TodoApp.ViewModel.Note_ListItem>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style type="text/css">
+    /*.notes-container{
+        background-color: #e8e8e8;
+    }*/
+    .notes {
+        margin: auto auto;
+        background-color: #e8e8e8;
+        padding-bottom:3.5em;
+    }
+    .note {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    .note:hover .note-inner {
+        box-shadow: 0 2px 15px rgba(0,0,0,0.30);
+    }
+    .note-inner {
+        /*background-color: #fff;*/
+        min-height: 4em;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
+        transition: box-shadow 0.2s;
+    }
+
+    .note-inner ul{
+        list-style-type: none;
+        padding-left:1em;
+    }
+
+    .command-items {
+        display:none;
+        float:right;
+    }
+
+    .command-items i {
+        cursor: pointer;
+        margin-left:0.5em;
+    }
+    .command-item-add {
+        cursor: pointer;
+    }
+
+.command-note-new {
+  background-color: #F44336;
+  color: #fff;
+  padding: 0;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  border: none;
+  box-shadow: none;
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  i {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+
+    .note-item:hover .command-items {
+        display:block;
+    }
+    .noteHeader:hover .command-items {
+        display:block;
+    }
+
+    input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+    input[type=checkbox] + label:before {
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    input[type=checkbox] + label:before { content: "\f0c8"; } /* unchecked icon */
+    input[type=checkbox] + label:before { letter-spacing: 5px; } /* space between checkbox and label */
+
+    input[type=checkbox]:checked + label:before { content: "\f14a"; } /* checked icon */
+    input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+
+</style>
+  
+
+<div class="notes">
+@foreach (var note in Model){
+    @(await Component.InvokeAsync<Note>(note));
+}
+<button class="command-note-new"><i class="fas fa-plus"></i></button>
+</div>
+ 
+
+@section Scripts {
+    <script type="text/javascript">
+        $('.notes').isotope({
+            itemSelector: '.note',
+            layoutMode: 'masonry'});
+
+        $(document).ready(function() {
+
+
+            function commandNoteEdit(e) { 
+                var note = $(e.currentTarget).parents(".note");
+                var noteTitle = note.find(".note-text");
+
+                // request new item title from user
+                bootbox.prompt({
+                    title: "Note Title",
+                    value: noteTitle.text(),
+                    callback: function (result) {
+                        if (result) {
+                            // if confirmed, http PATCH the new title
+                            $.ajax( {
+                                url:'Note/' + e.currentTarget.dataset.id, 
+                                type: 'PATCH',
+                                data: { title:result }
+                            })
+                            .done(
+                                function(data,textStatus,jqXHR ){
+                                    // if PATCH request successfull replace current node with the received content
+                                    var replacement =  $(data).find(".note-inner");
+                                    note.find(".note-inner").replaceWith(replacement);
+                                    bindItemEvents(replacement);
+                                }
+                            );
+                        }
+                    }
+                });
+            }
+
+            function commandNoteCategory(e) {
+                var categoriesPromise = $.get( "Categories");  
+
+                var currentCategoryId = e.currentTarget.dataset.categoryId;
+
+                var note = $(e.currentTarget).parents(".note");
+                var noteTitle = note.find(".note-text");
+
+                // request new category from user
+                categoriesPromise.done(function(data){
+                    bootbox.prompt({
+                        title: "Change category",
+                        inputType: 'select',
+                        value: currentCategoryId,
+                        inputOptions: data,
+                        /*value: noteTitle.text(),*/
+                        callback: function (result) {
+                            if (result) {
+                                // if confirmed, http PATCH the new category
+                                $.ajax( {
+                                    url:'Note/' + e.currentTarget.dataset.id, 
+                                    type: 'PATCH',
+                                    data: { category: { id: result}}
+                                })
+                                .done(
+                                    function(data,textStatus,jqXHR ){
+                                        // if PATCH request successfull replace current node with the received content
+                                        var replacement =  $(data).find(".note-inner");
+                                        note.find(".note-inner").replaceWith(replacement);
+                                        bindItemEvents(replacement);
+                                    }
+                                );
+                            }
+                        }
+                    });
+                });
+            }
+
+
+            function commandNoteDelete(e) { 
+                var note = $(e.currentTarget).parents(".note");
+                var noteTitle = note.find(".note-text");
+
+                // request delete confirmation from user
+                bootbox.confirm({
+                    title: "Delete note?",
+                    message: `Are you sure you want to delete the note "${noteTitle.text()}".<br/>This cannot be undone.`,
+                    callback: function (result) {
+                        if (result){
+                            // if confirmed, http DELETE the note
+                            $.ajax( {
+                                url:'Note/' + e.currentTarget.dataset.id, 
+                                type: 'DELETE',
+                            })
+                            .done(
+                                function(data,textStatus,jqXHR ){
+                                    // if DELETE request successfull (=controller returned true)
+                                    if (data) {
+                                        // remove note from DOM
+                                        $(".notes").isotope( 'remove', note )
+                                        $(".notes").isotope(); //trigger re-layout 
+                                    }
+                                }
+                            );
+                        }
+                    }
+                });
+
+
+            }
+
+            $('.command-note-new').click(function(e) {
+                var categoriesPromise = $.get( "Categories");  
+
+                categoriesPromise.done(function(data){
+                    bootbox.prompt({
+                        title: "Select the category for the new note",
+                        inputType: 'select',
+                        value: data[0].value,
+                        inputOptions: data,
+                        callback: function (result) {
+                            if (result){
+                                $.post( "Note/", { category: { id: result}} )
+                                    .done(function( data ) {
+                                        console.log(data);
+                                        var newItem = $(data);
+                                        $(".notes").append(newItem).isotope('addItems', newItem);
+                                        $(".notes").isotope(); //trigger re-layout 
+                                        bindItemEvents(newItem);
+                                    });
+                            }
+                        }
+                    })
+                })
+            });
+
+
+
+            function commandItemAdd(e) { 
+                var noteItem = $(e.currentTarget).parents(".note");
+                var noteAddItem = noteItem.find(".command-item-add");
+
+                bootbox.prompt({
+                    title: "Item Title",
+                    value: "",
+                    callback: function (result) {
+                        if (result){
+                            $.ajax( {
+                                url:'Item/' + e.currentTarget.dataset.id, 
+                                type: 'POST',
+                                data: { title: result, completed:false }
+                            })
+                            .done(
+                                function(data,textStatus,jqXHR) {
+                                        // if POST request successfull, append new the node-item with the received content
+                                        var newItem = $(data);
+                                        noteAddItem.before(newItem);
+                                        bindItemEvents(newItem);
+                                }
+                            );
+                        }
+                    }
+                });
+            };
+        
+            function commandItemDelete(e){ 
+                var noteItem = $(e.currentTarget).parents(".note-item");
+                var noteItemLabel = noteItem.find(".item-text");
+                // request delete confirmation from user
+                bootbox.confirm({
+                    title: "Delete item?",
+                    message: `Are you sure you want to delete the item "${noteItemLabel.text()}".<br/>This cannot be undone.`,
+                    callback: function (result) {
+                        if (result){
+                            // if confirmed, http DELETE the item
+                            $.ajax( {
+                                url:'Item/' + e.currentTarget.dataset.id, 
+                                type: 'DELETE',
+                            })
+                            .done(
+                                function(data,textStatus,jqXHR ){
+                                    // if DELETE request successfull (=controller returned true)
+                                    if (data) {
+                                        // remove noteItem from DOM
+                                        noteItem.remove();
+                                        $(".notes").isotope(); //trigger re-layout 
+                                    }
+                                }
+                            );
+                        }
+                    }
+                });
+            };
+
+            function commandItemEdit(e){
+                var noteItem = $(e.currentTarget).parents(".note-item");
+                var noteItemLabel = noteItem.find(".item-text");
+                // request new item title from user
+                bootbox.prompt({
+                    title: "Item Title",
+                    value: noteItemLabel.text(),
+                    callback: function (result) {
+                        if (result) {
+                            // if confirmed, http PATCH the new title
+                            $.ajax( {
+                                url:'Item/' + e.currentTarget.dataset.id, 
+                                type: 'PATCH',
+                                data: { title:result }
+                            })
+                            .done(
+                                function(data,textStatus,jqXHR ){
+                                    // if PATCH request successfull replace current node-item with the received content
+                                    var replacement =  $(data);
+                                    noteItem.replaceWith(replacement);
+                                    bindItemEvents(replacement);
+                                }
+                            );
+                        }
+                    }
+                });
+            }
+
+            function commandItemCheck(e){
+                var noteItem = $(e.currentTarget).parents(".note-item");
+                var noteItemCheck =  noteItem.find(".command-item-check");
+                // http PATCH the new check state
+                $.ajax( {
+                    url:'Item/' + e.currentTarget.dataset.id, 
+                    type: 'PATCH',
+                    data: { completed:this.checked }
+                })
+                .done(
+                    function(data,textStatus,jqXHR) {
+                            // if PATCH request successfull replace current node-item with the received content
+                            var replacement =  $(data);
+                            noteItem.replaceWith(replacement);
+                            bindItemEvents(replacement);
+                    }
+                );
+            }
+
+            function bindItemEvents(note) {
+                note.find(".command-item-check").bind("change",commandItemCheck);
+                note.find(".command-item-edit").bind("click",commandItemEdit);
+                note.find(".command-item-delete").bind("click",commandItemDelete);
+                note.find(".command-item-add").bind("click",commandItemAdd);
+
+                note.find(".command-note-category").bind("click",commandNoteCategory);
+                note.find(".command-note-edit").bind("click",commandNoteEdit);
+                note.find(".command-note-delete").bind("click",commandNoteDelete);
+                
+                //since events are getting reattached, assume item change (add, delete or edit). trigger isotope relayout
+                $('.notes').isotope('layout');
+            }
+
+            bindItemEvents($(".note"));//-item
+
+        });
+    </script>
+}
+
+

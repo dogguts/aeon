@@ -1,0 +1,147 @@
+@{
+    var theme= "superhero";//"; /* , darkly*/
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    
+    <!-- jquery -->
+    <script type="text/javascript" src="~/lib/jquery/jquery.js"></script>
+
+    <!-- popper.js -->
+    <script type="text/javascript" src="~/lib/popper.js/umd/popper.js"></script>
+
+    <!-- Bootstrap/bootswatch -->
+    <!-- <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="~/lib/bootswatch/@theme/bootstrap.min.css"> 
+    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.min.js"></script>    
+    
+
+    <!-- font awesome -->
+    <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js" defer></script>
+
+
+    <!-- easy autocomplete -->
+    <link href="~/lib/easy-autocomplete/easy-autocomplete.css" rel="stylesheet" type="text/css">
+	  <script type="text/javascript" src="~/lib/easy-autocomplete/jquery.easy-autocomplete.js" ></script>    
+
+    <!--
+    <script src="~/lib/jquery-validate/jquery.validate.js" ></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script> -->
+    
+    <!-- <script src="~/lib/popper.js/umd/popper.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script> -->
+
+    <style>
+           
+      .easy-autocomplete{
+        width:100% !important;
+      }
+      .card-item {
+        cursor:pointer;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 300ms;
+      }
+
+      .card-item:hover {
+        box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.5);
+      }
+      .edit-button {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+    </style>
+
+    <script type="text/javascript">
+        //Autocomplete search box
+        $(document).ready(function() {
+        
+      
+
+            function selectSearchTemplate(value,item) {
+                var html="";
+                html+= '<div class="mb-2">';
+                html+= '<img style="width:48px" class="mr-1 float-left" src="' + item.ImageUrl + '">';
+                html+= '<div class="text-dark mb-0">' + value + '</div>';
+                if (item.SubTitle) {
+                    html+= '<small class="text-black-50">'+ item.SubTitle +'</small><br/>';
+                } 
+                html+= '</div>';
+                console.log(html);
+                return html;
+            }
+            
+            var options = {
+                url: function(q) {
+                    console.log(encodeURIComponent(q))
+		                return "/Api/Search/" + encodeURIComponent(q);
+	              },
+
+                getValue: function(element){
+                    return element.Title;
+                },
+                list:{
+                    onChooseEvent: function(){
+                        var gotoUrl = $("#Search").getSelectedItemData().Url;
+                        window.location = gotoUrl;
+                    }
+                },
+                template: {
+                    type: "custom",
+                    method: selectSearchTemplate
+                }
+            };
+
+            $("#Search").easyAutocomplete(options);
+           
+        });
+    </script>
+
+    @RenderSection("header", false)
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="font-size:24px">
+      <i class="fas fa-wind" style="vertical-align: middle;"></i><span class="h4">Chinook Media Store</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+
+    <form class="mx-2 my-auto d-inline w-100">
+      <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search" id="Search">
+      </div>
+    </form>
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="#"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        @RenderSection("action", false)
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+<i class="fas fa-shopping-cart"></i>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

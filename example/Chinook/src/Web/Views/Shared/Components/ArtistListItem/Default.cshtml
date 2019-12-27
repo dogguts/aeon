@@ -1,0 +1,15 @@
+@using VM = Chinook.ViewModel.ListItem;    
+@model VM.ArtistListItem
+ 
+@if (Model != null) {
+    <a href="@(Url.Action("Index","Artist", new { id = Model.ArtistId }))" class="list-group-item list-group-item-action">
+        <img width="32" class="rounded-circle"  src="/Artist/Image/?id=@(Model.ArtistId)">
+        <strong>@(Model.Name)</strong>
+    </a>
+} else {
+    <a class="list-group-item ">
+        <strong>&nbsp;</strong>
+        <br/>
+        <span>&nbsp;</span>
+    </a>
+}    

@@ -19,7 +19,7 @@ namespace Chinook.Repository.Integration.Tests {
             => level == LogLevel.Information, true)
         });
 
-        private SqliteConnection connection;
+        private readonly SqliteConnection connection;
 
         public ServiceProvider ServiceProvider { get; private set; }
 

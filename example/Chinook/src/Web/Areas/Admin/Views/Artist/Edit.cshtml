@@ -1,0 +1,75 @@
+@model Chinook.ViewModel.ArtistViewModel
+@section header{
+
+}
+
+<form asp-controller="Artist" asp-action="Edit" method="post">
+
+
+<input asp-for="ArtistId" type="hidden" value="@Model.ArtistId"/>
+
+<label >Id</label>    
+<div class="form-group input-group col-2 pl-0 ">
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">#</span>
+    </div>
+    <p class="form-control">@Model.ArtistId</p>
+</div >
+
+<div  class="form-group">
+    <label for="Name">Name</label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name"></span>
+
+</div >
+<h4>Last.fm <i class="fab fa-lastfm-square @(string.IsNullOrEmpty(Model.MbId)? "text-danger" : "text-success" )"></i> </h4>
+<fieldset class="form-group">
+    <label for="MbId">MusicBrainz Identifier</label>
+    <div class="form-control text-muted" readonly>@Model.MbId</div>
+</fieldset>
+
+
+<div class="form-group">
+    <label for="Bio">Bio</label>
+    <div class="form-control text-muted" readonly style="height:inherit !important">@Model.Bio</div>
+</div>
+
+<script>
+    
+    /*
+     $("form").validate({
+        showErrors:function(errorMap, errorList) {
+           // alert(errorMap);
+        }
+        });
+       $(function(){
+          $('.field-validation-error').each(  function( a, b ) {
+              $(b).attr('data-valmsg-for');
+             $(b).popover({trigger:'focus',content:"a.innerText"});
+              $(b).popover('show')
+              //console.log(b);
+          });
+
+});*/
+</script>
+
+@* //TODO: make 'generic' viewcomponent *@
+<div class="d-flex justify-content-end">
+    <div class="p-2">
+        <input formaction="@(Url.Action("Edit","Artist", new { area="Admin", id = Model?.ArtistId.ToString()?? Context.Request.Query["id"].ToString() }))" class="btn btn-success" type="submit" role="button" value="Save" />
+    </div>
+    
+    <div class="p-2">
+        @if (Model.ArtistId != 0 ) {
+            <a asp-action="Index" asp-route-id="@(Model.ArtistId)" class="btn btn-secondary" role="button">Cancel</a>
+        } else {
+            <a  href="#" onclick="javascript:history.back();" class="btn btn-secondary" role="button">Cancel</a>
+        }
+    </div>
+</div>
+
+
+
+
+</form>
