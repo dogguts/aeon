@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace Chinook.Repository {
     public class UnitOfWorkAuditItem {
@@ -23,12 +23,12 @@ namespace Chinook.Repository {
         public override string ToString() {
             var sb = new System.Text.StringBuilder();
 
-            var header = $"{Action} ==== {Model} {{{JsonConvert.SerializeObject(KeyValues)}}} ";
+            var header = $"{Action} ==== {Model} {{{JsonSerializer.Serialize(KeyValues)}}} ";
             var padding = "".PadLeft(Math.Max(0, 120 - header.Length), '=');
             header = padding + header + padding;
             sb.AppendLine(header);
-            string oldValues = OldValues.Count == 0 ? "null" : JsonConvert.SerializeObject(OldValues);
-            string newValues = NewValues.Count == 0 ? "null" : JsonConvert.SerializeObject(NewValues);
+            string oldValues = OldValues.Count == 0 ? "null" : JsonSerializer.Serialize(OldValues);
+            string newValues = NewValues.Count == 0 ? "null" : JsonSerializer.Serialize(NewValues);
             sb.AppendLine($"{oldValues}");
             sb.AppendLine("=>");
             sb.AppendLine($"{newValues}");

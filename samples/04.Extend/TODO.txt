@@ -1,0 +1,4 @@
+Extend
+	custom implementation (override default repository class, eg force softdelete (delete property through reflection ór iface?)
+	custom implementation (extend default repository class) 
+	full custom implementation (implement interface)

@@ -1,7 +1,5 @@
-using System;
 using System.Linq;
 using Aeon.Core.Repository.Infrastructure;
-using Model = Chinook.Repository.Model;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 using Aeon.Core.Repository;
@@ -10,19 +8,14 @@ using System.ComponentModel;
 namespace Chinook.Repository.Integration.Tests {
 
     public class ReadonlyRepositoryTest : IClassFixture<ReadonlyRepositorySetup> {
-        private readonly IReadonlyRepository<Model.Genre> _genreRepository;
         private readonly IReadonlyRepository<Model.MediaType> _mediaTypeRepository;
         private readonly IReadonlyRepository<Model.Artist> _artistRepository;
         private readonly IReadonlyRepository<Model.Album> _albumRepository;
 
-        private readonly IReadonlyRepository<Model.Genre> _explicitReadonlyGenreRepository;
-
         public ReadonlyRepositoryTest(ReadonlyRepositorySetup serviceSetup) {
-            _genreRepository = serviceSetup.ServiceProvider.GetRequiredService<IRepository<Model.Genre>>();
             _mediaTypeRepository = serviceSetup.ServiceProvider.GetRequiredService<IRepository<Model.MediaType>>();
             _artistRepository = serviceSetup.ServiceProvider.GetRequiredService<IRepository<Model.Artist>>();
             _albumRepository = serviceSetup.ServiceProvider.GetRequiredService<IRepository<Model.Album>>();
-            _explicitReadonlyGenreRepository = serviceSetup.ServiceProvider.GetRequiredService<IReadonlyRepository<Model.Genre>>();
         }
 
         /// <summary>
@@ -134,7 +127,7 @@ namespace Chinook.Repository.Integration.Tests {
         public void GetWithNullFilter() {
             //creating a RepositoryFilter with criterea==null just creates a filter without criteria (same as All)
             var filter = new RepositoryFilter<Model.Album>(null);
-            var (data, total) = _albumRepository.GetWithFilter(filter);
+            var (_, total) = _albumRepository.GetWithFilter(filter);
             Assert.Equal(347, total);
         }
 
@@ -144,7 +137,7 @@ namespace Chinook.Repository.Integration.Tests {
         [Fact]
         public void GetWithFilterNull() {
             //calling GetWithFilter with null as filter results in no filter
-            var (data, total) = _albumRepository.GetWithFilter(null);
+            var (_, total) = _albumRepository.GetWithFilter(null);
             Assert.Equal(347, total);
         }
 
@@ -152,7 +145,7 @@ namespace Chinook.Repository.Integration.Tests {
         /// Get models using paging
         /// </summary>
         [Theory]
-        [InlineData(0, 10, 347, new string[] { "[1997] Black Light Syndrome", "Zooropa", "Worlds", "Weill: The Seven Deadly Sins", "Warner 25 Anos", "War", "Walking Into Clarksdale", "Wagner: Favourite Overtures", "Vs.", "Vozes do MPB" })]
+        [InlineData(1, 10, 347, new string[] { "[1997] Black Light Syndrome", "Zooropa", "Worlds", "Weill: The Seven Deadly Sins", "Warner 25 Anos", "War", "Walking Into Clarksdale", "Wagner: Favourite Overtures", "Vs.", "Vozes do MPB" })]
         [InlineData(2, 10, 347, new string[] { "Voodoo Lounge", "Volume Dois", "Vivaldi: The Four Seasons", "Virtual XI", "Vinícius De Moraes - Sem Limite", "Vinicius De Moraes", "Vault: Def Leppard's Greatest Hits", "Van Halen III", "Van Halen", "Use Your Illusion II" })]
         [InlineData(400, 10, 347, new string[] { })]
         public void GetWithNullFilterAndSortAndPaging(int page, int pageSize, int expectedTotal, string[] expectedAlbumTitles) {
@@ -172,7 +165,7 @@ namespace Chinook.Repository.Integration.Tests {
         /// Get models using paging
         /// </summary>
         [Theory]
-        [InlineData(0, 10, 347, new string[] { "[1997] Black Light Syndrome", "Zooropa", "Worlds", "Weill: The Seven Deadly Sins", "Warner 25 Anos", "War", "Walking Into Clarksdale", "Wagner: Favourite Overtures", "Vs.", "Vozes do MPB" })]
+        [InlineData(1, 10, 347, new string[] { "[1997] Black Light Syndrome", "Zooropa", "Worlds", "Weill: The Seven Deadly Sins", "Warner 25 Anos", "War", "Walking Into Clarksdale", "Wagner: Favourite Overtures", "Vs.", "Vozes do MPB" })]
         [InlineData(2, 10, 347, new string[] { "Voodoo Lounge", "Volume Dois", "Vivaldi: The Four Seasons", "Virtual XI", "Vinícius De Moraes - Sem Limite", "Vinicius De Moraes", "Vault: Def Leppard's Greatest Hits", "Van Halen III", "Van Halen", "Use Your Illusion II" })]
         [InlineData(400, 10, 347, new string[] { })]
         public void GetWithFilterNullAndSortAndPaging(int page, int pageSize, int expectedTotal, string[] expectedAlbumTitles) {

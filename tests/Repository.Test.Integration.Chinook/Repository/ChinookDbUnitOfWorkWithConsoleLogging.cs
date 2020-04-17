@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Newtonsoft.Json;
 
 namespace Chinook.Repository {
 
     public class ChinookDbUnitOfWorkWithConsoleLogging : Infrastructure.IChinookDbUnitOfWork {
-        private ChinookDbContext _context;
+        private readonly ChinookDbContext _context;
 
         public ChinookDbUnitOfWorkWithConsoleLogging(ChinookDbContext context) {
             _context = context;
@@ -25,8 +23,9 @@ namespace Chinook.Repository {
 
             foreach (var entry in _context.ChangeTracker.Entries()) {
 
-                var auditEntry = new UnitOfWorkAuditItem(entry);
-                auditEntry.Model = entry.Entity.GetType().ToString();
+                var auditEntry = new UnitOfWorkAuditItem(entry) {
+                    Model = entry.Entity.GetType().ToString()
+                };
                 auditEntries.Add(auditEntry);
 
                 foreach (var property in entry.Properties) {

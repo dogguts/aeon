@@ -7,28 +7,28 @@ using Aeon.Core.Repository.Infrastructure;
 #pragma warning disable 1591 //docs are in interface specifications
 
 namespace Aeon.Core.Repository {
-    public class RepositoryInclude<T> : IRepositoryInclude<T>, IRepositoryIncludable<T> where T : class {
-        private List<IRepositoryIncludable<T>> _includes = new List<IRepositoryIncludable<T>>();
+    public class RepositoryInclude<TEntity> : IRepositoryInclude<TEntity>, IRepositoryIncludable<TEntity> where TEntity : class {
+        private readonly List<IRepositoryIncludable<TEntity>> _includes = new List<IRepositoryIncludable<TEntity>>();
 
         public RepositoryInclude() { }
-        public RepositoryInclude(IRepositoryInclude<T> repositoryInclude) {
+        public RepositoryInclude(IRepositoryInclude<TEntity> repositoryInclude) {
             if (repositoryInclude != null) {
-                _includes = new List<IRepositoryIncludable<T>>(repositoryInclude.Includes);
+                _includes = new List<IRepositoryIncludable<TEntity>>(repositoryInclude.Includes);
             }
         }
 
-        internal IRepositoryIncludable<T> AddInclude(IRepositoryIncludable<T> inc) {
+        internal IRepositoryIncludable<TEntity> AddInclude(IRepositoryIncludable<TEntity> inc) {
             _includes.Add(inc);
             return inc;
         }
 
         public IEnumerable<string> IncludePaths => _includes.Select(i => i.ToString());
-        public IReadOnlyList<IRepositoryIncludable<T>> Includes => _includes;
+        public IReadOnlyList<IRepositoryIncludable<TEntity>> Includes => _includes;
 
         public String Name { get; set; }
 
         //TODO: internal?
-        public IRepositoryIncludable<T> Previous => throw new NotImplementedException();
+        public IRepositoryIncludable<TEntity> Previous => throw new NotImplementedException();
     }
 
     public interface IRepositoryIncludable<out T> where T : class {

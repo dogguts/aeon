@@ -1,34 +1,29 @@
-using System;
 using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Chinook.Repository;
-using Chinook.Repository.Model;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
 
 namespace Chinook.Repository.Integration.Tests.Remedies {
 
     public class Remedy4Setup {
 
-        public static readonly LoggerFactory MyLoggerFactory = new LoggerFactory(new[] {
-        new ConsoleLoggerProvider((category, level) => level == LogLevel.Warning, true) /* level == LogLevel.Information */
+        public static ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
+            builder.AddFilter((category, level) => level == LogLevel.Warning)
+                   .AddConsole();
         });
-
-        private SqliteConnection connection;
+        private readonly SqliteConnection connection;
 
         public ServiceProvider ServiceProvider { get; private set; }
 
-       // public static MemoryCache MemoryCache = new MemoryCache(new MemoryCacheOptions());
+        // public static MemoryCache MemoryCache = new MemoryCache(new MemoryCacheOptions());
 
         public Remedy4Setup() {
 
             var services = new ServiceCollection();
 
-         services.AddEntityFrameworkSqlite();
+            services.AddEntityFrameworkSqlite();
 
             connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -37,8 +32,7 @@ namespace Chinook.Repository.Integration.Tests.Remedies {
 
 
             services.AddDbContext<Chinook.Repository.ChinookDbContext>(opt => opt.UseSqlite(connection)
-            
-                                                                            // .UseMemoryCache(MemoryCache)
+                                                                             // .UseMemoryCache(MemoryCache)
                                                                              .EnableSensitiveDataLogging()
                                                                              .UseLoggerFactory(MyLoggerFactory));
 

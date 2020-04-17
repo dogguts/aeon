@@ -1,17 +1,9 @@
-using System;
-using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Model = Chinook.Repository.Model;
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
 using Xunit;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit.Priority;
-using System.Linq.Expressions;
 
 namespace Chinook.Repository.Integration.Tests {
     public class Repository : IClassFixture<RepositorySetup> {
@@ -129,11 +121,11 @@ namespace Chinook.Repository.Integration.Tests {
             using (var scope = scopeFactory.CreateScope()) {
                 var artistRepository = scope.ServiceProvider.GetRequiredService<IRepository<Model.Artist>>();
                 // get discography by artistname
-                var result = artistRepository.GetWithFilter(Filter.ArtistFilter.Discography(artistName));
+                var (Data, _) = artistRepository.GetWithFilter(Filter.ArtistFilter.Discography(artistName));
                 // get first hit (in our database there will only be one hit)
-                var band = result.Data.First();
+                var band = Data.First();
                 // Asserts (database vs testdata)
-                result.Data.ToList().ForEach(a => {
+                Data.ToList().ForEach(a => {
                     Assert.Equal(artistName, a.Name);
                     a.Album.ToList().ForEach(al => {
                         Assert.Equal(albumTitle, al.Title);
@@ -187,12 +179,12 @@ namespace Chinook.Repository.Integration.Tests {
                 var trackRepository = scope.ServiceProvider.GetRequiredService<IRepository<Model.Track>>();
 
                 var artist = artistRepository.GetWithFilter(Filter.ArtistFilter.Discography(artistToDelete)).Data.First();
-                
+
                 foreach (var album in artist.Album) {
                     foreach (var track in album.Track) {
                         trackRepository.Delete(track);
                     }
-                    albumRepository.Delete(album );
+                    albumRepository.Delete(album);
                 }
                 artistRepository.Delete(artist);
 

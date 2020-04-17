@@ -1,23 +1,20 @@
-using System;
 using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Chinook.Repository;
-using Chinook.Repository.Model;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
 
 namespace Chinook.Repository.Integration.Tests {
 
     public class RepositorySetup {
 
-        public static readonly LoggerFactory MyLoggerFactory = new LoggerFactory(new[] {
-        new ConsoleLoggerProvider((category, level) => level == LogLevel.Warning, true) /* level == LogLevel.Information */
+        public static ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
+            builder.AddFilter((category, level) => level == LogLevel.Warning)
+                   .AddConsole();
         });
 
-        private SqliteConnection connection;
+        private readonly SqliteConnection connection;
 
         public ServiceProvider ServiceProvider { get; private set; }
 
@@ -51,6 +48,7 @@ namespace Chinook.Repository.Integration.Tests {
             dbContext.Database.EnsureCreated();
 
             //Add some predefined records  
+            dbContext.Artist.Add(new Model.Artist() { Name = "AC/DC" });
             dbContext.MediaType.Add(new Model.MediaType() { Name = "MP3" });
             dbContext.SaveChanges();
         }
