@@ -29,7 +29,7 @@ jobs:
         dotnet-version: 3.1.201
     
     - name: testje
-      run: echo short= $GH_SHORT_SHA long= $GITHUB_SHA
+      run: echo shorta= $GH_SHORT_SHAa  shortb= $GH_SHORT_SHAb long= $GITHUB_SHA
       env:
         GH_SHORT_SHAa: $(git rev-parse --short "$GITHUB_SHA")
         GH_SHORT_SHAb: ${git rev-parse --short "$GITHUB_SHA"}
