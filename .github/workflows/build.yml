@@ -43,7 +43,7 @@ jobs:
       run: dotnet build aeon.sln --configuration Release
     
     - name: Test
-      run: dotnet test tests\Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
+      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
     
     - name: Publish test
       uses: actions/upload-artifact@master
