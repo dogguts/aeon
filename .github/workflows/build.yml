@@ -28,7 +28,7 @@ jobs:
             dotnet-version: 3.1.201
             source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
-            NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+            NUGET_AUTH_TOKEN: ${{secrets.GH_NUGET_TOKEN}}
                
     - name: Runtime environment
       shell: bash
@@ -45,14 +45,14 @@ jobs:
     - name: Build
       run: dotnet build aeon.sln --configuration Release
     
-    - name: Test
-      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
+#    - name: Test
+#      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
     
-    - name: Publish Test results to Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: Repository.Test.Integration.trx
-        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
+#    - name: Publish Test results to Artifacts
+#      uses: actions/upload-artifact@master
+#      with:
+#        name: Repository.Test.Integration.trx
+#        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
 
     - name: Pack
       run: |
