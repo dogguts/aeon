@@ -35,11 +35,9 @@ jobs:
       run: |
           echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"    
           
-    - name: testje
-      run: echo shorta= $GH_SHORT_SHA  shortb= $GH_SHORT_SHAb long= $GITHUB_SHA
-      env:
-        GH_SHORT_SHAa: $(git rev-parse --short "$GITHUB_SHA")
-        GH_SHORT_SHAb: ${git rev-parse --short "$GITHUB_SHA"}
+    - name: ConsoleOut 
+      run: echo SSA::7=$GH_SHORT_SHA GITHUB_WORKFLOW=$GITHUB_WORKFLOW
+ 
     
     # Runs a single command using the runners shell
     - name: Run a one-line script
