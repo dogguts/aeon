@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+ 
+
+    steps:
+    # Checks-out under $GITHUB_WORKSPACE
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.201
+    
+    - name: Runtime environment
+      shell: bash
+      env:
+          WORKSPACE: ${{ github.workspace }}
+      run: |
+          echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"    
+          
+    - name: ConsoleOut 
+      run: |
+          echo SSA::7=$GH_SHORT_SHA GITHUB_WORKFLOW=$GITHUB_WORKFLOW
+          echo pkg-version-suffix=$GITHUB_WORKFLOW-$GH_SHORT_SHA
+    
+    - name: Build
+      run: dotnet build aeon.sln --configuration Release
+    
+    - name: Test
+      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
+    
+    - name: Publish test
+      uses: actions/upload-artifact@master
+      with:
+        name: Repository.Test.Integration.trx
+        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
+
+    - name: Pack
+      run: dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA
+
+

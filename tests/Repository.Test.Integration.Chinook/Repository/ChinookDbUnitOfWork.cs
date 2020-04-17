@@ -1,9 +1,6 @@
-
-using System;
-
 namespace Chinook.Repository {
     public class ChinookDbUnitOfWork : Infrastructure.IChinookDbUnitOfWork {
-        private ChinookDbContext _context;
+        private readonly ChinookDbContext _context;
 
         public ChinookDbUnitOfWork(ChinookDbContext context) {
             _context = context;

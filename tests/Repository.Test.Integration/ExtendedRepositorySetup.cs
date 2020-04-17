@@ -1,25 +1,23 @@
 using System;
 using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Chinook.Repository;
 using Chinook.Repository.Infrastructure;
 using Chinook.Repository.Model;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
 
 namespace Chinook.Repository.Integration.Tests {
 
     public class ExtendedRepositorySetup {
 
-        public static readonly LoggerFactory MyLoggerFactory = new LoggerFactory(new[] {
-        new ConsoleLoggerProvider((category, level)
-            => level == LogLevel.Information, true)
+        public static ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
+            builder.AddFilter((category, level) => level == LogLevel.Information)
+                   .AddConsole();
         });
 
-        private SqliteConnection connection;
+        private readonly SqliteConnection connection;
 
         public ServiceProvider ServiceProvider { get; private set; }
 
@@ -49,7 +47,7 @@ namespace Chinook.Repository.Integration.Tests {
             // Fill (memory) database from sql script (might take a while)
             Console.WriteLine("Initializing data (this might take a while)... ");
             var dataSql = System.IO.File.ReadAllText("Chinook_DataSqlite.sql");
-            dbContext.Database.ExecuteSqlCommand(dataSql);
+            dbContext.Database.ExecuteSqlRaw(dataSql);
         }
 
         public void Dispose() {

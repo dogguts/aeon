@@ -1,11 +1,7 @@
 using System;
 using System.Linq;
-using Aeon.Core.Repository.Infrastructure;
-using Model = Chinook.Repository.Model;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
-using Aeon.Core.Repository;
-using System.ComponentModel;
 using Chinook.Repository.Infrastructure;
 using System.Collections.Generic;
 
