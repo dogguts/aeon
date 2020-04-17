@@ -28,7 +28,7 @@ jobs:
             dotnet-version: 3.1.201
             source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
-            NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}  
+            NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
                
     - name: Runtime environment
       shell: bash
@@ -48,7 +48,7 @@ jobs:
     - name: Test
       run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
     
-    - name: Publish Artifact Test results
+    - name: Publish Test results to Artifacts
       uses: actions/upload-artifact@master
       with:
         name: Repository.Test.Integration.trx
@@ -59,5 +59,6 @@ jobs:
         dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
-    - name: Push packages to GitHub registry
+    - name: Publish packages to GPR
       run: dotnet nuget push packages/*.nupkg --skip-duplicate
+      
