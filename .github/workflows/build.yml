@@ -43,6 +43,7 @@ jobs:
           echo pkg-version-suffix=$GITHUB_WORKFLOW-$GH_SHORT_SHA
           pwd
           cat /home/runner/work/nuget.config
+          cp /home/runner/work/nuget.config /home/runner/work/aeon/aeon
     
     - name: Build
       run: dotnet build aeon.sln --configuration Release
