@@ -1,8 +1,6 @@
-﻿using System;
-using Chinook.Repository.Model;
+﻿using Chinook.Repository.Model;
+using View = Chinook.Repository.Model.View;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-
 
 /*
 ~/Dropbox/Projects/Pantheon/Chinook/src/Repository$ dotnet ef dbcontext scaffold "Filename=/home/dogguts/Dropbox/Projects/Pantheon/Chinook/src/Chinook_Sqlite_AutoIncrementPKs.sqlite" Microsoft.EntityFrameworkCore.Sqlite -s ../test/ --force -o Model -d
@@ -32,6 +30,8 @@ namespace Chinook.Repository {
         public virtual DbSet<PlaylistTrack> PlaylistTrack { get; set; }
         public virtual DbSet<Track> Track { get; set; }
 
+        public virtual DbSet<View.AlbumCountByArtists> AlbumCountByArtists { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             if (!optionsBuilder.IsConfigured) {
                 optionsBuilder.UseSqlite("Filename=chinook.sqlite");
@@ -39,6 +39,16 @@ namespace Chinook.Repository {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            /*
+            CREATE VIEW AlbumCountByArtists
+            AS 
+                SELECT Artist.Name, COUNT(AlbumId) Total FROM Artist
+                INNER JOIN Album ON Album.ArtistId = Artist.ArtistId
+                GROUP BY Artist.Name 
+                ORDER BY COUNT(AlbumId) DESC
+            */
+            modelBuilder.Entity<View.AlbumCountByArtists>().ToView("AlbumCountByArtists").HasNoKey();
+ 
             modelBuilder.Entity<Album>(entity => {
                 entity.HasIndex(e => e.AlbumId)
                     .HasName("IPK_Album")

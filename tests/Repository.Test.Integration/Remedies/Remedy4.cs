@@ -1,13 +1,8 @@
 using System;
-using System.Linq;
 using Aeon.Core.Repository.Infrastructure;
-using Model = Chinook.Repository.Model;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
-using Aeon.Core.Repository;
-using System.ComponentModel;
 using System.Reflection;
-using System.Collections;
 
 namespace Chinook.Repository.Integration.Tests.Remedies {
     /// <summary>
