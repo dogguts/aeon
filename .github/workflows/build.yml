@@ -23,13 +23,20 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.201
+#    - name: Setup .NET Core SDK
+#      uses: actions/setup-dotnet@v1
+#      with:
+#        dotnet-version: 3.1.201
     
+    - name: Runtime environment
+      shell: bash
+      env:
+          WORKSPACE: ${{ github.workspace }}
+      run: |
+          echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"    
+          
     - name: testje
-      run: echo shorta= $GH_SHORT_SHAa  shortb= $GH_SHORT_SHAb long= $GITHUB_SHA
+      run: echo shorta= $GH_SHORT_SHA  shortb= $GH_SHORT_SHAb long= $GITHUB_SHA
       env:
         GH_SHORT_SHAa: $(git rev-parse --short "$GITHUB_SHA")
         GH_SHORT_SHAb: ${git rev-parse --short "$GITHUB_SHA"}
