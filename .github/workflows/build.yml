@@ -63,5 +63,5 @@ jobs:
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
-      run: dotnet nuget push packages/*.nupkg --skip-duplicate --source "defaultPushSource"
+      run: dotnet nuget push packages/*.nupkg --skip-duplicate --source "https://nuget.pkg.github.com/dogguts/index.json"
       
