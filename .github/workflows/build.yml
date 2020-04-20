@@ -1,25 +1,17 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
+
     runs-on: ubuntu-latest
-
-
+     
     steps:
-    # Checks-out under $GITHUB_WORKSPACE
     - uses: actions/checkout@v2
 
     - name: Setup .NET Core SDK
@@ -29,17 +21,6 @@ jobs:
             source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
             NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-    - name: ConsoleOut
-      run: |
-          dotnet nuget list source          
-          pwd
-          echo **  cat /home/runner/work/nuget.config
-          cat /home/runner/work/nuget.config
-          sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config; rm nuget.config.bak
-          echo ** cat nuget.config
-          cat nuget.config
-          dotnet nuget list source          
           
     - name: Runtime environment
       shell: bash
@@ -47,27 +28,18 @@ jobs:
           WORKSPACE: ${{ github.workspace }}
       run: |
           echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"    
-#dotnet tool install gpr -g
-          
-    - name: ConsoleOut2 
-      run: |
-          echo SSA::7=$GH_SHORT_SHA GITHUB_WORKFLOW=$GITHUB_WORKFLOW
-          echo pkg-version-suffix=$GITHUB_WORKFLOW-$GH_SHORT_SHA
-          pwd
-          cat /home/runner/work/nuget.config
-          cp /home/runner/work/nuget.config /home/runner/work/aeon/
     
     - name: Build
       run: dotnet build aeon.sln --configuration Release
     
-#    - name: Test
-#      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
-    
-#    - name: Publish Test results to Artifacts
-#      uses: actions/upload-artifact@master
-#      with:
-#        name: Repository.Test.Integration.trx
-#        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
+    - name: Test
+      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
+   
+    - name: Publish Test results to Artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: Repository.Test.Integration.trx
+        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
 
     - name: Pack
       run: |
@@ -75,6 +47,4 @@ jobs:
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
-#run: gpr push "packages/*.nupkg" -k ${{secrets.GH_NUGET_TOKEN}}
       run: dotnet nuget push packages/*.nupkg --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
- 
