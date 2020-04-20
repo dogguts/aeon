@@ -35,7 +35,7 @@ jobs:
           pwd
           echo **  cat /home/runner/work/nuget.config
           cat /home/runner/work/nuget.config
-          sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config > nuget.config
+          sed -i.bak 's/GITHUB_TOKEN/abc/g' nuget.config;rm nuget.config.bak
           echo ** cat nuget.config
           cat nuget.config
           
