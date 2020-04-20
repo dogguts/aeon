@@ -32,14 +32,14 @@ jobs:
 
     - name: ConsoleOut
       run: |
+          dotnet nuget list source          
           pwd
           echo **  cat /home/runner/work/nuget.config
           cat /home/runner/work/nuget.config
-          sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config;rm nuget.config.bak
+          sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config; rm nuget.config.bak
           echo ** cat nuget.config
           cat nuget.config
-          
-          
+          dotnet nuget list source          
           
     - name: Runtime environment
       shell: bash
@@ -47,7 +47,7 @@ jobs:
           WORKSPACE: ${{ github.workspace }}
       run: |
           echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"    
-          dotnet tool install gpr -g
+#dotnet tool install gpr -g
           
     - name: ConsoleOut2 
       run: |
@@ -75,6 +75,6 @@ jobs:
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
-      run: gpr push "packages/*.nupkg" -k ${{secrets.GH_NUGET_TOKEN}}
-#      run: dotnet nuget push packages/*.nupkg --skip-duplicate --source "Source"
+#run: gpr push "packages/*.nupkg" -k ${{secrets.GH_NUGET_TOKEN}}
+      run: dotnet nuget push packages/*.nupkg --skip-duplicate --source "github"
  
