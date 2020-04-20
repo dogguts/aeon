@@ -9,6 +9,7 @@
     <AssemblyName>Aeon.Core.Repository</AssemblyName>
     <RootNamespace>Aeon.Core.Repository</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <RepositoryUrl>https://github.com/dogguts/aeon</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
