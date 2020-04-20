@@ -10,9 +10,19 @@
     <RootNamespace>Aeon.Core.Repository</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <RepositoryUrl>https://github.com/dogguts/aeon</RepositoryUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>../../aeon.snk</AssemblyOriginatorKeyFile>
+    <PackageIcon>aeon.png</PackageIcon>
   </PropertyGroup>  
   
   <ItemGroup>
     <ProjectReference Include="..\..\src\Aeon.Core.Repository\Aeon.Core.Repository.csproj" />
+  </ItemGroup>  
+  
+  <ItemGroup>
+    <None Include="..\..\aeon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

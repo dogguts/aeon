@@ -45,10 +45,12 @@ jobs:
 
     - name: Pack
       run: |
-        dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
-        dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
+        dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
+        dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
+#        dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
+#        dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
       run: | 
-        ls packages/*.nupkg
-        dotnet nuget push 'packages/*.nupkg' --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
+        ls packages/*.*nupkg
+        dotnet nuget push 'packages/*.*nupkg' --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
