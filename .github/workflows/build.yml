@@ -33,6 +33,7 @@ jobs:
     - name: ConsoleOut
       run: |
           pwd
+          cp nuget.config ../../_temp/nuget.config
           cat /home/runner/work/nuget.config
           cp /home/runner/work/nuget.config /home/runner/work/aeon/
           ls /home/runner/work/aeon/    
