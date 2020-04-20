@@ -29,7 +29,14 @@ jobs:
             source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
             NUGET_AUTH_TOKEN: ${{secrets.GH_NUGET_TOKEN}}
-               
+
+    - name: ConsoleOut
+      run: |
+          pwd
+          cat /home/runner/work/nuget.config
+          cp /home/runner/work/nuget.config /home/runner/work/aeon/
+          ls /home/runner/work/aeon/    
+
     - name: Runtime environment
       shell: bash
       env:
@@ -38,7 +45,7 @@ jobs:
           echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"    
           dotnet tool install gpr -g
           
-    - name: ConsoleOut 
+    - name: ConsoleOut2 
       run: |
           echo SSA::7=$GH_SHORT_SHA GITHUB_WORKFLOW=$GITHUB_WORKFLOW
           echo pkg-version-suffix=$GITHUB_WORKFLOW-$GH_SHORT_SHA
