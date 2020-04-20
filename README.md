@@ -17,6 +17,7 @@ A generic repository pattern implementation for ef core/netstandard2.0
 | CI|  |
 |--|--|
 | Build | ![Build status](https://dev.azure.com/dogguts/aeon/_apis/build/status/aeon-ASP.NET%20Core-CI) |
+|| ![CI](https://github.com/dogguts/aeon/workflows/CI/badge.svg?branch=master) |
 |Tests|![test](https://img.shields.io/azure-devops/tests/dogguts/aeon/2.svg)
 
 
