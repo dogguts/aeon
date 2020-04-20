@@ -33,7 +33,13 @@ jobs:
     - name: ConsoleOut
       run: |
           pwd
+          echo **  cat /home/runner/work/nuget.config
           cat /home/runner/work/nuget.config
+          sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config > nuget.config
+          echo ** cat nuget.config
+          cat nuget.config
+          
+          
           
     - name: Runtime environment
       shell: bash
