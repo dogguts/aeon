@@ -17,18 +17,19 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
-            dotnet-version: 3.1.201
-            source-url: https://nuget.pkg.github.com/dogguts/index.json
+        dotnet-version: 3.1.201
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
-            NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           
     - name: Runtime environment
       shell: bash
       env:
-          WORKSPACE: ${{ github.workspace }}
+        WORKSPACE: ${{ github.workspace }}
       run: |
-          echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"
-          sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config; rm nuget.config.bak
+        echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"
+        mv github_nuget.config nuget.config
+        sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config; rm nuget.config.bak
     
     - name: Build
       run: dotnet build aeon.sln --configuration Release
@@ -48,4 +49,6 @@ jobs:
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
-      run: dotnet nuget push packages/*.nupkg --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
+      run: | 
+        ls packages/*.nupkg
+        dotnet nuget push 'packages/*.nupkg' --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
