@@ -34,18 +34,18 @@ jobs:
     - name: Build
       run: dotnet build aeon.sln --configuration Release
     
-#    - name: Test
-#      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
-   
-#    - name: Publish Test results to Artifacts
-#      uses: actions/upload-artifact@master
-#      with:
-#        name: Repository.Test.Integration.trx
-#        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
+    - name: Test
+      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
+  
+    - name: Publish Test results to Artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: Repository.Test.Integration.trx
+        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
     
     - name: Run Samples
       run: |
-        find samples/ -name 01*.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
+        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
 
     - name: Pack
       run: |
