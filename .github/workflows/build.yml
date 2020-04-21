@@ -42,13 +42,15 @@ jobs:
 #      with:
 #        name: Repository.Test.Integration.trx
 #        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
+    
+    - name: Run Samples
+      run: |
+        find samples/ -name 01*.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
 
     - name: Pack
       run: |
         dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
-#        dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
-#        dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-$GH_SHORT_SHA /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
       run: | 
