@@ -1,17 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2647F36-C482-486E-856B-129312A899CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aeon.Core.Repository", "src\Aeon.Core.Repository\Aeon.Core.Repository.csproj", "{27C8E4E5-7A77-4240-BE49-BD4A4C295AFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aeon.Core.Repository", "src\Aeon.Core.Repository\Aeon.Core.Repository.csproj", "{27C8E4E5-7A77-4240-BE49-BD4A4C295AFB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C9960017-7A74-43ED-8A00-02BA32E3EC41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "tests\Repository.Test.Integration\Test.csproj", "{8474E849-9C23-4E9B-9AD2-84CEE557EF51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "tests\Repository.Test.Integration\Test.csproj", "{8474E849-9C23-4E9B-9AD2-84CEE557EF51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook", "tests\Repository.Test.Integration.Chinook\Chinook.csproj", "{709988EF-D4F1-484F-BFA3-56F55BDABB2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chinook", "tests\Repository.Test.Integration.Chinook\Chinook.csproj", "{709988EF-D4F1-484F-BFA3-56F55BDABB2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{E1B9D597-C9BB-4001-B246-9550406C467B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Basics", "01.Basics", "{F4875C81-8755-4751-8EFA-15A1BEE1BE5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ReadonlyRepository", "samples\01.Basics\04.ReadonlyRepository\04.ReadonlyRepository.csproj", "{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{27C8E4E5-7A77-4240-BE49-BD4A4C295AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -62,10 +65,30 @@ Global
 		{709988EF-D4F1-484F-BFA3-56F55BDABB2E}.Release|x64.Build.0 = Release|Any CPU
 		{709988EF-D4F1-484F-BFA3-56F55BDABB2E}.Release|x86.ActiveCfg = Release|Any CPU
 		{709988EF-D4F1-484F-BFA3-56F55BDABB2E}.Release|x86.Build.0 = Release|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Debug|x64.Build.0 = Debug|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Debug|x86.Build.0 = Debug|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Release|x64.ActiveCfg = Release|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Release|x64.Build.0 = Release|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27C8E4E5-7A77-4240-BE49-BD4A4C295AFB} = {C2647F36-C482-486E-856B-129312A899CF}
 		{8474E849-9C23-4E9B-9AD2-84CEE557EF51} = {C9960017-7A74-43ED-8A00-02BA32E3EC41}
 		{709988EF-D4F1-484F-BFA3-56F55BDABB2E} = {C9960017-7A74-43ED-8A00-02BA32E3EC41}
+		{F4875C81-8755-4751-8EFA-15A1BEE1BE5E} = {E1B9D597-C9BB-4001-B246-9550406C467B}
+		{FD77C4A3-64C8-4E9F-B58C-C2DAE61CDC65} = {F4875C81-8755-4751-8EFA-15A1BEE1BE5E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38BD3DA0-660A-42AE-B1E0-FDD693ACF133}
 	EndGlobalSection
 EndGlobal
