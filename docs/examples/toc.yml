@@ -1,0 +1,27 @@
+- name: Basics
+  items:
+    - href: xref:example_basic_setup
+    - href: xref:example_basic_setup_mvc
+    - href: xref:example_basic_repository
+    - href: xref:example_basic_repository_crud
+    - href: xref:example_basic_repository_readonly
+- name: Unit Of Work
+  items:
+    - href: xref:example_unitofwork_custom_simple
+    - href: xref:example_unitofwork_custom_logging
+- name: Filters
+  items:
+    - href: xref:example_filter_nullfilter
+    - href: xref:example_filter_includes
+    - href: xref:example_filter_paging
+    - href: xref:example_filter_sort
+- name: Extend
+  items:
+    - href: xref:example_extend_override
+#custom implementation (override default repository class, eg force softdelete (delete property through reflection �r iface?)
+    - href: xref:example_extend_extend
+#custom implementation (extend default repository class) 
+    - href: xref:example_extend_custom
+#full custom implementation (implement interface)
+
+  

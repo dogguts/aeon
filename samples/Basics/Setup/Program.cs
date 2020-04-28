@@ -1,11 +1,10 @@
 ﻿using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Aeon.Samples.Basics.Setup.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Aeon.Samples.Basics.Setup {
+namespace Aeon.Samples.BasicSetup {
 
     public class Runnable {
         private readonly IRepository<Blog> _blogRepository;
