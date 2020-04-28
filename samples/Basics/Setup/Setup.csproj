@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Aeon.Samples.Basics.Setup</AssemblyName>
     <RootNamespace>Aeon.Samples.Basics.Setup</RootNamespace>
-    <StartupObject>Aeon.Samples.Basics.Setup.Program</StartupObject>
+    <StartupObject>Aeon.Samples.BasicSetup.Program</StartupObject>
   </PropertyGroup>
 
 
