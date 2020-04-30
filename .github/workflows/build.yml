@@ -73,6 +73,9 @@ jobs:
         docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
         
         echo "**Clone gh-pages"
+        git config --global user.email "bart.verthe@gmail.com"
+        git config --global user.name "Bart Verthé"
+        
         mkdir gh-pages-tmp
         git clone https://github.com/${{ github.repository }}.git --branch gh-pages gh-pages-tmp
         cd gh-pages-tmp 
@@ -90,4 +93,4 @@ jobs:
         git commit -m "Update generated documentation"
         git push origin gh-pages
 
-        
+
