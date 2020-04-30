@@ -61,10 +61,15 @@ jobs:
      
     steps:
     - uses: actions/checkout@v2
-    - name: Test
-      shell: bash
-      env:
-        WORKSPACE: ${{ github.workspace }}
+    - uses: nuget/setup-nuget@v1
+      with:
+       nuget-version: '5.x'
+    - name: Test nuget
       run: |
         pwd
-        ps -a
+        nuget -version
+        ls -al
+        nuget install docfx.console -version 2.51.0
+        ls -al
+        
+        
