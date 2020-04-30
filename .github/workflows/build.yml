@@ -88,9 +88,11 @@ jobs:
         cd gh-pages-tmp
         git status --porcelain
         
-        echo "**Push gh-pages"
-        git add . -A
-        git commit -m "Update generated documentation"
-        git push origin gh-pages
+        echo "git config"
+        git config --local -l
+        #echo "**Push gh-pages"
+        #git add . -A
+        #git commit -m "Update generated documentation"
+        #git push origin gh-pages
 
 
