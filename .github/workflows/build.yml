@@ -67,7 +67,6 @@ jobs:
     - name: Test nuget
       run: |
         pwd
-        nuget -version
         ls -al
         nuget install docfx.console -version 2.51.0
         ls -al
