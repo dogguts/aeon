@@ -71,6 +71,9 @@ jobs:
         nuget install docfx.console -version 2.51.0
         ls -al
         docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
+        ls docfx
+        ls docfx/_site
+        
         
         
         
