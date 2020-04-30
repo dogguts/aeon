@@ -66,11 +66,15 @@ jobs:
        nuget-version: '5.x'
     - name: Test nuget
       run: |
-        pwd
-        ls -al
+        mkdir gh-pages-tmp
+        git clone https://github.com/${{ github.repository }}.git --branch gh-pages gh-pages-tmp
+        cd gh-pages-tmp 
+        ls -a
+        git rm -r *
+        
         nuget install docfx.console -version 2.51.0
-        ls -al
         docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
+        
         ls docs
         ls docs/_site
             
