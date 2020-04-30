@@ -89,6 +89,7 @@ jobs:
         git status --porcelain
         
         echo "git config"
+        git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ${{ secrets.GITHUB_TOKEN }}
         git config --local -l
         #echo "**Push gh-pages"
         #git add . -A
