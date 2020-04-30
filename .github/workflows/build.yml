@@ -70,5 +70,6 @@ jobs:
         ls -al
         nuget install docfx.console -version 2.51.0
         ls -al
+        docfx.exe --version
         
         
