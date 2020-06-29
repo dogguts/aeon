@@ -71,7 +71,13 @@ jobs:
         
         echo "**Run docfx"
         docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
-        
+
+    - name: Deploy 
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/_site/
 #        echo "**Clone gh-pages"
 #        git config --global user.email "bart.verthe@gmail.com"
 #        git config --global user.name "Bart Verthé"
