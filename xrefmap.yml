@@ -1,0 +1,1380 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Aeon.Core.Repository
+  name: Aeon.Core.Repository
+  href: api/Aeon.Core.Repository.html
+  commentId: N:Aeon.Core.Repository
+  fullName: Aeon.Core.Repository
+  nameWithType: Aeon.Core.Repository
+- uid: Aeon.Core.Repository.DefaultDbUnitOfWork`1
+  name: DefaultDbUnitOfWork<TContext>
+  href: api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html
+  commentId: T:Aeon.Core.Repository.DefaultDbUnitOfWork`1
+  name.vb: DefaultDbUnitOfWork(Of TContext)
+  fullName: Aeon.Core.Repository.DefaultDbUnitOfWork<TContext>
+  fullName.vb: Aeon.Core.Repository.DefaultDbUnitOfWork(Of TContext)
+  nameWithType: DefaultDbUnitOfWork<TContext>
+  nameWithType.vb: DefaultDbUnitOfWork(Of TContext)
+- uid: Aeon.Core.Repository.DefaultDbUnitOfWork`1.#ctor(`0)
+  name: DefaultDbUnitOfWork(TContext)
+  href: api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html#Aeon_Core_Repository_DefaultDbUnitOfWork_1__ctor__0_
+  commentId: M:Aeon.Core.Repository.DefaultDbUnitOfWork`1.#ctor(`0)
+  fullName: Aeon.Core.Repository.DefaultDbUnitOfWork<TContext>.DefaultDbUnitOfWork(TContext)
+  fullName.vb: Aeon.Core.Repository.DefaultDbUnitOfWork(Of TContext).DefaultDbUnitOfWork(TContext)
+  nameWithType: DefaultDbUnitOfWork<TContext>.DefaultDbUnitOfWork(TContext)
+  nameWithType.vb: DefaultDbUnitOfWork(Of TContext).DefaultDbUnitOfWork(TContext)
+- uid: Aeon.Core.Repository.DefaultDbUnitOfWork`1.#ctor*
+  name: DefaultDbUnitOfWork
+  href: api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html#Aeon_Core_Repository_DefaultDbUnitOfWork_1__ctor_
+  commentId: Overload:Aeon.Core.Repository.DefaultDbUnitOfWork`1.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.DefaultDbUnitOfWork<TContext>.DefaultDbUnitOfWork
+  fullName.vb: Aeon.Core.Repository.DefaultDbUnitOfWork(Of TContext).DefaultDbUnitOfWork
+  nameWithType: DefaultDbUnitOfWork<TContext>.DefaultDbUnitOfWork
+  nameWithType.vb: DefaultDbUnitOfWork(Of TContext).DefaultDbUnitOfWork
+- uid: Aeon.Core.Repository.DefaultDbUnitOfWork`1.Commit
+  name: Commit()
+  href: api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html#Aeon_Core_Repository_DefaultDbUnitOfWork_1_Commit
+  commentId: M:Aeon.Core.Repository.DefaultDbUnitOfWork`1.Commit
+  fullName: Aeon.Core.Repository.DefaultDbUnitOfWork<TContext>.Commit()
+  fullName.vb: Aeon.Core.Repository.DefaultDbUnitOfWork(Of TContext).Commit()
+  nameWithType: DefaultDbUnitOfWork<TContext>.Commit()
+  nameWithType.vb: DefaultDbUnitOfWork(Of TContext).Commit()
+- uid: Aeon.Core.Repository.DefaultDbUnitOfWork`1.Commit*
+  name: Commit
+  href: api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html#Aeon_Core_Repository_DefaultDbUnitOfWork_1_Commit_
+  commentId: Overload:Aeon.Core.Repository.DefaultDbUnitOfWork`1.Commit
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.DefaultDbUnitOfWork<TContext>.Commit
+  fullName.vb: Aeon.Core.Repository.DefaultDbUnitOfWork(Of TContext).Commit
+  nameWithType: DefaultDbUnitOfWork<TContext>.Commit
+  nameWithType.vb: DefaultDbUnitOfWork(Of TContext).Commit
+- uid: Aeon.Core.Repository.Infrastructure
+  name: Aeon.Core.Repository.Infrastructure
+  href: api/Aeon.Core.Repository.Infrastructure.html
+  commentId: N:Aeon.Core.Repository.Infrastructure
+  fullName: Aeon.Core.Repository.Infrastructure
+  nameWithType: Aeon.Core.Repository.Infrastructure
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1
+  name: IReadonlyRepository<TEntity>
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1
+  name.vb: IReadonlyRepository(Of TEntity)
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity)
+  nameWithType: IReadonlyRepository<TEntity>
+  nameWithType.vb: IReadonlyRepository(Of TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.All
+  name: All()
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_All
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.All
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.All()
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).All()
+  nameWithType: IReadonlyRepository<TEntity>.All()
+  nameWithType.vb: IReadonlyRepository(Of TEntity).All()
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: All(IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_All_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: All(IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: IReadonlyRepository<TEntity>.All(IRepositoryInclude<TEntity>)
+  nameWithType.vb: IReadonlyRepository(Of TEntity).All(IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.All*
+  name: All
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_All_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.All
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.All
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).All
+  nameWithType: IReadonlyRepository<TEntity>.All
+  nameWithType.vb: IReadonlyRepository(Of TEntity).All
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name: Get(IRepositoryInclude<TEntity>, Object[])
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_Get_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__System_Object___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name.vb: Get(IRepositoryInclude(Of TEntity), Object())
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>, System.Object[])
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity), System.Object())
+  nameWithType: IReadonlyRepository<TEntity>.Get(IRepositoryInclude<TEntity>, Object[])
+  nameWithType.vb: IReadonlyRepository(Of TEntity).Get(IRepositoryInclude(Of TEntity), Object())
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.Get(System.Object[])
+  name: Get(Object[])
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_Get_System_Object___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.Get(System.Object[])
+  name.vb: Get(Object())
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.Get(System.Object[])
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).Get(System.Object())
+  nameWithType: IReadonlyRepository<TEntity>.Get(Object[])
+  nameWithType.vb: IReadonlyRepository(Of TEntity).Get(Object())
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.Get*
+  name: Get
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_Get_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.Get
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.Get
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).Get
+  nameWithType: IReadonlyRepository<TEntity>.Get
+  nameWithType.vb: IReadonlyRepository(Of TEntity).Get
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilter(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_GetWithFilter_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0__System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilter(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: IReadonlyRepository<TEntity>.GetWithFilter(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: IReadonlyRepository(Of TEntity).GetWithFilter(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.GetWithFilter(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilter((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_GetWithFilter_System_ValueTuple_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0___System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.GetWithFilter(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilter((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.GetWithFilter(System.ValueTuple<Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).GetWithFilter(System.ValueTuple(Of Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity)), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: IReadonlyRepository<TEntity>.GetWithFilter((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: IReadonlyRepository(Of TEntity).GetWithFilter((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.GetWithFilter*
+  name: GetWithFilter
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepository_1_GetWithFilter_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IReadonlyRepository`1.GetWithFilter
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>.GetWithFilter
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity).GetWithFilter
+  nameWithType: IReadonlyRepository<TEntity>.GetWithFilter
+  nameWithType.vb: IReadonlyRepository(Of TEntity).GetWithFilter
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1
+  name: IReadonlyRepositoryAsync<TEntity>
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1
+  name.vb: IReadonlyRepositoryAsync(Of TEntity)
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity)
+  nameWithType: IReadonlyRepositoryAsync<TEntity>
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.AllAsync
+  name: AllAsync()
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_AllAsync
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.AllAsync
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.AllAsync()
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).AllAsync()
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.AllAsync()
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).AllAsync()
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: AllAsync(IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_AllAsync_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: AllAsync(IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.AllAsync(IRepositoryInclude<TEntity>)
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).AllAsync(IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.AllAsync*
+  name: AllAsync
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_AllAsync_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.AllAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.AllAsync
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).AllAsync
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.AllAsync
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).AllAsync
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name: GetAsync(IRepositoryInclude<TEntity>, Object[])
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_GetAsync_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__System_Object___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name.vb: GetAsync(IRepositoryInclude(Of TEntity), Object())
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>, System.Object[])
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity), System.Object())
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.GetAsync(IRepositoryInclude<TEntity>, Object[])
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).GetAsync(IRepositoryInclude(Of TEntity), Object())
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetAsync(System.Object[])
+  name: GetAsync(Object[])
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_GetAsync_System_Object___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetAsync(System.Object[])
+  name.vb: GetAsync(Object())
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.GetAsync(System.Object[])
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).GetAsync(System.Object())
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.GetAsync(Object[])
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).GetAsync(Object())
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetAsync*
+  name: GetAsync
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_GetAsync_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.GetAsync
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).GetAsync
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.GetAsync
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).GetAsync
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilterAsync(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_GetWithFilterAsync_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0__System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilterAsync(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.GetWithFilterAsync(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).GetWithFilterAsync(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetWithFilterAsync(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilterAsync((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_GetWithFilterAsync_System_ValueTuple_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0___System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetWithFilterAsync(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilterAsync((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.GetWithFilterAsync(System.ValueTuple<Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).GetWithFilterAsync(System.ValueTuple(Of Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity)), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.GetWithFilterAsync((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).GetWithFilterAsync((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetWithFilterAsync*
+  name: GetWithFilterAsync
+  href: api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html#Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync_1_GetWithFilterAsync_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync`1.GetWithFilterAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>.GetWithFilterAsync
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity).GetWithFilterAsync
+  nameWithType: IReadonlyRepositoryAsync<TEntity>.GetWithFilterAsync
+  nameWithType.vb: IReadonlyRepositoryAsync(Of TEntity).GetWithFilterAsync
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1
+  name: IRepository<TEntity>
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IRepository`1
+  name.vb: IRepository(Of TEntity)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity)
+  nameWithType: IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1.Add(`0)
+  name: Add(TEntity)
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html#Aeon_Core_Repository_Infrastructure_IRepository_1_Add__0_
+  commentId: M:Aeon.Core.Repository.Infrastructure.IRepository`1.Add(`0)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>.Add(TEntity)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity).Add(TEntity)
+  nameWithType: IRepository<TEntity>.Add(TEntity)
+  nameWithType.vb: IRepository(Of TEntity).Add(TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1.Add*
+  name: Add
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html#Aeon_Core_Repository_Infrastructure_IRepository_1_Add_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepository`1.Add
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>.Add
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity).Add
+  nameWithType: IRepository<TEntity>.Add
+  nameWithType.vb: IRepository(Of TEntity).Add
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1.Delete(`0)
+  name: Delete(TEntity)
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html#Aeon_Core_Repository_Infrastructure_IRepository_1_Delete__0_
+  commentId: M:Aeon.Core.Repository.Infrastructure.IRepository`1.Delete(`0)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>.Delete(TEntity)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity).Delete(TEntity)
+  nameWithType: IRepository<TEntity>.Delete(TEntity)
+  nameWithType.vb: IRepository(Of TEntity).Delete(TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1.Delete*
+  name: Delete
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html#Aeon_Core_Repository_Infrastructure_IRepository_1_Delete_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepository`1.Delete
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>.Delete
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity).Delete
+  nameWithType: IRepository<TEntity>.Delete
+  nameWithType.vb: IRepository(Of TEntity).Delete
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1.Update(`0)
+  name: Update(TEntity)
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html#Aeon_Core_Repository_Infrastructure_IRepository_1_Update__0_
+  commentId: M:Aeon.Core.Repository.Infrastructure.IRepository`1.Update(`0)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>.Update(TEntity)
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity).Update(TEntity)
+  nameWithType: IRepository<TEntity>.Update(TEntity)
+  nameWithType.vb: IRepository(Of TEntity).Update(TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepository`1.Update*
+  name: Update
+  href: api/Aeon.Core.Repository.Infrastructure.IRepository-1.html#Aeon_Core_Repository_Infrastructure_IRepository_1_Update_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepository`1.Update
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepository<TEntity>.Update
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepository(Of TEntity).Update
+  nameWithType: IRepository<TEntity>.Update
+  nameWithType.vb: IRepository(Of TEntity).Update
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryFilter`1
+  name: IRepositoryFilter<TEntity>
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryFilter-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IRepositoryFilter`1
+  name.vb: IRepositoryFilter(Of TEntity)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity)
+  nameWithType: IRepositoryFilter<TEntity>
+  nameWithType.vb: IRepositoryFilter(Of TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryFilter`1.Criteria
+  name: Criteria
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryFilter-1.html#Aeon_Core_Repository_Infrastructure_IRepositoryFilter_1_Criteria
+  commentId: P:Aeon.Core.Repository.Infrastructure.IRepositoryFilter`1.Criteria
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>.Criteria
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity).Criteria
+  nameWithType: IRepositoryFilter<TEntity>.Criteria
+  nameWithType.vb: IRepositoryFilter(Of TEntity).Criteria
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryFilter`1.Criteria*
+  name: Criteria
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryFilter-1.html#Aeon_Core_Repository_Infrastructure_IRepositoryFilter_1_Criteria_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepositoryFilter`1.Criteria
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>.Criteria
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity).Criteria
+  nameWithType: IRepositoryFilter<TEntity>.Criteria
+  nameWithType.vb: IRepositoryFilter(Of TEntity).Criteria
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1
+  name: IRepositoryInclude<TEntity>
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1
+  name.vb: IRepositoryInclude(Of TEntity)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity)
+  nameWithType: IRepositoryInclude<TEntity>
+  nameWithType.vb: IRepositoryInclude(Of TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.IncludePaths
+  name: IncludePaths
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html#Aeon_Core_Repository_Infrastructure_IRepositoryInclude_1_IncludePaths
+  commentId: P:Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.IncludePaths
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>.IncludePaths
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity).IncludePaths
+  nameWithType: IRepositoryInclude<TEntity>.IncludePaths
+  nameWithType.vb: IRepositoryInclude(Of TEntity).IncludePaths
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.IncludePaths*
+  name: IncludePaths
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html#Aeon_Core_Repository_Infrastructure_IRepositoryInclude_1_IncludePaths_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.IncludePaths
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>.IncludePaths
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity).IncludePaths
+  nameWithType: IRepositoryInclude<TEntity>.IncludePaths
+  nameWithType.vb: IRepositoryInclude(Of TEntity).IncludePaths
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.Includes
+  name: Includes
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html#Aeon_Core_Repository_Infrastructure_IRepositoryInclude_1_Includes
+  commentId: P:Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.Includes
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>.Includes
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity).Includes
+  nameWithType: IRepositoryInclude<TEntity>.Includes
+  nameWithType.vb: IRepositoryInclude(Of TEntity).Includes
+- uid: Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.Includes*
+  name: Includes
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html#Aeon_Core_Repository_Infrastructure_IRepositoryInclude_1_Includes_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepositoryInclude`1.Includes
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>.Includes
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity).Includes
+  nameWithType: IRepositoryInclude<TEntity>.Includes
+  nameWithType.vb: IRepositoryInclude(Of TEntity).Includes
+- uid: Aeon.Core.Repository.Infrastructure.IRepositorySort`1
+  name: IRepositorySort<TEntity>
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositorySort-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IRepositorySort`1
+  name.vb: IRepositorySort(Of TEntity)
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity)
+  nameWithType: IRepositorySort<TEntity>
+  nameWithType.vb: IRepositorySort(Of TEntity)
+- uid: Aeon.Core.Repository.Infrastructure.IRepositorySort`1.Sorts
+  name: Sorts
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositorySort-1.html#Aeon_Core_Repository_Infrastructure_IRepositorySort_1_Sorts
+  commentId: P:Aeon.Core.Repository.Infrastructure.IRepositorySort`1.Sorts
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>.Sorts
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity).Sorts
+  nameWithType: IRepositorySort<TEntity>.Sorts
+  nameWithType.vb: IRepositorySort(Of TEntity).Sorts
+- uid: Aeon.Core.Repository.Infrastructure.IRepositorySort`1.Sorts*
+  name: Sorts
+  href: api/Aeon.Core.Repository.Infrastructure.IRepositorySort-1.html#Aeon_Core_Repository_Infrastructure_IRepositorySort_1_Sorts_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IRepositorySort`1.Sorts
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>.Sorts
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity).Sorts
+  nameWithType: IRepositorySort<TEntity>.Sorts
+  nameWithType.vb: IRepositorySort(Of TEntity).Sorts
+- uid: Aeon.Core.Repository.Infrastructure.IUnitOfWork
+  name: IUnitOfWork
+  href: api/Aeon.Core.Repository.Infrastructure.IUnitOfWork.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IUnitOfWork
+  fullName: Aeon.Core.Repository.Infrastructure.IUnitOfWork
+  nameWithType: IUnitOfWork
+- uid: Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit
+  name: Commit()
+  href: api/Aeon.Core.Repository.Infrastructure.IUnitOfWork.html#Aeon_Core_Repository_Infrastructure_IUnitOfWork_Commit
+  commentId: M:Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit
+  fullName: Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit()
+  nameWithType: IUnitOfWork.Commit()
+- uid: Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit*
+  name: Commit
+  href: api/Aeon.Core.Repository.Infrastructure.IUnitOfWork.html#Aeon_Core_Repository_Infrastructure_IUnitOfWork_Commit_
+  commentId: Overload:Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit
+  nameWithType: IUnitOfWork.Commit
+- uid: Aeon.Core.Repository.IRepositoryIncludable`1
+  name: IRepositoryIncludable<T>
+  href: api/Aeon.Core.Repository.IRepositoryIncludable-1.html
+  commentId: T:Aeon.Core.Repository.IRepositoryIncludable`1
+  name.vb: IRepositoryIncludable(Of T)
+  fullName: Aeon.Core.Repository.IRepositoryIncludable<T>
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludable(Of T)
+  nameWithType: IRepositoryIncludable<T>
+  nameWithType.vb: IRepositoryIncludable(Of T)
+- uid: Aeon.Core.Repository.IRepositoryIncludable`1.Name
+  name: Name
+  href: api/Aeon.Core.Repository.IRepositoryIncludable-1.html#Aeon_Core_Repository_IRepositoryIncludable_1_Name
+  commentId: P:Aeon.Core.Repository.IRepositoryIncludable`1.Name
+  fullName: Aeon.Core.Repository.IRepositoryIncludable<T>.Name
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludable(Of T).Name
+  nameWithType: IRepositoryIncludable<T>.Name
+  nameWithType.vb: IRepositoryIncludable(Of T).Name
+- uid: Aeon.Core.Repository.IRepositoryIncludable`1.Name*
+  name: Name
+  href: api/Aeon.Core.Repository.IRepositoryIncludable-1.html#Aeon_Core_Repository_IRepositoryIncludable_1_Name_
+  commentId: Overload:Aeon.Core.Repository.IRepositoryIncludable`1.Name
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.IRepositoryIncludable<T>.Name
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludable(Of T).Name
+  nameWithType: IRepositoryIncludable<T>.Name
+  nameWithType.vb: IRepositoryIncludable(Of T).Name
+- uid: Aeon.Core.Repository.IRepositoryIncludable`1.Previous
+  name: Previous
+  href: api/Aeon.Core.Repository.IRepositoryIncludable-1.html#Aeon_Core_Repository_IRepositoryIncludable_1_Previous
+  commentId: P:Aeon.Core.Repository.IRepositoryIncludable`1.Previous
+  fullName: Aeon.Core.Repository.IRepositoryIncludable<T>.Previous
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludable(Of T).Previous
+  nameWithType: IRepositoryIncludable<T>.Previous
+  nameWithType.vb: IRepositoryIncludable(Of T).Previous
+- uid: Aeon.Core.Repository.IRepositoryIncludable`1.Previous*
+  name: Previous
+  href: api/Aeon.Core.Repository.IRepositoryIncludable-1.html#Aeon_Core_Repository_IRepositoryIncludable_1_Previous_
+  commentId: Overload:Aeon.Core.Repository.IRepositoryIncludable`1.Previous
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.IRepositoryIncludable<T>.Previous
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludable(Of T).Previous
+  nameWithType: IRepositoryIncludable<T>.Previous
+  nameWithType.vb: IRepositoryIncludable(Of T).Previous
+- uid: Aeon.Core.Repository.IRepositoryIncludable`2
+  name: IRepositoryIncludable<T, P>
+  href: api/Aeon.Core.Repository.IRepositoryIncludable-2.html
+  commentId: T:Aeon.Core.Repository.IRepositoryIncludable`2
+  name.vb: IRepositoryIncludable(Of T, P)
+  fullName: Aeon.Core.Repository.IRepositoryIncludable<T, P>
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludable(Of T, P)
+  nameWithType: IRepositoryIncludable<T, P>
+  nameWithType.vb: IRepositoryIncludable(Of T, P)
+- uid: Aeon.Core.Repository.IRepositoryIncludeExpression`2
+  name: IRepositoryIncludeExpression<T, P>
+  href: api/Aeon.Core.Repository.IRepositoryIncludeExpression-2.html
+  commentId: T:Aeon.Core.Repository.IRepositoryIncludeExpression`2
+  name.vb: IRepositoryIncludeExpression(Of T, P)
+  fullName: Aeon.Core.Repository.IRepositoryIncludeExpression<T, P>
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludeExpression(Of T, P)
+  nameWithType: IRepositoryIncludeExpression<T, P>
+  nameWithType.vb: IRepositoryIncludeExpression(Of T, P)
+- uid: Aeon.Core.Repository.IRepositoryIncludeExpression`2.Next
+  name: Next
+  href: api/Aeon.Core.Repository.IRepositoryIncludeExpression-2.html#Aeon_Core_Repository_IRepositoryIncludeExpression_2_Next
+  commentId: P:Aeon.Core.Repository.IRepositoryIncludeExpression`2.Next
+  fullName: Aeon.Core.Repository.IRepositoryIncludeExpression<T, P>.Next
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludeExpression(Of T, P).Next
+  nameWithType: IRepositoryIncludeExpression<T, P>.Next
+  nameWithType.vb: IRepositoryIncludeExpression(Of T, P).Next
+- uid: Aeon.Core.Repository.IRepositoryIncludeExpression`2.Next*
+  name: Next
+  href: api/Aeon.Core.Repository.IRepositoryIncludeExpression-2.html#Aeon_Core_Repository_IRepositoryIncludeExpression_2_Next_
+  commentId: Overload:Aeon.Core.Repository.IRepositoryIncludeExpression`2.Next
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.IRepositoryIncludeExpression<T, P>.Next
+  fullName.vb: Aeon.Core.Repository.IRepositoryIncludeExpression(Of T, P).Next
+  nameWithType: IRepositoryIncludeExpression<T, P>.Next
+  nameWithType.vb: IRepositoryIncludeExpression(Of T, P).Next
+- uid: Aeon.Core.Repository.ReadonlyRepository`2
+  name: ReadonlyRepository<TEntity, TDbContext>
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html
+  commentId: T:Aeon.Core.Repository.ReadonlyRepository`2
+  name.vb: ReadonlyRepository(Of TEntity, TDbContext)
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext)
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext)
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.#ctor(`1)
+  name: ReadonlyRepository(TDbContext)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2__ctor__1_
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.#ctor(`1)
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.ReadonlyRepository(TDbContext)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).ReadonlyRepository(TDbContext)
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.ReadonlyRepository(TDbContext)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).ReadonlyRepository(TDbContext)
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.#ctor*
+  name: ReadonlyRepository
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2__ctor_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.ReadonlyRepository
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).ReadonlyRepository
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.ReadonlyRepository
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).ReadonlyRepository
+- uid: Aeon.Core.Repository.ReadonlyRepository`2._context
+  name: _context
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2__context
+  commentId: F:Aeon.Core.Repository.ReadonlyRepository`2._context
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>._context
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext)._context
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>._context
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext)._context
+- uid: Aeon.Core.Repository.ReadonlyRepository`2._dbSet
+  name: _dbSet
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2__dbSet
+  commentId: F:Aeon.Core.Repository.ReadonlyRepository`2._dbSet
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>._dbSet
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext)._dbSet
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>._dbSet
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext)._dbSet
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.All
+  name: All()
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_All
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.All
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.All()
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).All()
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.All()
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).All()
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: All(IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_All_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: All(IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).All(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.All(IRepositoryInclude<TEntity>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).All(IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.All*
+  name: All
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_All_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.All
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.All
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).All
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.All
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).All
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.AllAsync
+  name: AllAsync()
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_AllAsync
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.AllAsync
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.AllAsync()
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).AllAsync()
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.AllAsync()
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).AllAsync()
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: AllAsync(IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_AllAsync_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: AllAsync(IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).AllAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.AllAsync(IRepositoryInclude<TEntity>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).AllAsync(IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.AllAsync*
+  name: AllAsync
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_AllAsync_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.AllAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.AllAsync
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).AllAsync
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.AllAsync
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).AllAsync
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name: Get(IRepositoryInclude<TEntity>, Object[])
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_Get_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__System_Object___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name.vb: Get(IRepositoryInclude(Of TEntity), Object())
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>, System.Object[])
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity), System.Object())
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.Get(IRepositoryInclude<TEntity>, Object[])
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).Get(IRepositoryInclude(Of TEntity), Object())
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.Get(System.Object[])
+  name: Get(Object[])
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_Get_System_Object___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.Get(System.Object[])
+  name.vb: Get(Object())
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.Get(System.Object[])
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).Get(System.Object())
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.Get(Object[])
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).Get(Object())
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.Get*
+  name: Get
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_Get_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.Get
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.Get
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).Get
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.Get
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).Get
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name: GetAsync(IRepositoryInclude<TEntity>, Object[])
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetAsync_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__System_Object___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
+  name.vb: GetAsync(IRepositoryInclude(Of TEntity), Object())
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>, System.Object[])
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetAsync(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity), System.Object())
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetAsync(IRepositoryInclude<TEntity>, Object[])
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetAsync(IRepositoryInclude(Of TEntity), Object())
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetAsync(System.Object[])
+  name: GetAsync(Object[])
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetAsync_System_Object___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.GetAsync(System.Object[])
+  name.vb: GetAsync(Object())
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetAsync(System.Object[])
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetAsync(System.Object())
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetAsync(Object[])
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetAsync(Object())
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetAsync*
+  name: GetAsync
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetAsync_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.GetAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetAsync
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetAsync
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetAsync
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetAsync
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilter(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetWithFilter_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0__System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilter(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilter(Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilter(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilter(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilter(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilter((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetWithFilter_System_ValueTuple_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0___System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilter(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilter((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetWithFilter(System.ValueTuple<Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilter(System.ValueTuple(Of Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity)), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilter((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilter((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilter*
+  name: GetWithFilter
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetWithFilter_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilter
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetWithFilter
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilter
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilter
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilter
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilterAsync(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetWithFilterAsync_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0__System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilterAsync(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync(Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync(IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilterAsync(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: GetWithFilterAsync((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetWithFilterAsync_System_ValueTuple_Aeon_Core_Repository_Infrastructure_IRepositoryFilter__0__Aeon_Core_Repository_Infrastructure_IRepositorySort__0___System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilterAsync(System.ValueTuple{Aeon.Core.Repository.Infrastructure.IRepositoryFilter{`0},Aeon.Core.Repository.Infrastructure.IRepositorySort{`0}},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: GetWithFilterAsync((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync(System.ValueTuple<Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync(System.ValueTuple(Of Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity)), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync((IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts), Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync((filter As IRepositoryFilter(Of TEntity), sorts As IRepositorySort(Of TEntity)), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilterAsync*
+  name: GetWithFilterAsync
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_GetWithFilterAsync_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.GetWithFilterAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync
+- uid: Aeon.Core.Repository.Repository`2
+  name: Repository<TEntity, TDbContext>
+  href: api/Aeon.Core.Repository.Repository-2.html
+  commentId: T:Aeon.Core.Repository.Repository`2
+  name.vb: Repository(Of TEntity, TDbContext)
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext)
+  nameWithType: Repository<TEntity, TDbContext>
+  nameWithType.vb: Repository(Of TEntity, TDbContext)
+- uid: Aeon.Core.Repository.Repository`2.#ctor(`1)
+  name: Repository(TDbContext)
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2__ctor__1_
+  commentId: M:Aeon.Core.Repository.Repository`2.#ctor(`1)
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Repository(TDbContext)
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Repository(TDbContext)
+  nameWithType: Repository<TEntity, TDbContext>.Repository(TDbContext)
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Repository(TDbContext)
+- uid: Aeon.Core.Repository.Repository`2.#ctor*
+  name: Repository
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2__ctor_
+  commentId: Overload:Aeon.Core.Repository.Repository`2.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Repository
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Repository
+  nameWithType: Repository<TEntity, TDbContext>.Repository
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Repository
+- uid: Aeon.Core.Repository.Repository`2.Add(`0)
+  name: Add(TEntity)
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2_Add__0_
+  commentId: M:Aeon.Core.Repository.Repository`2.Add(`0)
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Add(TEntity)
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Add(TEntity)
+  nameWithType: Repository<TEntity, TDbContext>.Add(TEntity)
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Add(TEntity)
+- uid: Aeon.Core.Repository.Repository`2.Add*
+  name: Add
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2_Add_
+  commentId: Overload:Aeon.Core.Repository.Repository`2.Add
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Add
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Add
+  nameWithType: Repository<TEntity, TDbContext>.Add
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Add
+- uid: Aeon.Core.Repository.Repository`2.Delete(`0)
+  name: Delete(TEntity)
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2_Delete__0_
+  commentId: M:Aeon.Core.Repository.Repository`2.Delete(`0)
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Delete(TEntity)
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Delete(TEntity)
+  nameWithType: Repository<TEntity, TDbContext>.Delete(TEntity)
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Delete(TEntity)
+- uid: Aeon.Core.Repository.Repository`2.Delete*
+  name: Delete
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2_Delete_
+  commentId: Overload:Aeon.Core.Repository.Repository`2.Delete
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Delete
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Delete
+  nameWithType: Repository<TEntity, TDbContext>.Delete
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Delete
+- uid: Aeon.Core.Repository.Repository`2.Update(`0)
+  name: Update(TEntity)
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2_Update__0_
+  commentId: M:Aeon.Core.Repository.Repository`2.Update(`0)
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Update(TEntity)
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Update(TEntity)
+  nameWithType: Repository<TEntity, TDbContext>.Update(TEntity)
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Update(TEntity)
+- uid: Aeon.Core.Repository.Repository`2.Update*
+  name: Update
+  href: api/Aeon.Core.Repository.Repository-2.html#Aeon_Core_Repository_Repository_2_Update_
+  commentId: Overload:Aeon.Core.Repository.Repository`2.Update
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.Repository<TEntity, TDbContext>.Update
+  fullName.vb: Aeon.Core.Repository.Repository(Of TEntity, TDbContext).Update
+  nameWithType: Repository<TEntity, TDbContext>.Update
+  nameWithType.vb: Repository(Of TEntity, TDbContext).Update
+- uid: Aeon.Core.Repository.RepositoryExtensions
+  name: RepositoryExtensions
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html
+  commentId: T:Aeon.Core.Repository.RepositoryExtensions
+  fullName: Aeon.Core.Repository.RepositoryExtensions
+  nameWithType: RepositoryExtensions
+- uid: Aeon.Core.Repository.RepositoryExtensions.AsEnumerable*
+  name: AsEnumerable
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_AsEnumerable_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.AsEnumerable
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.AsEnumerable
+  nameWithType: RepositoryExtensions.AsEnumerable
+- uid: Aeon.Core.Repository.RepositoryExtensions.AsEnumerable``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0},Aeon.Core.Repository.Infrastructure.IRepositorySort{``0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: AsEnumerable<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_AsEnumerable__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepository___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__Aeon_Core_Repository_Infrastructure_IRepositorySort___0__System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.AsEnumerable``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0},Aeon.Core.Repository.Infrastructure.IRepositorySort{``0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: AsEnumerable(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.AsEnumerable<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.AsEnumerable(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: RepositoryExtensions.AsEnumerable<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: RepositoryExtensions.AsEnumerable(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync*
+  name: AsEnumerableAsync
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_AsEnumerableAsync_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync
+  nameWithType: RepositoryExtensions.AsEnumerableAsync
+- uid: Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0},Aeon.Core.Repository.Infrastructure.IRepositorySort{``0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name: AsEnumerableAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_AsEnumerableAsync__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__Aeon_Core_Repository_Infrastructure_IRepositorySort___0__System_Nullable_System_ValueTuple_System_Int32_System_Int32___
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0},Aeon.Core.Repository.Infrastructure.IRepositorySort{``0},System.Nullable{System.ValueTuple{System.Int32,System.Int32}})
+  name.vb: AsEnumerableAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositorySort<TEntity>, System.Nullable<System.ValueTuple<System.Int32, System.Int32>>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.AsEnumerableAsync(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositorySort(Of TEntity), System.Nullable(Of System.ValueTuple(Of System.Int32, System.Int32)))
+  nameWithType: RepositoryExtensions.AsEnumerableAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, Nullable<(Int32 Page, Int32 PageSize)>)
+  nameWithType.vb: RepositoryExtensions.AsEnumerableAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity), IRepositorySort(Of TEntity), Nullable(Of (Page As Int32, PageSize As Int32)))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetCount*
+  name: GetCount
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetCount_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetCount
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetCount
+  nameWithType: RepositoryExtensions.GetCount
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetCount``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetCount<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetCount__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepository___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetCount``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetCount(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetCount<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetCount(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetCount<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetCount(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetCountAsync*
+  name: GetCountAsync
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetCountAsync_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetCountAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetCountAsync
+  nameWithType: RepositoryExtensions.GetCountAsync
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetCountAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetCountAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetCountAsync__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetCountAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetCountAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetCountAsync<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetCountAsync(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetCountAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetCountAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirst*
+  name: GetFirst
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirst_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetFirst
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirst
+  nameWithType: RepositoryExtensions.GetFirst
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirst``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetFirst<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirst__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepository___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetFirst``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetFirst(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirst<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetFirst(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetFirst<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetFirst(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync*
+  name: GetFirstAsync
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirstAsync_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync
+  nameWithType: RepositoryExtensions.GetFirstAsync
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetFirstAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirstAsync__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetFirstAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetFirstAsync(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetFirstAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetFirstAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault*
+  name: GetFirstOrDefault
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirstOrDefault_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault
+  nameWithType: RepositoryExtensions.GetFirstOrDefault
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetFirstOrDefault<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirstOrDefault__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepository___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetFirstOrDefault(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefault(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetFirstOrDefault<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetFirstOrDefault(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync*
+  name: GetFirstOrDefaultAsync
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirstOrDefaultAsync_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync
+  nameWithType: RepositoryExtensions.GetFirstOrDefaultAsync
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetFirstOrDefaultAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetFirstOrDefaultAsync__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetFirstOrDefaultAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetFirstOrDefaultAsync(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetFirstOrDefaultAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetFirstOrDefaultAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingle*
+  name: GetSingle
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingle_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetSingle
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingle
+  nameWithType: RepositoryExtensions.GetSingle
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingle``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetSingle<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingle__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepository___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetSingle``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetSingle(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingle<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetSingle(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetSingle<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetSingle(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync*
+  name: GetSingleAsync
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingleAsync_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync
+  nameWithType: RepositoryExtensions.GetSingleAsync
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetSingleAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingleAsync__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetSingleAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetSingleAsync(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetSingleAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetSingleAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault*
+  name: GetSingleOrDefault
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingleOrDefault_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault
+  nameWithType: RepositoryExtensions.GetSingleOrDefault
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetSingleOrDefault<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingleOrDefault__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepository___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepository{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetSingleOrDefault(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepository<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefault(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepository(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetSingleOrDefault<TEntity>(IReadonlyRepository<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetSingleOrDefault(Of TEntity)(IReadonlyRepository(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync*
+  name: GetSingleOrDefaultAsync
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingleOrDefaultAsync_
+  commentId: Overload:Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync
+  nameWithType: RepositoryExtensions.GetSingleOrDefaultAsync
+- uid: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name: GetSingleOrDefaultAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryExtensions.html#Aeon_Core_Repository_RepositoryExtensions_GetSingleOrDefaultAsync__1_Aeon_Core_Repository_Infrastructure_IReadonlyRepositoryAsync___0__Aeon_Core_Repository_Infrastructure_IRepositoryFilter___0__
+  commentId: M:Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync``1(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync{``0},Aeon.Core.Repository.Infrastructure.IRepositoryFilter{``0})
+  name.vb: GetSingleOrDefaultAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync<TEntity>(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync<TEntity>, Aeon.Core.Repository.Infrastructure.IRepositoryFilter<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryExtensions.GetSingleOrDefaultAsync(Of TEntity)(Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync(Of TEntity), Aeon.Core.Repository.Infrastructure.IRepositoryFilter(Of TEntity))
+  nameWithType: RepositoryExtensions.GetSingleOrDefaultAsync<TEntity>(IReadonlyRepositoryAsync<TEntity>, IRepositoryFilter<TEntity>)
+  nameWithType.vb: RepositoryExtensions.GetSingleOrDefaultAsync(Of TEntity)(IReadonlyRepositoryAsync(Of TEntity), IRepositoryFilter(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryFilter`1
+  name: RepositoryFilter<TEntity>
+  href: api/Aeon.Core.Repository.RepositoryFilter-1.html
+  commentId: T:Aeon.Core.Repository.RepositoryFilter`1
+  name.vb: RepositoryFilter(Of TEntity)
+  fullName: Aeon.Core.Repository.RepositoryFilter<TEntity>
+  fullName.vb: Aeon.Core.Repository.RepositoryFilter(Of TEntity)
+  nameWithType: RepositoryFilter<TEntity>
+  nameWithType.vb: RepositoryFilter(Of TEntity)
+- uid: Aeon.Core.Repository.RepositoryFilter`1.#ctor(Expression{Func{`0,System.Boolean}},Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: RepositoryFilter(Expression<Func<TEntity, Boolean>>, IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryFilter-1.html#Aeon_Core_Repository_RepositoryFilter_1__ctor_Expression_Func__0_System_Boolean___Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.RepositoryFilter`1.#ctor(Expression{Func{`0,System.Boolean}},Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: RepositoryFilter(Expression(Of Func(Of TEntity, Boolean)), IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryFilter<TEntity>.RepositoryFilter(Expression<Func<TEntity, System.Boolean>>, Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryFilter(Of TEntity).RepositoryFilter(Expression(Of Func(Of TEntity, System.Boolean)), Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: RepositoryFilter<TEntity>.RepositoryFilter(Expression<Func<TEntity, Boolean>>, IRepositoryInclude<TEntity>)
+  nameWithType.vb: RepositoryFilter(Of TEntity).RepositoryFilter(Expression(Of Func(Of TEntity, Boolean)), IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryFilter`1.#ctor*
+  name: RepositoryFilter
+  href: api/Aeon.Core.Repository.RepositoryFilter-1.html#Aeon_Core_Repository_RepositoryFilter_1__ctor_
+  commentId: Overload:Aeon.Core.Repository.RepositoryFilter`1.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryFilter<TEntity>.RepositoryFilter
+  fullName.vb: Aeon.Core.Repository.RepositoryFilter(Of TEntity).RepositoryFilter
+  nameWithType: RepositoryFilter<TEntity>.RepositoryFilter
+  nameWithType.vb: RepositoryFilter(Of TEntity).RepositoryFilter
+- uid: Aeon.Core.Repository.RepositoryFilter`1.Criteria
+  name: Criteria
+  href: api/Aeon.Core.Repository.RepositoryFilter-1.html#Aeon_Core_Repository_RepositoryFilter_1_Criteria
+  commentId: P:Aeon.Core.Repository.RepositoryFilter`1.Criteria
+  fullName: Aeon.Core.Repository.RepositoryFilter<TEntity>.Criteria
+  fullName.vb: Aeon.Core.Repository.RepositoryFilter(Of TEntity).Criteria
+  nameWithType: RepositoryFilter<TEntity>.Criteria
+  nameWithType.vb: RepositoryFilter(Of TEntity).Criteria
+- uid: Aeon.Core.Repository.RepositoryFilter`1.Criteria*
+  name: Criteria
+  href: api/Aeon.Core.Repository.RepositoryFilter-1.html#Aeon_Core_Repository_RepositoryFilter_1_Criteria_
+  commentId: Overload:Aeon.Core.Repository.RepositoryFilter`1.Criteria
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryFilter<TEntity>.Criteria
+  fullName.vb: Aeon.Core.Repository.RepositoryFilter(Of TEntity).Criteria
+  nameWithType: RepositoryFilter<TEntity>.Criteria
+  nameWithType.vb: RepositoryFilter(Of TEntity).Criteria
+- uid: Aeon.Core.Repository.RepositoryInclude`1
+  name: RepositoryInclude<TEntity>
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html
+  commentId: T:Aeon.Core.Repository.RepositoryInclude`1
+  name.vb: RepositoryInclude(Of TEntity)
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity)
+  nameWithType: RepositoryInclude<TEntity>
+  nameWithType.vb: RepositoryInclude(Of TEntity)
+- uid: Aeon.Core.Repository.RepositoryInclude`1.#ctor
+  name: RepositoryInclude()
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1__ctor
+  commentId: M:Aeon.Core.Repository.RepositoryInclude`1.#ctor
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.RepositoryInclude()
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).RepositoryInclude()
+  nameWithType: RepositoryInclude<TEntity>.RepositoryInclude()
+  nameWithType.vb: RepositoryInclude(Of TEntity).RepositoryInclude()
+- uid: Aeon.Core.Repository.RepositoryInclude`1.#ctor(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: RepositoryInclude(IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1__ctor_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.RepositoryInclude`1.#ctor(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: RepositoryInclude(IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.RepositoryInclude(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).RepositoryInclude(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: RepositoryInclude<TEntity>.RepositoryInclude(IRepositoryInclude<TEntity>)
+  nameWithType.vb: RepositoryInclude(Of TEntity).RepositoryInclude(IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.RepositoryInclude`1.#ctor*
+  name: RepositoryInclude
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1__ctor_
+  commentId: Overload:Aeon.Core.Repository.RepositoryInclude`1.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.RepositoryInclude
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).RepositoryInclude
+  nameWithType: RepositoryInclude<TEntity>.RepositoryInclude
+  nameWithType.vb: RepositoryInclude(Of TEntity).RepositoryInclude
+- uid: Aeon.Core.Repository.RepositoryInclude`1.IncludePaths
+  name: IncludePaths
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_IncludePaths
+  commentId: P:Aeon.Core.Repository.RepositoryInclude`1.IncludePaths
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.IncludePaths
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).IncludePaths
+  nameWithType: RepositoryInclude<TEntity>.IncludePaths
+  nameWithType.vb: RepositoryInclude(Of TEntity).IncludePaths
+- uid: Aeon.Core.Repository.RepositoryInclude`1.IncludePaths*
+  name: IncludePaths
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_IncludePaths_
+  commentId: Overload:Aeon.Core.Repository.RepositoryInclude`1.IncludePaths
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.IncludePaths
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).IncludePaths
+  nameWithType: RepositoryInclude<TEntity>.IncludePaths
+  nameWithType.vb: RepositoryInclude(Of TEntity).IncludePaths
+- uid: Aeon.Core.Repository.RepositoryInclude`1.Includes
+  name: Includes
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_Includes
+  commentId: P:Aeon.Core.Repository.RepositoryInclude`1.Includes
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.Includes
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).Includes
+  nameWithType: RepositoryInclude<TEntity>.Includes
+  nameWithType.vb: RepositoryInclude(Of TEntity).Includes
+- uid: Aeon.Core.Repository.RepositoryInclude`1.Includes*
+  name: Includes
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_Includes_
+  commentId: Overload:Aeon.Core.Repository.RepositoryInclude`1.Includes
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.Includes
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).Includes
+  nameWithType: RepositoryInclude<TEntity>.Includes
+  nameWithType.vb: RepositoryInclude(Of TEntity).Includes
+- uid: Aeon.Core.Repository.RepositoryInclude`1.Name
+  name: Name
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_Name
+  commentId: P:Aeon.Core.Repository.RepositoryInclude`1.Name
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.Name
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).Name
+  nameWithType: RepositoryInclude<TEntity>.Name
+  nameWithType.vb: RepositoryInclude(Of TEntity).Name
+- uid: Aeon.Core.Repository.RepositoryInclude`1.Name*
+  name: Name
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_Name_
+  commentId: Overload:Aeon.Core.Repository.RepositoryInclude`1.Name
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.Name
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).Name
+  nameWithType: RepositoryInclude<TEntity>.Name
+  nameWithType.vb: RepositoryInclude(Of TEntity).Name
+- uid: Aeon.Core.Repository.RepositoryInclude`1.Previous
+  name: Previous
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_Previous
+  commentId: P:Aeon.Core.Repository.RepositoryInclude`1.Previous
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.Previous
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).Previous
+  nameWithType: RepositoryInclude<TEntity>.Previous
+  nameWithType.vb: RepositoryInclude(Of TEntity).Previous
+- uid: Aeon.Core.Repository.RepositoryInclude`1.Previous*
+  name: Previous
+  href: api/Aeon.Core.Repository.RepositoryInclude-1.html#Aeon_Core_Repository_RepositoryInclude_1_Previous_
+  commentId: Overload:Aeon.Core.Repository.RepositoryInclude`1.Previous
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryInclude<TEntity>.Previous
+  fullName.vb: Aeon.Core.Repository.RepositoryInclude(Of TEntity).Previous
+  nameWithType: RepositoryInclude<TEntity>.Previous
+  nameWithType.vb: RepositoryInclude(Of TEntity).Previous
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2
+  name: RepositoryIncludeExpression<T, P>
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html
+  commentId: T:Aeon.Core.Repository.RepositoryIncludeExpression`2
+  name.vb: RepositoryIncludeExpression(Of T, P)
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P)
+  nameWithType: RepositoryIncludeExpression<T, P>
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P)
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.#ctor(Aeon.Core.Repository.IRepositoryIncludable{`0})
+  name: RepositoryIncludeExpression(IRepositoryIncludable<T>)
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2__ctor_Aeon_Core_Repository_IRepositoryIncludable__0__
+  commentId: M:Aeon.Core.Repository.RepositoryIncludeExpression`2.#ctor(Aeon.Core.Repository.IRepositoryIncludable{`0})
+  name.vb: RepositoryIncludeExpression(IRepositoryIncludable(Of T))
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.RepositoryIncludeExpression(Aeon.Core.Repository.IRepositoryIncludable<T>)
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).RepositoryIncludeExpression(Aeon.Core.Repository.IRepositoryIncludable(Of T))
+  nameWithType: RepositoryIncludeExpression<T, P>.RepositoryIncludeExpression(IRepositoryIncludable<T>)
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).RepositoryIncludeExpression(IRepositoryIncludable(Of T))
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.#ctor*
+  name: RepositoryIncludeExpression
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2__ctor_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExpression`2.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.RepositoryIncludeExpression
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).RepositoryIncludeExpression
+  nameWithType: RepositoryIncludeExpression<T, P>.RepositoryIncludeExpression
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).RepositoryIncludeExpression
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.Name
+  name: Name
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_Name
+  commentId: P:Aeon.Core.Repository.RepositoryIncludeExpression`2.Name
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.Name
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).Name
+  nameWithType: RepositoryIncludeExpression<T, P>.Name
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).Name
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.Name*
+  name: Name
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_Name_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExpression`2.Name
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.Name
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).Name
+  nameWithType: RepositoryIncludeExpression<T, P>.Name
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).Name
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.Next
+  name: Next
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_Next
+  commentId: P:Aeon.Core.Repository.RepositoryIncludeExpression`2.Next
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.Next
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).Next
+  nameWithType: RepositoryIncludeExpression<T, P>.Next
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).Next
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.Next*
+  name: Next
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_Next_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExpression`2.Next
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.Next
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).Next
+  nameWithType: RepositoryIncludeExpression<T, P>.Next
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).Next
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.Previous
+  name: Previous
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_Previous
+  commentId: P:Aeon.Core.Repository.RepositoryIncludeExpression`2.Previous
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.Previous
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).Previous
+  nameWithType: RepositoryIncludeExpression<T, P>.Previous
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).Previous
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.Previous*
+  name: Previous
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_Previous_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExpression`2.Previous
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.Previous
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).Previous
+  nameWithType: RepositoryIncludeExpression<T, P>.Previous
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).Previous
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.ToString
+  name: ToString()
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_ToString
+  commentId: M:Aeon.Core.Repository.RepositoryIncludeExpression`2.ToString
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.ToString()
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).ToString()
+  nameWithType: RepositoryIncludeExpression<T, P>.ToString()
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).ToString()
+- uid: Aeon.Core.Repository.RepositoryIncludeExpression`2.ToString*
+  name: ToString
+  href: api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html#Aeon_Core_Repository_RepositoryIncludeExpression_2_ToString_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExpression`2.ToString
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExpression<T, P>.ToString
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExpression(Of T, P).ToString
+  nameWithType: RepositoryIncludeExpression<T, P>.ToString
+  nameWithType.vb: RepositoryIncludeExpression(Of T, P).ToString
+- uid: Aeon.Core.Repository.RepositoryIncludeExtensions
+  name: RepositoryIncludeExtensions
+  href: api/Aeon.Core.Repository.RepositoryIncludeExtensions.html
+  commentId: T:Aeon.Core.Repository.RepositoryIncludeExtensions
+  fullName: Aeon.Core.Repository.RepositoryIncludeExtensions
+  nameWithType: RepositoryIncludeExtensions
+- uid: Aeon.Core.Repository.RepositoryIncludeExtensions.Include*
+  name: Include
+  href: api/Aeon.Core.Repository.RepositoryIncludeExtensions.html#Aeon_Core_Repository_RepositoryIncludeExtensions_Include_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExtensions.Include
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExtensions.Include
+  nameWithType: RepositoryIncludeExtensions.Include
+- uid: Aeon.Core.Repository.RepositoryIncludeExtensions.Include``2(Aeon.Core.Repository.IRepositoryIncludable{``0},Expression{Func{``0,``1}})
+  name: Include<TEntity, TProperty>(IRepositoryIncludable<TEntity>, Expression<Func<TEntity, TProperty>>)
+  href: api/Aeon.Core.Repository.RepositoryIncludeExtensions.html#Aeon_Core_Repository_RepositoryIncludeExtensions_Include__2_Aeon_Core_Repository_IRepositoryIncludable___0__Expression_Func___0___1___
+  commentId: M:Aeon.Core.Repository.RepositoryIncludeExtensions.Include``2(Aeon.Core.Repository.IRepositoryIncludable{``0},Expression{Func{``0,``1}})
+  name.vb: Include(Of TEntity, TProperty)(IRepositoryIncludable(Of TEntity), Expression(Of Func(Of TEntity, TProperty)))
+  fullName: Aeon.Core.Repository.RepositoryIncludeExtensions.Include<TEntity, TProperty>(Aeon.Core.Repository.IRepositoryIncludable<TEntity>, Expression<Func<TEntity, TProperty>>)
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExtensions.Include(Of TEntity, TProperty)(Aeon.Core.Repository.IRepositoryIncludable(Of TEntity), Expression(Of Func(Of TEntity, TProperty)))
+  nameWithType: RepositoryIncludeExtensions.Include<TEntity, TProperty>(IRepositoryIncludable<TEntity>, Expression<Func<TEntity, TProperty>>)
+  nameWithType.vb: RepositoryIncludeExtensions.Include(Of TEntity, TProperty)(IRepositoryIncludable(Of TEntity), Expression(Of Func(Of TEntity, TProperty)))
+- uid: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude*
+  name: ThenInclude
+  href: api/Aeon.Core.Repository.RepositoryIncludeExtensions.html#Aeon_Core_Repository_RepositoryIncludeExtensions_ThenInclude_
+  commentId: Overload:Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude
+  nameWithType: RepositoryIncludeExtensions.ThenInclude
+- uid: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude``3(Aeon.Core.Repository.IRepositoryIncludable{``0,``1},Expression{Func{``1,``2}})
+  name: ThenInclude<TEntity, TPreviousProperty, TProperty>(IRepositoryIncludable<TEntity, TPreviousProperty>, Expression<Func<TPreviousProperty, TProperty>>)
+  href: api/Aeon.Core.Repository.RepositoryIncludeExtensions.html#Aeon_Core_Repository_RepositoryIncludeExtensions_ThenInclude__3_Aeon_Core_Repository_IRepositoryIncludable___0___1__Expression_Func___1___2___
+  commentId: M:Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude``3(Aeon.Core.Repository.IRepositoryIncludable{``0,``1},Expression{Func{``1,``2}})
+  name.vb: ThenInclude(Of TEntity, TPreviousProperty, TProperty)(IRepositoryIncludable(Of TEntity, TPreviousProperty), Expression(Of Func(Of TPreviousProperty, TProperty)))
+  fullName: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude<TEntity, TPreviousProperty, TProperty>(Aeon.Core.Repository.IRepositoryIncludable<TEntity, TPreviousProperty>, Expression<Func<TPreviousProperty, TProperty>>)
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude(Of TEntity, TPreviousProperty, TProperty)(Aeon.Core.Repository.IRepositoryIncludable(Of TEntity, TPreviousProperty), Expression(Of Func(Of TPreviousProperty, TProperty)))
+  nameWithType: RepositoryIncludeExtensions.ThenInclude<TEntity, TPreviousProperty, TProperty>(IRepositoryIncludable<TEntity, TPreviousProperty>, Expression<Func<TPreviousProperty, TProperty>>)
+  nameWithType.vb: RepositoryIncludeExtensions.ThenInclude(Of TEntity, TPreviousProperty, TProperty)(IRepositoryIncludable(Of TEntity, TPreviousProperty), Expression(Of Func(Of TPreviousProperty, TProperty)))
+- uid: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude``3(Aeon.Core.Repository.IRepositoryIncludable{``0,IEnumerable{``1}},Expression{Func{``1,``2}})
+  name: ThenInclude<TEntity, TPreviousProperty, TProperty>(IRepositoryIncludable<TEntity, IEnumerable<TPreviousProperty>>, Expression<Func<TPreviousProperty, TProperty>>)
+  href: api/Aeon.Core.Repository.RepositoryIncludeExtensions.html#Aeon_Core_Repository_RepositoryIncludeExtensions_ThenInclude__3_Aeon_Core_Repository_IRepositoryIncludable___0_IEnumerable___1___Expression_Func___1___2___
+  commentId: M:Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude``3(Aeon.Core.Repository.IRepositoryIncludable{``0,IEnumerable{``1}},Expression{Func{``1,``2}})
+  name.vb: ThenInclude(Of TEntity, TPreviousProperty, TProperty)(IRepositoryIncludable(Of TEntity, IEnumerable(Of TPreviousProperty)), Expression(Of Func(Of TPreviousProperty, TProperty)))
+  fullName: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude<TEntity, TPreviousProperty, TProperty>(Aeon.Core.Repository.IRepositoryIncludable<TEntity, IEnumerable<TPreviousProperty>>, Expression<Func<TPreviousProperty, TProperty>>)
+  fullName.vb: Aeon.Core.Repository.RepositoryIncludeExtensions.ThenInclude(Of TEntity, TPreviousProperty, TProperty)(Aeon.Core.Repository.IRepositoryIncludable(Of TEntity, IEnumerable(Of TPreviousProperty)), Expression(Of Func(Of TPreviousProperty, TProperty)))
+  nameWithType: RepositoryIncludeExtensions.ThenInclude<TEntity, TPreviousProperty, TProperty>(IRepositoryIncludable<TEntity, IEnumerable<TPreviousProperty>>, Expression<Func<TPreviousProperty, TProperty>>)
+  nameWithType.vb: RepositoryIncludeExtensions.ThenInclude(Of TEntity, TPreviousProperty, TProperty)(IRepositoryIncludable(Of TEntity, IEnumerable(Of TPreviousProperty)), Expression(Of Func(Of TPreviousProperty, TProperty)))
+- uid: Aeon.Core.Repository.RepositorySort`1
+  name: RepositorySort<TEntity>
+  href: api/Aeon.Core.Repository.RepositorySort-1.html
+  commentId: T:Aeon.Core.Repository.RepositorySort`1
+  name.vb: RepositorySort(Of TEntity)
+  fullName: Aeon.Core.Repository.RepositorySort<TEntity>
+  fullName.vb: Aeon.Core.Repository.RepositorySort(Of TEntity)
+  nameWithType: RepositorySort<TEntity>
+  nameWithType.vb: RepositorySort(Of TEntity)
+- uid: Aeon.Core.Repository.RepositorySort`1.#ctor(IList{System.ValueTuple{ListSortDirection,Expression{Func{`0,System.Object}}}})
+  name: RepositorySort(IList<(ListSortDirection Direction, Expression<Func<TEntity, Object>> KeySelector)>)
+  href: api/Aeon.Core.Repository.RepositorySort-1.html#Aeon_Core_Repository_RepositorySort_1__ctor_IList_System_ValueTuple_ListSortDirection_Expression_Func__0_System_Object_____
+  commentId: M:Aeon.Core.Repository.RepositorySort`1.#ctor(IList{System.ValueTuple{ListSortDirection,Expression{Func{`0,System.Object}}}})
+  name.vb: RepositorySort(IList(Of (Direction As ListSortDirection, KeySelector As Expression(Of Func(Of TEntity, Object)))))
+  fullName: Aeon.Core.Repository.RepositorySort<TEntity>.RepositorySort(IList<System.ValueTuple<ListSortDirection, Expression<Func<TEntity, System.Object>>>>)
+  fullName.vb: Aeon.Core.Repository.RepositorySort(Of TEntity).RepositorySort(IList(Of System.ValueTuple(Of ListSortDirection, Expression(Of Func(Of TEntity, System.Object)))))
+  nameWithType: RepositorySort<TEntity>.RepositorySort(IList<(ListSortDirection Direction, Expression<Func<TEntity, Object>> KeySelector)>)
+  nameWithType.vb: RepositorySort(Of TEntity).RepositorySort(IList(Of (Direction As ListSortDirection, KeySelector As Expression(Of Func(Of TEntity, Object)))))
+- uid: Aeon.Core.Repository.RepositorySort`1.#ctor(System.ValueTuple{ListSortDirection,Expression{Func{`0,System.Object}}}[])
+  name: RepositorySort((ListSortDirection Direction, Expression<Func<TEntity, Object>> KeySelector)[])
+  href: api/Aeon.Core.Repository.RepositorySort-1.html#Aeon_Core_Repository_RepositorySort_1__ctor_System_ValueTuple_ListSortDirection_Expression_Func__0_System_Object______
+  commentId: M:Aeon.Core.Repository.RepositorySort`1.#ctor(System.ValueTuple{ListSortDirection,Expression{Func{`0,System.Object}}}[])
+  name.vb: RepositorySort((Direction As ListSortDirection, KeySelector As Expression(Of Func(Of TEntity, Object)))())
+  fullName: Aeon.Core.Repository.RepositorySort<TEntity>.RepositorySort(System.ValueTuple<ListSortDirection, Expression<Func<TEntity, System.Object>>>[])
+  fullName.vb: Aeon.Core.Repository.RepositorySort(Of TEntity).RepositorySort(System.ValueTuple(Of ListSortDirection, Expression(Of Func(Of TEntity, System.Object)))())
+  nameWithType: RepositorySort<TEntity>.RepositorySort((ListSortDirection Direction, Expression<Func<TEntity, Object>> KeySelector)[])
+  nameWithType.vb: RepositorySort(Of TEntity).RepositorySort((Direction As ListSortDirection, KeySelector As Expression(Of Func(Of TEntity, Object)))())
+- uid: Aeon.Core.Repository.RepositorySort`1.#ctor*
+  name: RepositorySort
+  href: api/Aeon.Core.Repository.RepositorySort-1.html#Aeon_Core_Repository_RepositorySort_1__ctor_
+  commentId: Overload:Aeon.Core.Repository.RepositorySort`1.#ctor
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositorySort<TEntity>.RepositorySort
+  fullName.vb: Aeon.Core.Repository.RepositorySort(Of TEntity).RepositorySort
+  nameWithType: RepositorySort<TEntity>.RepositorySort
+  nameWithType.vb: RepositorySort(Of TEntity).RepositorySort
+- uid: Aeon.Core.Repository.RepositorySort`1.Sorts
+  name: Sorts
+  href: api/Aeon.Core.Repository.RepositorySort-1.html#Aeon_Core_Repository_RepositorySort_1_Sorts
+  commentId: P:Aeon.Core.Repository.RepositorySort`1.Sorts
+  fullName: Aeon.Core.Repository.RepositorySort<TEntity>.Sorts
+  fullName.vb: Aeon.Core.Repository.RepositorySort(Of TEntity).Sorts
+  nameWithType: RepositorySort<TEntity>.Sorts
+  nameWithType.vb: RepositorySort(Of TEntity).Sorts
+- uid: Aeon.Core.Repository.RepositorySort`1.Sorts*
+  name: Sorts
+  href: api/Aeon.Core.Repository.RepositorySort-1.html#Aeon_Core_Repository_RepositorySort_1_Sorts_
+  commentId: Overload:Aeon.Core.Repository.RepositorySort`1.Sorts
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.RepositorySort<TEntity>.Sorts
+  fullName.vb: Aeon.Core.Repository.RepositorySort(Of TEntity).Sorts
+  nameWithType: RepositorySort<TEntity>.Sorts
+  nameWithType.vb: RepositorySort(Of TEntity).Sorts
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html
+  commentId: T:Aeon.Core.Repository.ServiceCollectionExtensions
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection,Type[])
+  name: AddRepositories(IServiceCollection, Type[])
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepositories_IServiceCollection_Type___
+  commentId: M:Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection,Type[])
+  name.vb: AddRepositories(IServiceCollection, Type())
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type[])
+  fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type())
+  nameWithType: ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type[])
+  nameWithType.vb: ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type())
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories*
+  name: AddRepositories
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepositories_
+  commentId: Overload:Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories
+  nameWithType: ServiceCollectionExtensions.AddRepositories
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories``1(IServiceCollection)
+  name: AddRepositories<TDbContext>(IServiceCollection)
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepositories__1_IServiceCollection_
+  commentId: M:Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories``1(IServiceCollection)
+  name.vb: AddRepositories(Of TDbContext)(IServiceCollection)
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories<TDbContext>(IServiceCollection)
+  fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(Of TDbContext)(IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddRepositories<TDbContext>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddRepositories(Of TDbContext)(IServiceCollection)
+- uid: example_basic_repository
+  name: Repository
+  href: examples/basics/Repository.html
+- uid: example_basic_repository_crud
+  name: Repository CRUD
+  href: examples/basics/RepositoryCrud.html
+- uid: example_basic_repository_readonly
+  name: Readonly Repository
+  href: examples/basics/RepositoryReadonly.html
+- uid: example_basic_setup
+  name: Basic Setup (Console)
+  href: examples/basics/GettingStarted.html
+- uid: example_basic_setup_mvc
+  name: Basic Setup (MVC)
+  href: examples/basics/GettingStartedMvc.html
+- uid: example_extend_custom
+  name: Custom Repository
+  href: examples/extend/Custom.html
+- uid: example_extend_extend
+  name: Extend Repository
+  href: examples/extend/Extend.html
+- uid: example_extend_override
+  name: Override Repository
+  href: examples/extend/Override.html
+- uid: example_filter_includes
+  name: Includes
+  href: examples/filters/WithIncludes.html
+- uid: example_filter_nullfilter
+  name: Null Filter
+  href: examples/filters/GetWithFilter.html
+- uid: example_filter_paging
+  name: Paging
+  href: examples/filters/WithPaging.html
+- uid: example_filter_sort
+  name: Sorting
+  href: examples/filters/WithSorting.html
+- uid: example_unitofwork_custom_logging
+  name: Custom Logging
+  href: examples/unitofwork/CustomWithLogging.html
+- uid: example_unitofwork_custom_simple
+  name: Custom Simple
+  href: examples/unitofwork/CustomSimple.html

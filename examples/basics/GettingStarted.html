@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Basic Setup (Console) | Aeon repository </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Basic Setup (Console) | Aeon repository ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/aeon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="example_basic_setup">
+<h1 id="getting-started-basic-setup-console">Getting started: Basic Setup (Console)</h1>
+
+<p>In this tutorial, we will create a .NET Core console app that performs basic data access against a SQLite database using Entity Framework Core.</p>
+<p><a href="https://github.com/dogguts/aeon/tree/master/samples/Basics/Setup">Download or view the completed app.</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To keep things simple, we'll create a Console Application</p>
+</div>
+<h2 id="create-a-new-project">Create a new project</h2>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_netcore-cli" role="tab" aria-controls="tabpanel_CeZOj-G++Q_netcore-cli" data-tab="netcore-cli" tabindex="0" aria-selected="true">.NET Core CLI</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_visual-studio" role="tab" aria-controls="tabpanel_CeZOj-G++Q_visual-studio" data-tab="visual-studio" tabindex="-1">Visual Studio</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_netcore-cli" role="tabpanel" data-tab="netcore-cli">
+
+<pre><code class="lang-DOS">dotnet new console -o BasicSetup
+cd BasicSetup
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q_visual-studio" role="tabpanel" data-tab="visual-studio" aria-hidden="true" hidden="hidden">
+
+<ul>
+<li>Open Visual Studio</li>
+<li>Click <strong>Create a new project</strong></li>
+<li>Select <strong>Console App (.NET Core)</strong> with the <strong>C#</strong> tag and click Next</li>
+<li>Enter BasicSetup for the name and click Create</li>
+</ul>
+</section>
+</div>
+<h2 id="install-packages">Install packages</h2>
+<p>To install Aeon Repository, you install;</p>
+<ul>
+<li>the packages for the EF Core database provider(s) you want to target.</li>
+<li>the &quot;Aeon.Core.Repository&quot; package
+This tutorial uses SQLite because it runs on all platforms that .NET Core supports.</li>
+</ul>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_netcore-cli" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_netcore-cli" data-tab="netcore-cli" tabindex="0" aria-selected="true">.NET Core CLI</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_visual-studio" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_visual-studio" data-tab="visual-studio" tabindex="-1">Visual Studio</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_netcore-cli" role="tabpanel" data-tab="netcore-cli">
+
+<pre><code class="lang-DOS">dotnet add package Aeon.Core.Repository
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_visual-studio" role="tabpanel" data-tab="visual-studio" aria-hidden="true" hidden="hidden">
+
+<ul>
+<li><p>Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
+</li>
+<li><p>Run the following commands:</p>
+</li>
+</ul>
+<pre><code class="lang-ps">Install-Package Aeon.Core.Repository
+Install-Package Microsoft.EntityFrameworkCore.Sqlite
+</code></pre>
+<p>Or you can just right-click the project and select Manage NuGet Packages</p>
+</section>
+</div>
+<h2 id="create-the-model">Create the model</h2>
+<p>Define a context class and entity classes that make up the model.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Creating a DbContext, Models and Data-seed is no different from creating those with just EF Core.</p>
+</div>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-2_netcore-cli" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_netcore-cli" data-tab="netcore-cli" tabindex="0" aria-selected="true">.NET Core CLI</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-2_visual-studio" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_visual-studio" data-tab="visual-studio" tabindex="-1">Visual Studio</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-2_netcore-cli" role="tabpanel" data-tab="netcore-cli">
+
+<ul>
+<li>In the project directory, create Model.cs with the following code</li>
+</ul>
+</section>
+<section id="tabpanel_CeZOj-G++Q-2_visual-studio" role="tabpanel" data-tab="visual-studio" aria-hidden="true" hidden="hidden">
+
+<ul>
+<li>Right-click on the project and select <strong>Add &gt; Class</strong></li>
+<li>Enter <strong>Model.cs</strong> as the name and click <strong>Add</strong></li>
+<li>Replace the contents of the file with the following code</li>
+</ul>
+</section>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>It looks like the sample you are looking for does not exist.</p>
+</div><h2 id="our-actual-program">Our actual program</h2>
+<ul>
+<li>Open Program.cs and replace the contents with the following code:</li>
+</ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>It looks like the sample you are looking for does not exist.</p>
+</div></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

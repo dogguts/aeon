@@ -1,0 +1,584 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/aeon/aeon/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html",
+          "hash": "vVk8CZPvz2NNc23N5+HykA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.IRepositoryIncludable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.IRepositoryIncludable-1.html",
+          "hash": "1x9Ln0tvU+lHCN6gGb9j4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.IRepositoryIncludable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.IRepositoryIncludable-2.html",
+          "hash": "ojcLGmeRUXNnRAaBbXIu+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.IRepositoryIncludeExpression-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.IRepositoryIncludeExpression-2.html",
+          "hash": "juVz4tBQaat7nBZRAGKcTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html",
+          "hash": "DZ8BTmp085A0ktlJJesFSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html",
+          "hash": "kv+cG314xiSctnNm6nsXVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepository-1.html",
+          "hash": "OcGeD0pSO63ALHniZZE65A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepositoryFilter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepositoryFilter-1.html",
+          "hash": "6Zp9Oi38B3T3jE9+QIGArw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html",
+          "hash": "ibuXRHRC1eztSBvMevgTkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepositorySort-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IRepositorySort-1.html",
+          "hash": "xBL+Ek81+lLHpVz7bmEi3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IUnitOfWork.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IUnitOfWork.html",
+          "hash": "WjrX0P1VGGhjwv8olZzLqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.html",
+          "hash": "+YQwdMMmiQQYDnvJfV78Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.ReadonlyRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.ReadonlyRepository-2.html",
+          "hash": "geHiN9UDGmH0jsKn+iUhfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Repository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Repository-2.html",
+          "hash": "Ls+2Fud894eXUHFp5GS9dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.RepositoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.RepositoryExtensions.html",
+          "hash": "J0+4zCPtfnaKBKCeY6Y+MQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.RepositoryFilter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.RepositoryFilter-1.html",
+          "hash": "hAJLaYpXtwFdzkDYqjnw2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.RepositoryInclude-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.RepositoryInclude-1.html",
+          "hash": "EtRxKldmM/t+rmtFDLbCKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.RepositoryIncludeExpression-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.RepositoryIncludeExpression-2.html",
+          "hash": "cd9CGRm40trmD9Jf29R/dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.RepositoryIncludeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.RepositoryIncludeExtensions.html",
+          "hash": "XCeTbPqUJUf+OHDV/0RbUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.RepositorySort-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.RepositorySort-1.html",
+          "hash": "0vqkVS6iqZqp7mYO8OqZSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.ServiceCollectionExtensions.html",
+          "hash": "VLijCQVBUEMfs3OS3dsAMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.html",
+          "hash": "4Oj5AIIzAZR5INDXIiBauQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Z3v0KoqlC8PoJgT0Z7gggw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "1co4DuHko1KbdESIqqVuQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "codesnippet-not-found"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "examples/basics/GettingStarted.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/basics/GettingStarted.html",
+          "hash": "G6CxQxNgag1A1QGOIhM/1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/basics/GettingStartedMvc.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/basics/GettingStartedMvc.html",
+          "hash": "3zA4aJ+FJY3D1AW+xDRYmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/basics/Repository.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/basics/Repository.html",
+          "hash": "KYwOVqf0E/A/bKSPLiqrgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/basics/RepositoryCrud.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/basics/RepositoryCrud.html",
+          "hash": "opBkUs6qAPSNemFIgbUEcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/basics/RepositoryReadonly.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/basics/RepositoryReadonly.html",
+          "hash": "3RdfEIwWoqsJgvvgVN1Elw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/extend/Custom.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/extend/Custom.html",
+          "hash": "tYv0o9yNaf58y5ZyCJWqjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/extend/Extend.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/extend/Extend.html",
+          "hash": "NdFcgO31lzYpAAUia+E8rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/extend/Override.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/extend/Override.html",
+          "hash": "xm4OwTlw1gn4HI38kOp4eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/filters/GetWithFilter.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/filters/GetWithFilter.html",
+          "hash": "gOwCwEIeXKrB/FIKV9q6bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/filters/WithIncludes.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/filters/WithIncludes.html",
+          "hash": "syupkgPOx9PnYEqp5oOziA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/filters/WithPaging.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/filters/WithPaging.html",
+          "hash": "jiMPly3zac7dd03x+Wtjlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/filters/WithSorting.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/filters/WithSorting.html",
+          "hash": "sm6zAIIv+0yaWVS1+te8aA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/intro.html",
+          "hash": "4pf7Rp3Qzc+v7x566wpOWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "examples/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "examples/toc.html",
+          "hash": "qlWEYpnUXfsxJ+rIMkub4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/unitofwork/CustomSimple.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/unitofwork/CustomSimple.html",
+          "hash": "ifgdd8vPQCO+t9OhgxjEkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/unitofwork/CustomWithLogging.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/unitofwork/CustomWithLogging.html",
+          "hash": "9ryKL0DGszrpRsru2GuWtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/aeon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/aeon.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "8YIoz0bMRIiHXZtPThXE2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "zuPmd7WpF8qlkOkz5KH8eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 17,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 22,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
