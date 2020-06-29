@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="../../src/Aeon.Core.Repository/Aeon.Core.Repository.csproj" />
     <ProjectReference Include="../Repository.Test.Integration.Chinook/Chinook.csproj" />
+    <ProjectReference Include="..\..\src\Aeon.Core.Repository.Extensions\Aeon.Core.Repository.Extensions.csproj" />
 
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
