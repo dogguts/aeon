@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 15.0.26124.0
@@ -23,31 +24,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nupkgs.props = nupkgs.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Filters", "03.Filters", "{CD26E831-A5B4-4096-8CC9-79834384596C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Filters", "Filters", "{CD26E831-A5B4-4096-8CC9-79834384596C}"
 	ProjectSection(SolutionItems) = preProject
-		samples\03.Filters\TODO.txt = samples\03.Filters\TODO.txt
+		samples\Filters\TODO.txt = samples\Filters\TODO.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Extend", "04.Extend", "{73347CC7-1E21-47EA-8701-7495690FF486}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extend", "Extend", "{73347CC7-1E21-47EA-8701-7495690FF486}"
 	ProjectSection(SolutionItems) = preProject
-		samples\04.Extend\TODO.txt = samples\04.Extend\TODO.txt
+		samples\Extend\TODO.txt = samples\Extend\TODO.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{1B551FC7-E2F8-4834-8993-A87CDB40B6F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setup", "samples\Basics\Setup\Setup.csproj", "{42DC316D-DCAE-4BA1-A4A8-D0EAC6C385A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Setup", "samples\Basics\Setup\Setup.csproj", "{42DC316D-DCAE-4BA1-A4A8-D0EAC6C385A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "samples\Basics\Repository\Repository.csproj", "{5E14BD31-8757-4868-BA95-EBCF3889A9C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "samples\Basics\Repository\Repository.csproj", "{5E14BD31-8757-4868-BA95-EBCF3889A9C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadonlyRepository", "samples\Basics\ReadonlyRepository\ReadonlyRepository.csproj", "{BBE804EA-D5F1-4980-9A90-188E44B3760B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadonlyRepository", "samples\Basics\ReadonlyRepository\ReadonlyRepository.csproj", "{BBE804EA-D5F1-4980-9A90-188E44B3760B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryCrud", "samples\Basics\RepositoryCrud\RepositoryCrud.csproj", "{B7795EE5-8A3A-45FB-A8B8-2551BDB0AEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryCrud", "samples\Basics\RepositoryCrud\RepositoryCrud.csproj", "{B7795EE5-8A3A-45FB-A8B8-2551BDB0AEFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitOfWork", "UnitOfWork", "{D32752C3-845E-459A-B34F-B4A8CC6A8EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSimple", "samples\UnitOfWork\CustomSimple\CustomSimple.csproj", "{F885A99A-3D90-4392-B163-59F310D7975E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomSimple", "samples\UnitOfWork\CustomSimple\CustomSimple.csproj", "{F885A99A-3D90-4392-B163-59F310D7975E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLogging", "samples\UnitOfWork\CustomLogging\CustomLogging.csproj", "{B9BDE54B-C226-435C-928A-3C0E6BC7B5AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLogging", "samples\UnitOfWork\CustomLogging\CustomLogging.csproj", "{B9BDE54B-C226-435C-928A-3C0E6BC7B5AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -188,6 +189,8 @@ Global
 		{618B379B-3E98-4F5A-B317-D3CF53238E11} = {C2647F36-C482-486E-856B-129312A899CF}
 		{8474E849-9C23-4E9B-9AD2-84CEE557EF51} = {C9960017-7A74-43ED-8A00-02BA32E3EC41}
 		{709988EF-D4F1-484F-BFA3-56F55BDABB2E} = {C9960017-7A74-43ED-8A00-02BA32E3EC41}
+		{CD26E831-A5B4-4096-8CC9-79834384596C} = {A0BF7787-A244-42DF-8576-442682E469AF}
+		{73347CC7-1E21-47EA-8701-7495690FF486} = {A0BF7787-A244-42DF-8576-442682E469AF}
 		{1B551FC7-E2F8-4834-8993-A87CDB40B6F9} = {A0BF7787-A244-42DF-8576-442682E469AF}
 		{42DC316D-DCAE-4BA1-A4A8-D0EAC6C385A9} = {1B551FC7-E2F8-4834-8993-A87CDB40B6F9}
 		{5E14BD31-8757-4868-BA95-EBCF3889A9C0} = {1B551FC7-E2F8-4834-8993-A87CDB40B6F9}
