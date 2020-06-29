@@ -64,15 +64,12 @@ jobs:
     - uses: nuget/setup-nuget@v1
       with:
        nuget-version: '5.x'
-    - name: Test nuget
-      run: |
-        echo "**Install docfx"
-        nuget install docfx.console -version 2.51.0
-        
-        echo "**Run docfx"
-        docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
+    - name: Install docfx
+      run: nuget install docfx.console -version 2.51.0
+    - name: Run docfx        
+      run: docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
 
-    - name: Deploy 
+    - name: Deploy gh-pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
