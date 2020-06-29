@@ -56,44 +56,45 @@ jobs:
       run: | 
         ls packages/*.*nupkg
         dotnet nuget push 'packages/*.nupkg' --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
-  documentation:
-    runs-on: ubuntu-latest
-     
-    steps:
-    - uses: actions/checkout@v2
-    - uses: nuget/setup-nuget@v1
-      with:
-       nuget-version: '5.x'
-    - name: Test nuget
-      run: |
-        echo "**Install docfx"
-        nuget install docfx.console -version 2.51.0
-        
-        echo "**Run docfx"
-        docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
-        
-        echo "**Clone gh-pages"
-        git config --global user.email "bart.verthe@gmail.com"
-        git config --global user.name "Bart Verthé"
-        
-        mkdir gh-pages-tmp
-        git clone https://github.com/${{ github.repository }}.git --branch gh-pages gh-pages-tmp
-        cd gh-pages-tmp 
-        ls -a
-        git rm -r *
-        cd ..
-        
-        echo "Copy docfx result"
-        cp -r docs/_site/* gh-pages-tmp/
-        cd gh-pages-tmp
-        git status --porcelain
-        
-        echo "git config"
-        git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ${{ secrets.GITHUB_TOKEN }}
-        git config --local -l
-        #echo "**Push gh-pages"
-        #git add . -A
-        #git commit -m "Update generated documentation"
-        #git push origin gh-pages
-
-
+#  documentation:
+#    runs-on: ubuntu-latest
+#     
+#    steps:
+#    - uses: actions/checkout@v2
+#    - uses: nuget/setup-nuget@v1
+#      with:
+#       nuget-version: '5.x'
+#    - name: Test nuget
+#      run: |
+#        echo "**Install docfx"
+#        nuget install docfx.console -version 2.51.0
+#        
+#        echo "**Run docfx"
+#        docfx.console.2.51.0/tools/docfx.exe ./docs/docfx.json
+#        
+#        echo "**Clone gh-pages"
+#        git config --global user.email "bart.verthe@gmail.com"
+#        git config --global user.name "Bart Verthé"
+#        
+#        mkdir gh-pages-tmp
+#        git clone https://github.com/${{ github.repository }}.git --branch gh-pages gh-pages-tmp
+#        cd gh-pages-tmp 
+#        ls -a
+#        git rm -r *
+#        cd ..
+#        
+#        echo "Copy docfx result"
+#        cp -r docs/_site/* gh-pages-tmp/
+#        cd gh-pages-tmp
+#        git status --porcelain
+#        
+#        echo "git config"
+#        git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ${{ secrets.GITHUB_TOKEN }}
+#        git config --local -l
+#        #echo "**Push gh-pages"
+#        #git add . -A
+#        #git commit -m "Update generated documentation"
+#        #git push origin gh-pages
+#
+#
+#
