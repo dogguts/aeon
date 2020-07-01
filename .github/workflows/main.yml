@@ -21,5 +21,7 @@ jobs:
       run: echo "::warning file=somefile.cs,line=1,col=5::Achtung, test failed"
 
     - name: Test error
-      run: echo "::warning file=someotherfile.cs,line=16,col=8::Achtung, test kaput"
+      run: echo "::error file=someotherfile.cs,line=16,col=8::Achtung, test kaput"
 
+    - name: Test warning multiline
+      run: echo "::warning file=somefile.cs,line=1,col=5::Achtung, test failed\njust a warning"
