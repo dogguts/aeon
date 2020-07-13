@@ -13,7 +13,7 @@ namespace Chinook.Repository.Integration.Tests {
     public class ExtendedRepositorySetup {
 
         public static ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
-            builder.AddFilter((category, level) => level == LogLevel.Information)
+            builder.AddFilter((category, level) => level >= LogLevel.Warning)
                    .AddConsole();
         });
 

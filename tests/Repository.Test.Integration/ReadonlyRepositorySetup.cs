@@ -12,7 +12,7 @@ namespace Chinook.Repository.Integration.Tests {
     public class ReadonlyRepositorySetup {
 
         public static ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
-            builder.AddFilter((category, level) => level == LogLevel.Information)
+            builder.AddFilter((category, level) => level >= LogLevel.Warning)
                    .AddConsole();
         });
 
