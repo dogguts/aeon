@@ -32,11 +32,11 @@ jobs:
         REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
         echo '::set-env name=REL_VERSION_ONLY::'$REL_VERSION_ONLY
 
-   - name: debug/test
+    - name: debug/test
       run: | 
         env
         
-   - name: Build
+    - name: Build
       run: dotnet build $BUILDPATH --configuration $CONFIGURATION
 
     - name: Pack
@@ -55,8 +55,8 @@ jobs:
         echo $CMD
         ${CMD}
 
-    -name: debug list
-     run: |
+    - name: debug list
+      run: |
         ls $NUPKGPATH'/*.nupkg'
         ls $NUPKGPATH/*.nupkg
 #    - name: Publish packages to NuGet.org
