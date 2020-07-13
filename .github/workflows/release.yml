@@ -1,37 +1,65 @@
-name: ActionWorkFlowCommandTest
+name: Release
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  release:
+    types: [published]
+  push:           #TEST emulate release on push on master
+    branches:     #TEST emulate release on push on master
+      - master    #TEST emulate release on push on master
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [src/Aeon.Core.Repository/Aeon.Core.Repository.csproj, src/Aeon.Core.Repository.Extensions/Aeon.Core.Repository.Extensions.csproj]
+
+    env:
+      CONFIGURATION: Release
+      BUILDPATH: {{ matrix.project }}
+      NUPKGPATH: packages
 
     steps:
     - uses: actions/checkout@v2
+    - name: REL_*
+      run: | 
+        REL_GITHUB_REF=$GITHUB_REF
+        echo '::set-env name=REL_GITHUB_REF::'$GITHUB_REF
+        
+        REL_GITHUB_REF="refs/tags/v1.1.0-alpha$GITHUB_RUN_NUMBER" #TEST emulate release on push on master
+        echo '::set-env name=REL_GITHUB_REF::'$REL_GITHUB_REF     #TEST emulate release on push on master
+        
+        REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
+        echo '::set-env name=REL_VERSION::'$REL_VERSION
+        REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
+        echo '::set-env name=REL_VERSION_ONLY::'$REL_VERSION_ONLY
 
-    # Runs a single command using the runners shell
-      
-    - name: Test group
-      run: echo "::group::This is a group"
-      
-    - name: Test debug 
-      run: echo "::debug::This is a debug message"
+   - name: debug/test
+      run: | 
+        env
+        
+   - name: Build
+      run: dotnet build $BUILDPATH --configuration $CONFIGURATION
 
-    - name: Test warning
-      run: echo "::warning file=somefile.cs,line=1,col=5::Achtung, test failed"
+    - name: Pack
+      run: |
+        CMD="dotnet pack $BUILDPATH \
+        --configuration $CONFIGURATION \
+        --include-symbols \
+        --include-source \
+        -p:IncludeSymbols=true \
+        -p:SymbolPackageFormat=snupkg \
+        /p:Version=$REL_VERSION \
+        /p:RepositoryCommit=$GITHUB_SHA \
+        /p:AssemblyVersion=$REL_VERSION_ONLY \
+        /p:FileVersion=$REL_VERSION_ONLY \
+        -o $NUPKGPATH"
+        echo $CMD
+        ${CMD}
 
-    - name: Test error
-      run: echo "::error file=someotherfile.cs,line=16,col=8::Achtung, test kaput"
-
-    - name: Test warning multiline
-      run: echo "::warning file=somefile.cs,line=1,col=5::Achtung, test failed<br>just a warning"
-
-    - name: Test warning multiline2
-      run: echo "::warning file=somefile.cs,line=1,col=5::Achtung, test failed<br>nw1%0Anw2\%0Anew3/%0Anw4"
-
-    - name: Test endGroup
-      run: echo "::endgroup::This is a group"
+    -name: debug list
+     run: |
+        ls $NUPKGPATH'/*.nupkg'
+        ls $NUPKGPATH/*.nupkg
+#    - name: Publish packages to NuGet.org
+#      run: |
+#        dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
+        
