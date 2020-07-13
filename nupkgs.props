@@ -1,8 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <VersionPrefix>1.0.3</VersionPrefix>
-    
-        <PackageVersion>$(VersionPrefix)-preview1</PackageVersion> <!-- -$(VersionSuffix) -->
+        <Version>1.1.0</Version>
+       
         <IncludeSymbols>true</IncludeSymbols>
         <IncludeSource>true</IncludeSource>
 
