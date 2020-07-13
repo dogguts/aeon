@@ -24,7 +24,7 @@ jobs:
       run: | 
         REL_GITHUB_REF=$GITHUB_REF
         echo '::set-env name=REL_GITHUB_REF::'$GITHUB_REF
-        #REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER" #TEST emulate release on push on master
+        REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER" #TEST emulate release on push on master
         echo '::set-env name=REL_GITHUB_REF::'$REL_GITHUB_REF     #TEST emulate release on push on master
         REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
         echo '::set-env name=REL_VERSION::'$REL_VERSION
