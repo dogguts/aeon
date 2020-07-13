@@ -34,14 +34,12 @@ jobs:
     - name: Build
       run: dotnet build aeon.sln --configuration Release
     
+#    - name: Test
+#      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
+ 
     - name: Test
-      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
-  
-    - name: Publish Test results to Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: Repository.Test.Integration.trx
-        path: tests/Repository.Test.Integration/TestResults/Repository.Test.Integration.trx
+      run: |
+        dotnet test tests/Repository.Test.Integration --logger "github;name=test-report;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
     
     - name: Run Samples
       run: |
