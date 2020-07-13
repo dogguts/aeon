@@ -203,7 +203,7 @@ namespace Aeon.Core.Repository {
             var itemsTotal = await queryWithCriteria.CountAsync();
 
             if (paging.HasValue) {
-                if (paging.HasValue ? paging.Value.Page < 1 : false) {
+                if (paging.HasValue && paging.Value.Page < 1) {
                     throw new ArgumentOutOfRangeException(nameof(paging), $"{nameof(paging.Value.Page)} < 1 (paging is one-based)");
                 }
                 queryWithCriteria = queryWithCriteria.Skip(paging.Value.PageSize * (paging.Value.Page - 1))

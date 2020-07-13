@@ -14,5 +14,6 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+*.csproj.user
 #TEMP: temp location of docfx nuget install
 docfx.console*
