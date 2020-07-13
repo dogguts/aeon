@@ -8,13 +8,14 @@ on:
 
 jobs:
   build:
+    runs-on: [ubuntu-latest]
     strategy:
       matrix:
         project: [src/Aeon.Core.Repository/Aeon.Core.Repository.csproj, src/Aeon.Core.Repository.Extensions/Aeon.Core.Repository.Extensions.csproj]
 
     env:
       CONFIGURATION: Release
-      BUILDPATH: {{ matrix.project }}
+      BUILDPATH: ${{ matrix.project }}
       NUPKGPATH: packages
 
     steps:
