@@ -24,8 +24,10 @@ jobs:
       run: | 
         REL_GITHUB_REF=$GITHUB_REF
         echo '::set-env name=REL_GITHUB_REF::'$GITHUB_REF
-        REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER" #TEST emulate release on push on master
-        echo '::set-env name=REL_GITHUB_REF::'$REL_GITHUB_REF     #TEST emulate release on push on master
+        REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER"   #TEST emulate release on push on master
+        echo '::set-env name=REL_GITHUB_REF::'$REL_GITHUB_REF          #TEST emulate release on push on master
+        REL_GITHUB_BUILDNAME=$(echo $BUILDPATH | awk -F\/ '{print $NF}' | awk -F.csproj '{print $1}')
+        echo '::set-env name=REL_GITHUB_BUILDNAME::'$REL_GITHUB_BUILDNAME
         REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
         echo '::set-env name=REL_VERSION::'$REL_VERSION
         REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
@@ -40,7 +42,7 @@ jobs:
 
     - name: Run Tests
       run: |
-        dotnet test tests/Repository.Test.Integration --logger "github;name=test-report;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
+        dotnet test tests/Repository.Test.Integration --logger "github;name=$REL_GITHUB_BUILDNAME-tests;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
     
     - name: Run Samples
       run: |
