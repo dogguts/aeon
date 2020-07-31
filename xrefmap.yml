@@ -1311,15 +1311,22 @@ references:
   commentId: T:Aeon.Core.Repository.ServiceCollectionExtensions
   fullName: Aeon.Core.Repository.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection,Type[])
-  name: AddRepositories(IServiceCollection, Type[])
-  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepositories_IServiceCollection_Type___
-  commentId: M:Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection,Type[])
-  name.vb: AddRepositories(IServiceCollection, Type())
-  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type[])
-  fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type())
-  nameWithType: ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type[])
-  nameWithType.vb: ServiceCollectionExtensions.AddRepositories(IServiceCollection, Type())
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories*
+  name: AddReadonlyRepositories
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddReadonlyRepositories_
+  commentId: Overload:Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories
+  nameWithType: ServiceCollectionExtensions.AddReadonlyRepositories
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories``1(IServiceCollection)
+  name: AddReadonlyRepositories<TDbContext>(IServiceCollection)
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddReadonlyRepositories__1_IServiceCollection_
+  commentId: M:Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories``1(IServiceCollection)
+  name.vb: AddReadonlyRepositories(Of TDbContext)(IServiceCollection)
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories<TDbContext>(IServiceCollection)
+  fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories(Of TDbContext)(IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddReadonlyRepositories<TDbContext>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddReadonlyRepositories(Of TDbContext)(IServiceCollection)
 - uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories*
   name: AddRepositories
   href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepositories_
