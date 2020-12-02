@@ -29,12 +29,9 @@ jobs:
         
         REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER"   #TEST emulate release on push on master
  
-        #REL_GITHUB_BUILDNAME=$(echo $BUILDPATH | awk -F\/ '{print $NF}' | awk -F.csproj '{print $1}')
         REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
         REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
-        
-        
-        #echo 'REL_GITHUB_BUILDNAME='$REL_GITHUB_BUILDNAME
+
         echo 'REL_VERSION='$REL_VERSION >> $GITHUB_ENV
         echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY >> $GITHUB_ENV
 
@@ -43,31 +40,32 @@ jobs:
 #        env
         
     - name: Build
-      run: dotnet build aeon.sln --configuration Release
+      run: |
+        echo "::warning::Temp disabled"
+        #dotnet build aeon.sln --configuration Release
 
     - name: Run Tests
       run: |
-        dotnet test tests/Repository.Test.Integration --logger "github;name=test-repor;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
+        echo "::warning::Temp disabled"
+        #dotnet test tests/Repository.Test.Integration --logger "github;name=test-report;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
     
     - name: Run Samples
       run: |
-        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
+        echo "::warning::Temp disabled"
+        #find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
 
     - name: Pack
       run: |
-        CMD= "dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=$REL_VERSION -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=$REL_VERSION_ONLY -p:FileVersion=$REL_VERSION_ONLY -o $NUPKGPATH"
-        echo $CMD
-        ${CMD}
-        CMD="dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}} -p:FileVersion=${{env.REL_VERSION_ONLY}}Y -o $NUPKGPATH"
-        echo $CMD
-        ${CMD}
-    - name: debug list
+        dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=$REL_VERSION -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=$REL_VERSION_ONLY -p:FileVersion=$REL_VERSION_ONLY -o $NUPKGPATH
+        dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}} -p:FileVersion=${{env.REL_VERSION_ONLY}}Y -o $NUPKGPATH
+
+    - name: List packages
       run: |
         pwd
         ls $NUPKGPATH 
 
     - name: Publish packages to NuGet.org
       run: |
-        echo "TODO: temp disabled"
+        echo "::warning::Temp disabled"
         #dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
         
