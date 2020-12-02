@@ -22,6 +22,7 @@ jobs:
     - run: |
         pwd
         cat /home/runner/work/aeon/nuget.config
+        dotnet nuget list source
           
     - name: Runtime environment
       shell: bash
@@ -54,7 +55,8 @@ jobs:
     - name: Publish packages to GPR
       run: | 
         ls packages/*.*nupkg
-        dotnet nuget push 'packages/*.nupkg' --skip-duplicate --source "github" -k ${{secrets.GITHUB_TOKEN}}
+        dotnet nuget push 'packages/*.nupkg' --skip-duplicate 
+        #--source "github" -k ${{secrets.GITHUB_TOKEN}}
   documentation:
     runs-on: ubuntu-latest
      
