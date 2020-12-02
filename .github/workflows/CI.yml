@@ -27,7 +27,7 @@ jobs:
       env:
         WORKSPACE: ${{ github.workspace }}
       run: |
-        echo ::set-env name=GH_SHORT_SHA::"`git rev-parse --short "$GITHUB_SHA"`"
+        echo GH_SHORT_SHA="`git rev-parse --short "$GITHUB_SHA"`" >> $GITHUB_ENV
         mv github_nuget.config nuget.config
         sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config; rm nuget.config.bak
     
