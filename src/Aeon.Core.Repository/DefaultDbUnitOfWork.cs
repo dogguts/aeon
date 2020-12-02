@@ -9,7 +9,7 @@ namespace Aeon.Core.Repository {
     /// A simple IUnitOfWork implemenation, calls SaveChanges() on a TContext instance
     /// </summary>
     /// <typeparam name="TContext">the DbContext type SaveChanges should be invoked for</typeparam>
-    public class DefaultDbUnitOfWork<TContext> : IUnitOfWork where TContext : DbContext {
+    public class DefaultDbUnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext {
         private readonly TContext _dbContext;
 
         /// <summary>
