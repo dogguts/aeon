@@ -7,11 +7,13 @@ on:
       - master    #TEST emulate release on push on master
 
 # To publish a release; tag "v" + "VersionSuffix(Mandatory)" + "-" + "VersionSuffix(Optional)"
+# Tag: v5.0.0-preview1   or v5.0.0
 
 jobs:
   build:
     runs-on: [ubuntu-latest]
     env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
       CONFIGURATION: Release
       NUPKGPATH: packages
 
@@ -32,13 +34,12 @@ jobs:
         REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
         REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
 
-        echo 'REL_VERSION='$REL_VERSION >> $GITHUB_ENV
-        echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY >> $GITHUB_ENV
-
-#    - name: debug/test
-#      run: | 
-#        env
+        echo 'REL_VERSION='$REL_VERSION | tee -a $GITHUB_ENV
+        echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY | tee -a $GITHUB_ENV
         
+        echo "nuget sources"
+        dotnet nuget list source
+         
     - name: Build
       run: |
         echo "::warning::Temp disabled"
@@ -56,8 +57,8 @@ jobs:
 
     - name: Pack
       run: |
-        dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=$REL_VERSION -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=$REL_VERSION_ONLY -p:FileVersion=$REL_VERSION_ONLY -o $NUPKGPATH
-        dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}} -p:FileVersion=${{env.REL_VERSION_ONLY}}Y -o $NUPKGPATH
+        dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}}.0 -p:FileVersion=${{env.REL_VERSION_ONLY}}.0 -o $NUPKGPATH
+        dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}}.0 -p:FileVersion=${{env.REL_VERSION_ONLY}}.0 -o $NUPKGPATH
 
     - name: List packages
       run: |
