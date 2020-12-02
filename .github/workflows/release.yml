@@ -35,8 +35,8 @@ jobs:
         
         
         #echo 'REL_GITHUB_BUILDNAME='$REL_GITHUB_BUILDNAME
-        echo 'REL_VERSION='$REL_VERSION
-        echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY
+        echo 'REL_VERSION='$REL_VERSION >> $GITHUB_ENV
+        echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY >> $GITHUB_ENV
 
 #    - name: debug/test
 #      run: | 
@@ -55,7 +55,7 @@ jobs:
 
     - name: Pack
       run: |
-        CMD= "dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}} -p:FileVersion=${{env.REL_VERSION_ONLY}} -o $NUPKGPATH"
+        CMD= "dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=$REL_VERSION -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=$REL_VERSION_ONLY -p:FileVersion=$REL_VERSION_ONLY -o $NUPKGPATH"
         echo $CMD
         ${CMD}
         CMD="dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}} -p:FileVersion=${{env.REL_VERSION_ONLY}}Y -o $NUPKGPATH"
