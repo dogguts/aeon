@@ -20,9 +20,9 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - run: |
-        pwd
-        cat /home/runner/work/aeon/nuget.config
+        echo "nuget sources"
         dotnet nuget list source
+        echo "GITHUB_ACTOR:$GITHUB_ACTOR"
           
     - name: Runtime environment
       shell: bash
@@ -30,14 +30,9 @@ jobs:
         WORKSPACE: ${{ github.workspace }}
       run: |
         echo GH_SHORT_SHA="`git rev-parse --short "$GITHUB_SHA"`" >> $GITHUB_ENV
-        #mv github_nuget.config nuget.config
-        #sed -i.bak 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config; rm nuget.config.bak
     
     - name: Build
       run: dotnet build aeon.sln --configuration Release
-    
-#    - name: Test
-#      run: dotnet test tests/Repository.Test.Integration --logger "trx;LogFileName=Repository.Test.Integration.trx"
  
     - name: Test
       run: |
@@ -56,7 +51,6 @@ jobs:
       run: | 
         ls packages/*.*nupkg
         dotnet nuget push 'packages/*.nupkg' --skip-duplicate 
-        #--source "github" -k ${{secrets.GITHUB_TOKEN}}
   documentation:
     runs-on: ubuntu-latest
      
