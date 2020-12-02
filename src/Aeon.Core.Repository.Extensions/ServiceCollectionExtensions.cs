@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 
@@ -13,8 +14,20 @@ namespace Aeon.Core.Repository {
     /// Utility extensions on IServiceCollection
     /// </summary>
     public static class ServiceCollectionExtensions {
-        //NOTE: ideally we would also provide some Setup/Options Action<> and a method to add 
- 
+
+        /// <summary>
+        /// Create and register a single repository TRepositoryService with specific implementation TRepositoryImplementation
+        /// Synonymous with IServiceCollection.AddScoped&lt;TRepositoryService, TRepositoryImplementation&gt;();
+        /// </summary>
+        /// <typeparam name="TRepositoryService">The repository service type</typeparam>
+        /// <typeparam name="TRepositoryImplementation">The repository implementation type</typeparam>
+        /// <param name="services">The Microsoft.Extensions.DependencyInjection.IServiceCollection to add services to.</param>
+        /// <returns>The same service collection so that multiple calls can be chained.</returns>
+        public static IServiceCollection AddRepository<TRepositoryService, TRepositoryImplementation>(this IServiceCollection services)
+            where TRepositoryService : class
+            where TRepositoryImplementation : class, TRepositoryService => services.AddScoped<TRepositoryService, TRepositoryImplementation>();
+
+
         /// <summary>
         /// Create and register repositories (both as Repository&lt;,&gt;:IRepository&lt;&gt; and ReadonlyRepository&lt;,&gt;:IReadonlyRepository&lt;&gt;) for all public DbSet&lt;&gt; properties found in DbContext TDbContext
         /// </summary>
@@ -32,6 +45,16 @@ namespace Aeon.Core.Repository {
         /// <returns>The same service collection so that multiple calls can be chained.</returns>
         public static IServiceCollection AddReadonlyRepositories<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
             => AddReadonlyRepositories(services, typeof(TDbContext));
+
+        /// <summary>
+        /// Create and register readonly-repositories (as {implementationType}:IReadonlyRepository&lt;&gt;) for all public DbSet&lt;&gt; properties in DbContext TDbContext
+        /// </summary>
+        /// <typeparam name="TDbContext">The DbContext to scan for DbSets</typeparam>
+        /// <param name="services">The Microsoft.Extensions.DependencyInjection.IServiceCollection to add services to.</param>
+        /// <param name="implementationType">The  System.Type of the repository implementation</param>
+        /// <returns>The same service collection so that multiple calls can be chained.</returns>
+        public static IServiceCollection AddReadonlyRepositories<TDbContext>(this IServiceCollection services, System.Type implementationType ) where TDbContext : DbContext
+           => AddRepositoriesFromDbContexts(services, (typeof(IReadonlyRepository<>), implementationType), typeof(TDbContext));
 
         #region Private
 
@@ -56,6 +79,8 @@ namespace Aeon.Core.Repository {
         private static IServiceCollection AddReadonlyRepositories(this IServiceCollection services, params Type[] dbContextTypes) =>
             AddRepositoriesFromDbContexts(services, (typeof(IReadonlyRepository<>), typeof(ReadonlyRepository<,>)), dbContextTypes);
 
+        //private static IServiceCollection AddReadonlyRepositories<TImplementation>(this IServiceCollection services, params Type[] dbContextTypes) =>
+        //    AddRepositoriesFromDbContexts(services, (typeof(IReadonlyRepository<>), typeof(TImplementation)), dbContextTypes);
 
         /// <summary>
         /// 
