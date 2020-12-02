@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DefaultDbUnitOfWork&lt;TContext&gt;
+    <title>Interface IUnitOfWork&lt;TContext&gt;
    | Aeon repository </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DefaultDbUnitOfWork&lt;TContext&gt;
+    <meta name="title" content="Interface IUnitOfWork&lt;TContext&gt;
    | Aeon repository ">
     <meta name="generator" content="docfx 2.51.0.0">
     
@@ -68,29 +68,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Aeon.Core.Repository.DefaultDbUnitOfWork`1">
+            <article class="content wrap" id="_content" data-uid="Aeon.Core.Repository.Infrastructure.IUnitOfWork`1">
   
   
-  <h1 id="Aeon_Core_Repository_DefaultDbUnitOfWork_1" data-uid="Aeon.Core.Repository.DefaultDbUnitOfWork`1" class="text-break">Class DefaultDbUnitOfWork&lt;TContext&gt;
+  <h1 id="Aeon_Core_Repository_Infrastructure_IUnitOfWork_1" data-uid="Aeon.Core.Repository.Infrastructure.IUnitOfWork`1" class="text-break">Interface IUnitOfWork&lt;TContext&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A simple IUnitOfWork implemenation, calls SaveChanges() on a TContext instance</p>
+  <div class="markdown level0 summary"><p>Defines the basic functionality of a unit of work</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DefaultDbUnitOfWork&lt;TContext&gt;</span></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Aeon.Core.Repository.Infrastructure.IUnitOfWork.html#Aeon_Core_Repository_Infrastructure_IUnitOfWork_Commit">IUnitOfWork.Commit()</a>
+    </div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Aeon.Core.Repository.Infrastructure.IUnitOfWork-1.html">IUnitOfWork</a>&lt;TContext&gt;</div>
-    <div><a class="xref" href="Aeon.Core.Repository.Infrastructure.IUnitOfWork.html">IUnitOfWork</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Aeon.Core.Repository.html">Aeon.Core.Repository</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Aeon.Core.Repository.Infrastructure.html">Aeon.Core.Repository.Infrastructure</a></h6>
   <h6><strong>Assembly</strong>: Aeon.Core.Repository.dll</h6>
-  <h5 id="Aeon_Core_Repository_DefaultDbUnitOfWork_1_syntax">Syntax</h5>
+  <h5 id="Aeon_Core_Repository_Infrastructure_IUnitOfWork_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DefaultDbUnitOfWork&lt;TContext&gt; : object, IUnitOfWork&lt;TContext&gt;, IUnitOfWork where TContext : DbContext</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IUnitOfWork&lt;TContext&gt; : IUnitOfWork where TContext : DbContext</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -103,58 +99,10 @@
     <tbody>
       <tr>
         <td><span class="parametername">TContext</span></td>
-        <td><p>the DbContext type SaveChanges should be invoked for</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <a id="Aeon_Core_Repository_DefaultDbUnitOfWork_1__ctor_" data-uid="Aeon.Core.Repository.DefaultDbUnitOfWork`1.#ctor*"></a>
-  <h4 id="Aeon_Core_Repository_DefaultDbUnitOfWork_1__ctor__0_" data-uid="Aeon.Core.Repository.DefaultDbUnitOfWork`1.#ctor(`0)">DefaultDbUnitOfWork(TContext)</h4>
-  <div class="markdown level1 summary"><p>Creates a new DefaultDbUnitOfWork for dbContext</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DefaultDbUnitOfWork(TContext dbContext)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TContext</span></td>
-        <td><span class="parametername">dbContext</span></td>
-        <td><p>The DbContext this DefaultDbUnitOfWork is handling</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="Aeon_Core_Repository_DefaultDbUnitOfWork_1_Commit_" data-uid="Aeon.Core.Repository.DefaultDbUnitOfWork`1.Commit*"></a>
-  <h4 id="Aeon_Core_Repository_DefaultDbUnitOfWork_1_Commit" data-uid="Aeon.Core.Repository.DefaultDbUnitOfWork`1.Commit">Commit()</h4>
-  <div class="markdown level1 summary"><p>Save the changes from the TContext instance to the database</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Commit()</code></pre>
-  </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Aeon.Core.Repository.Infrastructure.IUnitOfWork-1.html">IUnitOfWork&lt;TContext&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Aeon.Core.Repository.Infrastructure.IUnitOfWork.html">IUnitOfWork</a>
-  </div>
 </article>
           </div>
           

@@ -408,6 +408,24 @@ references:
   isSpec: "True"
   fullName: Aeon.Core.Repository.Infrastructure.IUnitOfWork.Commit
   nameWithType: IUnitOfWork.Commit
+- uid: Aeon.Core.Repository.Infrastructure.IUnitOfWork`1
+  name: IUnitOfWork<TContext>
+  href: api/Aeon.Core.Repository.Infrastructure.IUnitOfWork-1.html
+  commentId: T:Aeon.Core.Repository.Infrastructure.IUnitOfWork`1
+  name.vb: IUnitOfWork(Of TContext)
+  fullName: Aeon.Core.Repository.Infrastructure.IUnitOfWork<TContext>
+  fullName.vb: Aeon.Core.Repository.Infrastructure.IUnitOfWork(Of TContext)
+  nameWithType: IUnitOfWork<TContext>
+  nameWithType.vb: IUnitOfWork(Of TContext)
+- uid: Aeon.Core.Repository.IReadonlyRepository`2
+  name: IReadonlyRepository<TEntity, TDbContext>
+  href: api/Aeon.Core.Repository.IReadonlyRepository-2.html
+  commentId: T:Aeon.Core.Repository.IReadonlyRepository`2
+  name.vb: IReadonlyRepository(Of TEntity, TDbContext)
+  fullName: Aeon.Core.Repository.IReadonlyRepository<TEntity, TDbContext>
+  fullName.vb: Aeon.Core.Repository.IReadonlyRepository(Of TEntity, TDbContext)
+  nameWithType: IReadonlyRepository<TEntity, TDbContext>
+  nameWithType.vb: IReadonlyRepository(Of TEntity, TDbContext)
 - uid: Aeon.Core.Repository.IRepositoryIncludable`1
   name: IRepositoryIncludable<T>
   href: api/Aeon.Core.Repository.IRepositoryIncludable-1.html
@@ -580,6 +598,24 @@ references:
   fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).AllAsync
   nameWithType: ReadonlyRepository<TEntity, TDbContext>.AllAsync
   nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).AllAsync
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.DynamicOrderBy(IQueryable{`0}@,Expression{Func{`0,System.Object}},ListSortDirection,System.Boolean)
+  name: DynamicOrderBy(ref IQueryable<TEntity>, Expression<Func<TEntity, Object>>, ListSortDirection, Boolean)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_DynamicOrderBy_IQueryable__0___Expression_Func__0_System_Object___ListSortDirection_System_Boolean_
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.DynamicOrderBy(IQueryable{`0}@,Expression{Func{`0,System.Object}},ListSortDirection,System.Boolean)
+  name.vb: DynamicOrderBy(ByRef IQueryable(Of TEntity), Expression(Of Func(Of TEntity, Object)), ListSortDirection, Boolean)
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.DynamicOrderBy(ref IQueryable<TEntity>, Expression<Func<TEntity, System.Object>>, ListSortDirection, System.Boolean)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).DynamicOrderBy(ByRef IQueryable(Of TEntity), Expression(Of Func(Of TEntity, System.Object)), ListSortDirection, System.Boolean)
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.DynamicOrderBy(ref IQueryable<TEntity>, Expression<Func<TEntity, Object>>, ListSortDirection, Boolean)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).DynamicOrderBy(ByRef IQueryable(Of TEntity), Expression(Of Func(Of TEntity, Object)), ListSortDirection, Boolean)
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.DynamicOrderBy*
+  name: DynamicOrderBy
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_DynamicOrderBy_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.DynamicOrderBy
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.DynamicOrderBy
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).DynamicOrderBy
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.DynamicOrderBy
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).DynamicOrderBy
 - uid: Aeon.Core.Repository.ReadonlyRepository`2.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])
   name: Get(IRepositoryInclude<TEntity>, Object[])
   href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_Get_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__System_Object___
@@ -688,6 +724,32 @@ references:
   fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync
   nameWithType: ReadonlyRepository<TEntity, TDbContext>.GetWithFilterAsync
   nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).GetWithFilterAsync
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.sortCallSelection
+  name: sortCallSelection
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_sortCallSelection
+  commentId: F:Aeon.Core.Repository.ReadonlyRepository`2.sortCallSelection
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.sortCallSelection
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).sortCallSelection
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.sortCallSelection
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).sortCallSelection
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.WithIncludes(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name: WithIncludes(IRepositoryInclude<TEntity>)
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_WithIncludes_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__
+  commentId: M:Aeon.Core.Repository.ReadonlyRepository`2.WithIncludes(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})
+  name.vb: WithIncludes(IRepositoryInclude(Of TEntity))
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.WithIncludes(Aeon.Core.Repository.Infrastructure.IRepositoryInclude<TEntity>)
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).WithIncludes(Aeon.Core.Repository.Infrastructure.IRepositoryInclude(Of TEntity))
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.WithIncludes(IRepositoryInclude<TEntity>)
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).WithIncludes(IRepositoryInclude(Of TEntity))
+- uid: Aeon.Core.Repository.ReadonlyRepository`2.WithIncludes*
+  name: WithIncludes
+  href: api/Aeon.Core.Repository.ReadonlyRepository-2.html#Aeon_Core_Repository_ReadonlyRepository_2_WithIncludes_
+  commentId: Overload:Aeon.Core.Repository.ReadonlyRepository`2.WithIncludes
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ReadonlyRepository<TEntity, TDbContext>.WithIncludes
+  fullName.vb: Aeon.Core.Repository.ReadonlyRepository(Of TEntity, TDbContext).WithIncludes
+  nameWithType: ReadonlyRepository<TEntity, TDbContext>.WithIncludes
+  nameWithType.vb: ReadonlyRepository(Of TEntity, TDbContext).WithIncludes
 - uid: Aeon.Core.Repository.Repository`2
   name: Repository<TEntity, TDbContext>
   href: api/Aeon.Core.Repository.Repository-2.html
@@ -1327,6 +1389,15 @@ references:
   fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories(Of TDbContext)(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddReadonlyRepositories<TDbContext>(IServiceCollection)
   nameWithType.vb: ServiceCollectionExtensions.AddReadonlyRepositories(Of TDbContext)(IServiceCollection)
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories``1(IServiceCollection,System.Type)
+  name: AddReadonlyRepositories<TDbContext>(IServiceCollection, System.Type)
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddReadonlyRepositories__1_IServiceCollection_System_Type_
+  commentId: M:Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories``1(IServiceCollection,System.Type)
+  name.vb: AddReadonlyRepositories(Of TDbContext)(IServiceCollection, System.Type)
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories<TDbContext>(IServiceCollection, System.Type)
+  fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddReadonlyRepositories(Of TDbContext)(IServiceCollection, System.Type)
+  nameWithType: ServiceCollectionExtensions.AddReadonlyRepositories<TDbContext>(IServiceCollection, System.Type)
+  nameWithType.vb: ServiceCollectionExtensions.AddReadonlyRepositories(Of TDbContext)(IServiceCollection, System.Type)
 - uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories*
   name: AddRepositories
   href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepositories_
@@ -1343,6 +1414,22 @@ references:
   fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepositories(Of TDbContext)(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddRepositories<TDbContext>(IServiceCollection)
   nameWithType.vb: ServiceCollectionExtensions.AddRepositories(Of TDbContext)(IServiceCollection)
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository*
+  name: AddRepository
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepository_
+  commentId: Overload:Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository
+  isSpec: "True"
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository
+  nameWithType: ServiceCollectionExtensions.AddRepository
+- uid: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository``2(IServiceCollection)
+  name: AddRepository<TRepositoryService, TRepositoryImplementation>(IServiceCollection)
+  href: api/Aeon.Core.Repository.ServiceCollectionExtensions.html#Aeon_Core_Repository_ServiceCollectionExtensions_AddRepository__2_IServiceCollection_
+  commentId: M:Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository``2(IServiceCollection)
+  name.vb: AddRepository(Of TRepositoryService, TRepositoryImplementation)(IServiceCollection)
+  fullName: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository<TRepositoryService, TRepositoryImplementation>(IServiceCollection)
+  fullName.vb: Aeon.Core.Repository.ServiceCollectionExtensions.AddRepository(Of TRepositoryService, TRepositoryImplementation)(IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddRepository<TRepositoryService, TRepositoryImplementation>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddRepository(Of TRepositoryService, TRepositoryImplementation)(IServiceCollection)
 - uid: example_basic_repository
   name: Repository
   href: examples/basics/Repository.html

@@ -9,7 +9,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Aeon.Core.Repository.DefaultDbUnitOfWork-1.html",
-          "hash": "vVk8CZPvz2NNc23N5+HykA=="
+          "hash": "CX8FTBv/v+ltq+FEVy7M5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.IReadonlyRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.IReadonlyRepository-2.html",
+          "hash": "+td+jeVLoVZJo+vfPyl+tg=="
         }
       },
       "is_incremental": false,
@@ -125,6 +137,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IUnitOfWork-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Aeon.Core.Repository.Infrastructure.IUnitOfWork-1.html",
+          "hash": "4ca6KgzhD3wNntmW2hqawg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Aeon.Core.Repository.Infrastructure.IUnitOfWork.yml",
       "output": {
         ".html": {
@@ -141,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Aeon.Core.Repository.Infrastructure.html",
-          "hash": "+YQwdMMmiQQYDnvJfV78Cg=="
+          "hash": "LBGGBd3NyhcBVPAUX6MVDA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Aeon.Core.Repository.ReadonlyRepository-2.html",
-          "hash": "geHiN9UDGmH0jsKn+iUhfw=="
+          "hash": "q4hQ+yKq58FWooAifcYYBw=="
         }
       },
       "is_incremental": false,
@@ -165,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Aeon.Core.Repository.Repository-2.html",
-          "hash": "Ls+2Fud894eXUHFp5GS9dg=="
+          "hash": "kgORfPyw14sAcDRREEki1A=="
         }
       },
       "is_incremental": false,
@@ -249,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Aeon.Core.Repository.ServiceCollectionExtensions.html",
-          "hash": "WPA6EOH09ppGESc9V7zeEw=="
+          "hash": "qL4kvR3emSJOG2jxM9TxDw=="
         }
       },
       "is_incremental": false,
@@ -261,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Aeon.Core.Repository.html",
-          "hash": "4Oj5AIIzAZR5INDXIiBauQ=="
+          "hash": "8eR8rIxagyZClzsqPpUIdQ=="
         }
       },
       "is_incremental": false,
@@ -285,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "1co4DuHko1KbdESIqqVuQg=="
+          "hash": "Or+se6TUTfDZ0PuDl73yYA=="
         }
       },
       "is_incremental": false,
@@ -545,7 +569,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 24,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

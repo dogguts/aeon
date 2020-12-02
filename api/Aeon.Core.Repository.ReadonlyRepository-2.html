@@ -83,6 +83,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Aeon.Core.Repository.IReadonlyRepository-2.html">IReadonlyRepository</a>&lt;TEntity, TDbContext&gt;</div>
     <div><a class="xref" href="Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html">IReadonlyRepository</a>&lt;TEntity&gt;</div>
     <div><a class="xref" href="Aeon.Core.Repository.Infrastructure.IReadonlyRepositoryAsync-1.html">IReadonlyRepositoryAsync</a>&lt;TEntity&gt;</div>
   </div>
@@ -90,7 +91,7 @@
   <h6><strong>Assembly</strong>: Aeon.Core.Repository.dll</h6>
   <h5 id="Aeon_Core_Repository_ReadonlyRepository_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReadonlyRepository&lt;TEntity, TDbContext&gt; : object, IReadonlyRepository&lt;TEntity&gt;, IReadonlyRepositoryAsync&lt;TEntity&gt; where TEntity : class where TDbContext : DbContext</code></pre>
+    <pre><code class="lang-csharp hljs">public class ReadonlyRepository&lt;TEntity, TDbContext&gt; : object, IReadonlyRepository&lt;TEntity, TDbContext&gt;, IReadonlyRepository&lt;TEntity&gt;, IReadonlyRepositoryAsync&lt;TEntity&gt; where TEntity : class where TDbContext : DbContext</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,6 +185,28 @@
       </tr>
     </tbody>
   </table>
+  <h4 id="Aeon_Core_Repository_ReadonlyRepository_2_sortCallSelection" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.sortCallSelection">sortCallSelection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static readonly IDictionary&lt;(ListSortDirection direction, bool isFirst), string&gt; sortCallSelection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">ListSortDirection</span>, <span class="xref">System.Boolean</span>&gt;, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <a id="Aeon_Core_Repository_ReadonlyRepository_2_All_" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.All*"></a>
@@ -192,7 +215,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;TEntity&gt; All()</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TEntity&gt; All()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,7 +301,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;TEntity&gt;&gt; AllAsync(IRepositoryInclude&lt;TEntity&gt; includes)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IEnumerable&lt;TEntity&gt;&gt; AllAsync(IRepositoryInclude&lt;TEntity&gt; includes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +335,53 @@
       </tr>
     </tbody>
   </table>
+  <a id="Aeon_Core_Repository_ReadonlyRepository_2_DynamicOrderBy_" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.DynamicOrderBy*"></a>
+  <h4 id="Aeon_Core_Repository_ReadonlyRepository_2_DynamicOrderBy_IQueryable__0___Expression_Func__0_System_Object___ListSortDirection_System_Boolean_" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.DynamicOrderBy(IQueryable{`0}@,Expression{Func{`0,System.Object}},ListSortDirection,System.Boolean)">DynamicOrderBy(ref IQueryable&lt;TEntity&gt;, Expression&lt;Func&lt;TEntity, Object&gt;&gt;, ListSortDirection, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void DynamicOrderBy(ref IQueryable&lt;TEntity&gt; query, Expression&lt;Func&lt;TEntity, object&gt;&gt; expression, ListSortDirection direction, bool isFirst)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueryable</span>&lt;TEntity&gt;</td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Expression</span>&lt;<span class="xref">Func</span>&lt;TEntity, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">ListSortDirection</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isFirst</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Aeon_Core_Repository_ReadonlyRepository_2_Get_" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.Get*"></a>
   <h4 id="Aeon_Core_Repository_ReadonlyRepository_2_Get_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__System_Object___" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.Get(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0},System.Object[])">Get(IRepositoryInclude&lt;TEntity&gt;, Object[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TEntity Get(IRepositoryInclude&lt;TEntity&gt; includes, params object[] keyValues)</code></pre>
+    <pre><code class="lang-csharp hljs">public TEntity Get(IRepositoryInclude&lt;TEntity&gt; includes, params object[] keyValues)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -363,7 +426,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TEntity Get(params object[] keyValues)</code></pre>
+    <pre><code class="lang-csharp hljs">public TEntity Get(params object[] keyValues)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -489,7 +552,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual (IEnumerable&lt;TEntity&gt; Data, int Total) GetWithFilter(IRepositoryFilter&lt;TEntity&gt; filter, IRepositorySort&lt;TEntity&gt; sorts = null, (int Page, int PageSize)? paging = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public (IEnumerable&lt;TEntity&gt; Data, int Total) GetWithFilter(IRepositoryFilter&lt;TEntity&gt; filter, IRepositorySort&lt;TEntity&gt; sorts = null, (int Page, int PageSize)? paging = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -540,7 +603,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual (IEnumerable&lt;TEntity&gt; Data, int Total) GetWithFilter((IRepositoryFilter&lt;TEntity&gt; filter, IRepositorySort&lt;TEntity&gt; sorts) specification, (int Page, int PageSize)? paging = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public (IEnumerable&lt;TEntity&gt; Data, int Total) GetWithFilter((IRepositoryFilter&lt;TEntity&gt; filter, IRepositorySort&lt;TEntity&gt; sorts) specification, (int Page, int PageSize)? paging = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -585,7 +648,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;(IEnumerable&lt;TEntity&gt; Data, int Total)&gt; GetWithFilterAsync(IRepositoryFilter&lt;TEntity&gt; filter, IRepositorySort&lt;TEntity&gt; sorts = null, (int Page, int PageSize)? paging = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;(IEnumerable&lt;TEntity&gt; Data, int Total)&gt; GetWithFilterAsync(IRepositoryFilter&lt;TEntity&gt; filter, IRepositorySort&lt;TEntity&gt; sorts = null, (int Page, int PageSize)? paging = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -675,7 +738,50 @@
       </tr>
     </tbody>
   </table>
+  <a id="Aeon_Core_Repository_ReadonlyRepository_2_WithIncludes_" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.WithIncludes*"></a>
+  <h4 id="Aeon_Core_Repository_ReadonlyRepository_2_WithIncludes_Aeon_Core_Repository_Infrastructure_IRepositoryInclude__0__" data-uid="Aeon.Core.Repository.ReadonlyRepository`2.WithIncludes(Aeon.Core.Repository.Infrastructure.IRepositoryInclude{`0})">WithIncludes(IRepositoryInclude&lt;TEntity&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IQueryable&lt;TEntity&gt; WithIncludes(IRepositoryInclude&lt;TEntity&gt; includes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Aeon.Core.Repository.Infrastructure.IRepositoryInclude-1.html">IRepositoryInclude</a>&lt;TEntity&gt;</td>
+        <td><span class="parametername">includes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueryable</span>&lt;TEntity&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Aeon.Core.Repository.IReadonlyRepository-2.html">IReadonlyRepository&lt;TEntity, TDbContext&gt;</a>
+  </div>
   <div>
       <a class="xref" href="Aeon.Core.Repository.Infrastructure.IReadonlyRepository-1.html">IReadonlyRepository&lt;TEntity&gt;</a>
   </div>
