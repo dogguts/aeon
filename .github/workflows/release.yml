@@ -6,18 +6,13 @@ on:
     branches:     #TEST emulate release on push on master
       - master    #TEST emulate release on push on master
 
-# To publish a release; tag "vx.y.z[-OptionalVersionSuffix]"
+# To publish a release; tag "v" + "VersionSuffix(Mandatory)" + "-" + "VersionSuffix(Optional)"
 
 jobs:
   build:
     runs-on: [ubuntu-latest]
-    strategy:
-      matrix:
-        project: [src/Aeon.Core.Repository/Aeon.Core.Repository.csproj, src/Aeon.Core.Repository.Extensions/Aeon.Core.Repository.Extensions.csproj]
-
     env:
       CONFIGURATION: Release
-      BUILDPATH: ${{ matrix.project }}
       NUPKGPATH: packages
 
     steps:
@@ -34,12 +29,12 @@ jobs:
         
         REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER"   #TEST emulate release on push on master
  
-        REL_GITHUB_BUILDNAME=$(echo $BUILDPATH | awk -F\/ '{print $NF}' | awk -F.csproj '{print $1}')
+        #REL_GITHUB_BUILDNAME=$(echo $BUILDPATH | awk -F\/ '{print $NF}' | awk -F.csproj '{print $1}')
         REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
         REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
         
         
-        echo 'REL_GITHUB_BUILDNAME='$REL_GITHUB_BUILDNAME
+        #echo 'REL_GITHUB_BUILDNAME='$REL_GITHUB_BUILDNAME
         echo 'REL_VERSION='$REL_VERSION
         echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY
 
@@ -48,11 +43,11 @@ jobs:
 #        env
         
     - name: Build
-      run: dotnet build $BUILDPATH --configuration $CONFIGURATION
+      run: dotnet build aeon.sln --configuration Release
 
     - name: Run Tests
       run: |
-        dotnet test tests/Repository.Test.Integration --logger "github;name=$REL_GITHUB_BUILDNAME-tests;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
+        dotnet test tests/Repository.Test.Integration --logger "github;name=test-repor;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
     
     - name: Run Samples
       run: |
@@ -60,20 +55,9 @@ jobs:
 
     - name: Pack
       run: |
-        CMD="dotnet pack $BUILDPATH \
-        --configuration $CONFIGURATION \
-        --include-symbols \
-        --include-source \
-        -p:IncludeSymbols=true \
-        -p:SymbolPackageFormat=snupkg \
-        /p:Version=$REL_VERSION \
-        /p:RepositoryCommit=$GITHUB_SHA \
-        /p:AssemblyVersion=$REL_VERSION_ONLY \
-        /p:FileVersion=$REL_VERSION_ONLY \
-        -o $NUPKGPATH"
-        echo $CMD
-        ${CMD}
-
+        dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=$REL_VERSION -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=$REL_VERSION_ONLY -p:FileVersion=$REL_VERSION_ONLY -o $NUPKGPATH
+        dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=$REL_VERSION -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=$REL_VERSION_ONLY -p:FileVersion=$REL_VERSION_ONLY -o $NUPKGPATH
+ 
     - name: debug list
       run: |
         pwd
