@@ -16,13 +16,12 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
-        source-url: https://nuget.pkg.github.com/$GITHUB_ACTOR/index.json
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - run: |
-        echo "nuget sources"
+    - name: Nuget sources 
+      run: |
         dotnet nuget list source
-        echo "GITHUB_ACTOR:$GITHUB_ACTOR"
           
     - name: Runtime environment
       shell: bash
@@ -51,6 +50,7 @@ jobs:
       run: | 
         ls packages/*.*nupkg
         dotnet nuget push 'packages/*.nupkg' --skip-duplicate 
+        
   documentation:
     runs-on: ubuntu-latest
      
