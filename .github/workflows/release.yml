@@ -1,10 +1,12 @@
 name: Release
 on:
-  release:
-    types: [published]
-#  push:           #TEST emulate release on push on master
-#    branches:     #TEST emulate release on push on master
-#      - master    #TEST emulate release on push on master
+#  release:
+#    types: [published]
+  push:           #TEST emulate release on push on master
+    branches:     #TEST emulate release on push on master
+      - master    #TEST emulate release on push on master
+
+# To publish a release; tag "vx.y.z[-OptionalVersionSuffix]"
 
 jobs:
   build:
@@ -20,18 +22,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+        source-url: https://api.nuget.org/v3/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_KEY}}
     - name: Set release version
       run: | 
         REL_GITHUB_REF=$GITHUB_REF
-        echo '::set-env name=REL_GITHUB_REF::'$GITHUB_REF
-        #REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER"   #TEST emulate release on push on master
-        #echo '::set-env name=REL_GITHUB_REF::'$REL_GITHUB_REF          #TEST emulate release on push on master
+        
+        REL_GITHUB_REF="refs/tags/v1.1.0-preview2$GITHUB_RUN_NUMBER"   #TEST emulate release on push on master
+ 
         REL_GITHUB_BUILDNAME=$(echo $BUILDPATH | awk -F\/ '{print $NF}' | awk -F.csproj '{print $1}')
-        echo '::set-env name=REL_GITHUB_BUILDNAME::'$REL_GITHUB_BUILDNAME
         REL_VERSION="${REL_GITHUB_REF/refs\/tags\/v/}"  
-        echo '::set-env name=REL_VERSION::'$REL_VERSION
         REL_VERSION_ONLY=$( echo "$REL_VERSION" | cut -d\- -f1) 
-        echo '::set-env name=REL_VERSION_ONLY::'$REL_VERSION_ONLY
+        
+        
+        echo 'REL_GITHUB_BUILDNAME='$REL_GITHUB_BUILDNAME
+        echo 'REL_VERSION='$REL_VERSION
+        echo 'REL_VERSION_ONLY='$REL_VERSION_ONLY
 
 #    - name: debug/test
 #      run: | 
@@ -71,5 +81,6 @@ jobs:
 
     - name: Publish packages to NuGet.org
       run: |
-        dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
+        echo "TODO: temp disabled"
+        #dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
         
