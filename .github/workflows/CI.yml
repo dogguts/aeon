@@ -20,7 +20,8 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - run: |
-        cat nuget.config
+        pwd
+        cat /home/runner/work/aeon/aeon/nuget.config
           
     - name: Runtime environment
       shell: bash
