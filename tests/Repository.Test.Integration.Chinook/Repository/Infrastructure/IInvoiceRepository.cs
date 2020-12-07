@@ -1,6 +1,6 @@
+using Aeon.Core.Repository.Infrastructure;
 using System;
 using System.Collections.Generic;
-using Aeon.Core.Repository.Infrastructure;
 
 namespace Chinook.Repository.Infrastructure {
     /// <summary>

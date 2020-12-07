@@ -1,8 +1,8 @@
-using System;
-using System.Linq.Expressions;
 using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
 using Chinook.Repository.Model;
+using System;
+using System.Linq.Expressions;
 
 namespace Chinook.Repository.Filter {
     public class ArtistFilter : RepositoryFilter<Model.Artist> {

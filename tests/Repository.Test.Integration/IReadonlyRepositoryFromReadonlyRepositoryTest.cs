@@ -1,11 +1,11 @@
-using System;
-using System.Linq;
-using Aeon.Core.Repository.Infrastructure;
-using View = Chinook.Repository.Model.View;
-using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 using Aeon.Core.Repository;
+using Aeon.Core.Repository.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.ComponentModel;
+using System.Linq;
+using Xunit;
+using View = Chinook.Repository.Model.View;
 
 
 namespace Chinook.Repository.Integration.Tests {

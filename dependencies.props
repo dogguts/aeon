@@ -1,0 +1,7 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AspNetCoreVersion>3.1</AspNetCoreVersion>
+    <EntityFrameworkVersion>3.1</EntityFrameworkVersion>
+    <SourceLinkGithubVersion>1.0.0</SourceLinkGithubVersion>
+  </PropertyGroup>
+</Project>

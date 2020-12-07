@@ -1,4 +1,3 @@
-using System;
 using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
 using Chinook.Repository.Infrastructure;
@@ -7,6 +6,7 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Chinook.Repository.Integration.Tests {
 

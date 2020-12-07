@@ -1,8 +1,8 @@
+using Chinook.Repository.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Chinook.Repository.Model;
-using Microsoft.EntityFrameworkCore;
 
 namespace Chinook.Repository {
     /// <summary>

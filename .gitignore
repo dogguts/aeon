@@ -17,3 +17,5 @@ msbuild.wrn
 *.csproj.user
 #TEMP: temp location of docfx nuget install
 docfx.console*
+# local publish
+packages/

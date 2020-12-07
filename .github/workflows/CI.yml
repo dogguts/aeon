@@ -43,8 +43,8 @@ jobs:
 
     - name: Pack
       run: |
-        dotnet pack src/Aeon.Core.Repository --configuration Release --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-${{ env.GH_SHORT_SHA }} /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
-        dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-${{ env.GH_SHORT_SHA }} /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
+        dotnet pack src/Aeon.Core.Repository --configuration Release -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-${{ env.GH_SHORT_SHA }} /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
+        dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-${{ env.GH_SHORT_SHA }} /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
 
     - name: Publish packages to GPR
       run: | 

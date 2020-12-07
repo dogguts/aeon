@@ -1,8 +1,8 @@
+using Aeon.Core.Repository.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Aeon.Core.Repository.Infrastructure;
 
 #pragma warning disable 1591 //docs are in interface specifications
 

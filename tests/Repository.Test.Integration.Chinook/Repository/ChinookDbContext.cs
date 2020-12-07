@@ -1,6 +1,6 @@
 ﻿using Chinook.Repository.Model;
-using View = Chinook.Repository.Model.View;
 using Microsoft.EntityFrameworkCore;
+using View = Chinook.Repository.Model.View;
 
 /*
 ~/Dropbox/Projects/Pantheon/Chinook/src/Repository$ dotnet ef dbcontext scaffold "Filename=/home/dogguts/Dropbox/Projects/Pantheon/Chinook/src/Chinook_Sqlite_AutoIncrementPKs.sqlite" Microsoft.EntityFrameworkCore.Sqlite -s ../test/ --force -o Model -d

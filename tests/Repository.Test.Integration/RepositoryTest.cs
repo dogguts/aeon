@@ -1,8 +1,8 @@
 using Aeon.Core.Repository.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 using System.Collections.Generic;
 using System.Linq;
+using Xunit;
 using Xunit.Priority;
 
 namespace Chinook.Repository.Integration.Tests {

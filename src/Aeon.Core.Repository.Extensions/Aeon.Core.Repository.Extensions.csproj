@@ -1,28 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="../../assemblyInfo.props" />
-  <Import Project="../../nupkgs.props" />
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>Repository</AssemblyTitle>
     <Description>Aeon repository pattern extension methods</Description>
     <AssemblyName>Aeon.Core.Repository.Extensions</AssemblyName>
     <RootNamespace>Aeon.Core.Repository</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/dogguts/aeon</RepositoryUrl>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>../../aeon.snk</AssemblyOriginatorKeyFile>
-    <PackageIcon>aeon.png</PackageIcon>
   </PropertyGroup>  
   
   <ItemGroup>
     <ProjectReference Include="..\..\src\Aeon.Core.Repository\Aeon.Core.Repository.csproj" />
   </ItemGroup>  
-  
-  <ItemGroup>
-    <None Include="..\..\aeon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+
 </Project>

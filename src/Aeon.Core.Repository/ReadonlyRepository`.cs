@@ -1,10 +1,10 @@
 using Aeon.Core.Repository.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using System;
-using System.ComponentModel;
 using System.Threading.Tasks;
 
 #pragma warning disable 1591 //docs are in interface specifications

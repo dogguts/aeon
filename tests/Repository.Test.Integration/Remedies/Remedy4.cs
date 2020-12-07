@@ -1,8 +1,8 @@
-using System;
 using Aeon.Core.Repository.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
+using System;
 using System.Reflection;
+using Xunit;
 
 namespace Chinook.Repository.Integration.Tests.Remedies {
     /// <summary>

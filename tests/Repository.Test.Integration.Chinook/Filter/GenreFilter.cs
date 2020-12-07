@@ -1,7 +1,7 @@
-using System;
-using System.Linq.Expressions;
 using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
+using System;
+using System.Linq.Expressions;
 
 namespace Chinook.Repository.Filter {
     public class GenreFilter : RepositoryFilter<Chinook.Repository.Model.Genre> {

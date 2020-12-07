@@ -1,13 +1,9 @@
 ﻿using Aeon.Core.Repository.Infrastructure;
-using Model = Chinook.Repository.Model;
-using View = Chinook.Repository.Model.View;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Collections.Generic;
-using System.IO.Pipes;
-using System.Text;
-using Xunit;
 using System.Linq;
+using Xunit;
+using View = Chinook.Repository.Model.View;
 
 namespace Chinook.Repository.Integration.Tests {
     public class ServiceCollectionExtensionsTest : IClassFixture<ServiceCollectionExtensionsSetup> {

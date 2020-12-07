@@ -1,9 +1,9 @@
-using System;
-using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 using Chinook.Repository.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using Xunit;
 
 namespace Chinook.Repository.Integration.Tests {
     public class ExtendedRepositoryTest : IClassFixture<ExtendedRepositorySetup> {

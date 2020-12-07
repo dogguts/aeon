@@ -55,8 +55,8 @@ jobs:
 
     - name: Pack
       run: |
-        dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}}.0 -p:FileVersion=${{env.REL_VERSION_ONLY}}.0 -o $NUPKGPATH
-        dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION --include-symbols --include-source -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}}.0 -p:FileVersion=${{env.REL_VERSION_ONLY}}.0 -o $NUPKGPATH
+        dotnet pack src/Aeon.Core.Repository/ --configuration $CONFIGURATION -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}}.0 -p:FileVersion=${{env.REL_VERSION_ONLY}}.0 -o $NUPKGPATH
+        dotnet pack src/Aeon.Core.Repository.Extensions/ --configuration $CONFIGURATION -p:Version=${{env.REL_VERSION}} -p:RepositoryCommit=$GITHUB_SHA -p:AssemblyVersion=${{env.REL_VERSION_ONLY}}.0 -p:FileVersion=${{env.REL_VERSION_ONLY}}.0 -o $NUPKGPATH
 
     - name: List packages
       run: |
