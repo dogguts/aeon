@@ -1,10 +1,9 @@
 ﻿using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using System;
-using Microsoft.Extensions.DependencyInjection;
 using Aeon.Samples.Basics.ReadonlyRepository.Models;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Aeon.Samples.Basics.ReadonlyRepository {
 

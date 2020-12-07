@@ -1,11 +1,11 @@
 ﻿using Aeon.Core.Repository;
 using Aeon.Core.Repository.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using System;
-using Microsoft.Extensions.DependencyInjection;
 using Aeon.Samples.Basics.Repository.Models;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.ComponentModel;
+using System.Linq;
 
 namespace Aeon.Samples.Basics.Repository {
 
@@ -110,10 +110,7 @@ namespace Aeon.Samples.Basics.Repository {
     }
 
     class Program {
-        /// <summary>
-        /// See samples/01.Basics/01.Setup 
-        /// </summary>
-        static void Main() {
+          static void Main() {
             var services = new ServiceCollection().AddSingleton<Runnable>();
 
             services.AddDbContext<BloggingContext>(options => options.UseSqlite("Filename=./blog.db"));

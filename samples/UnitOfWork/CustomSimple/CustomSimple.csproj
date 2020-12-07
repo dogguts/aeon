@@ -8,12 +8,4 @@
     <StartupObject>Aeon.Samples.UnitOfWork.CustomSimple.Program</StartupObject>
   </PropertyGroup>
 
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Aeon.Core.Repository\Aeon.Core.Repository.csproj" />
-  </ItemGroup>
-
 </Project>
