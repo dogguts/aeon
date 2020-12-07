@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Aeon.Samples.BasicSetup {
+namespace Aeon.Samples.Basics.Setup {
 
     public class Runnable {
         private readonly IRepository<Blog> _blogRepository;

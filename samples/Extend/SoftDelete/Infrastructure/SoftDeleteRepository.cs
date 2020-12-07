@@ -10,7 +10,7 @@ namespace Aeon.Samples.Extend.SoftDelete.Infrastructure {
       where TEntity : class
       where TDbContext : DbContext {
 
-        private PropertyInfo _softDeletePropertyInfo;
+        private readonly PropertyInfo _softDeletePropertyInfo;
 
         public SoftDeleteRepository(TDbContext context, string softDeletePropertyName = "Deleted") : base(context) {
             _softDeletePropertyInfo = typeof(TEntity).GetProperty(softDeletePropertyName);

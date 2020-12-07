@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Aeon.Samples.Basics.Setup</AssemblyName>
     <RootNamespace>Aeon.Samples.Basics.Setup</RootNamespace>
-    <StartupObject>Aeon.Samples.Basic.Setup.Program</StartupObject>
+    <StartupObject>Aeon.Samples.Basics.Setup.Program</StartupObject>
   </PropertyGroup>
 
 </Project>

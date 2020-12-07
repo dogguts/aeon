@@ -7,20 +7,17 @@ using System;
 
 namespace Aeon.Samples.Extend.SoftDelete {
     public class Runnable {
-        private readonly IRepository<Blog> _blogRepository;
         private readonly IRepository<Post> _postRepository;
         private readonly IUnitOfWork<BloggingContext> _bloggingDbUnitOfWork;
 
         private readonly DbContext _dbContext;
 
-        public Runnable(IRepository<Blog> blogRepository, IRepository<Post> postRepository, IUnitOfWork<BloggingContext> bloggingDbUnitOfWork, BloggingContext dbContext) {
-            _blogRepository = blogRepository;
+        public Runnable(IRepository<Post> postRepository, IUnitOfWork<BloggingContext> bloggingDbUnitOfWork, BloggingContext dbContext) {
             _postRepository = postRepository;
             _bloggingDbUnitOfWork = bloggingDbUnitOfWork;
-            _dbContext = dbContext; // DbContext is injected kept here only for illustration purposed (to show the EntityState later)
+            // DbContext is injected and kept here only for illustration purposed (to show the EntityState later)
+            _dbContext = dbContext;
         }
-
-
 
         public void Run() {
             // Delete an existing Post

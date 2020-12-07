@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace Aeon.Samples.BasicSetup {
+namespace Aeon.Samples.Basics.Setup {
     public class BloggingContext : DbContext {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
