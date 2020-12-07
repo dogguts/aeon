@@ -22,6 +22,8 @@ jobs:
     - name: Nuget sources 
       run: |
         dotnet nuget list source
+        ls /home/runner/work/aeon/
+        cat /home/runner/work/aeon/nuget.config
           
     - name: Runtime environment
       shell: bash
