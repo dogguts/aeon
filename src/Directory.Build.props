@@ -10,7 +10,7 @@
     <FileVersion>1.0.0.0</FileVersion>
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
     <Product>Aeon</Product>
-    <Authors>bart.verthe@gmail.com</Authors>
+    <Authors>Bart Verthe</Authors>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../../aeon.snk</AssemblyOriginatorKeyFile>
 
