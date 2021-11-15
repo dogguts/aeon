@@ -28,11 +28,8 @@ namespace Aeon.Samples.Basics.ReadonlyRepository.Models {
 
             modelBuilder.Entity<PostCountByBlogs>(entity => {
                 entity.ToView("PostCountByBlogs")
-                .HasNoKey();
-                      //.HasKey(c => c.BlogId);
-
+                      .HasKey(c => c.BlogId);
             });
-            //.ToView("PostCountByBlogs").HasNoKey();
 
             // "Blog" seed
             modelBuilder.Entity<Blog>().HasData(new Blog { BlogId = 1, Url = "http://www.surfbirds.com/index.php" });
