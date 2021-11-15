@@ -28,7 +28,8 @@ namespace Aeon.Samples.Basics.ReadonlyRepository.Models {
 
             modelBuilder.Entity<PostCountByBlogs>(entity => {
                 entity.ToView("PostCountByBlogs")
-                    .HasNoKey();
+                .HasNoKey();
+                      //.HasKey(c => c.BlogId);
 
             });
             //.ToView("PostCountByBlogs").HasNoKey();
@@ -79,7 +80,7 @@ namespace Aeon.Samples.Basics.ReadonlyRepository.Models {
                 Title = "Identification Summary Of Vaux's and Chimney Swifts",
                 Content = "Back in 2010, David Sibley illustrated a very useful chart highlighting the structural differences in the shape of the wings between Vaux's and Chimney Swift.",
             });
-         }
+        }
 
     }
     [Table(nameof(Blog))]
