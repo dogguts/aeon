@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-#pragma warning disable 1591 //docs are in interface specifications
-
 namespace Aeon.Core.Repository {
+    /// <inheritdoc/>
     public class RepositoryInclude<TEntity> : IRepositoryInclude<TEntity>, IRepositoryIncludable<TEntity> where TEntity : class {
-        private readonly List<IRepositoryIncludable<TEntity>> _includes = new List<IRepositoryIncludable<TEntity>>();
+        private readonly List<IRepositoryIncludable<TEntity>> _includes = new();
 
+        /// <inheritdoc/>
         public RepositoryInclude() { }
+
+        /// <inheritdoc/>
         public RepositoryInclude(IRepositoryInclude<TEntity> repositoryInclude) {
             if (repositoryInclude != null) {
                 _includes = new List<IRepositoryIncludable<TEntity>>(repositoryInclude.Includes);
@@ -22,52 +24,66 @@ namespace Aeon.Core.Repository {
             return inc;
         }
 
+        /// <inheritdoc/>
         public IEnumerable<string> IncludePaths => _includes.Select(i => i.ToString());
+
+        /// <inheritdoc/>
         public IReadOnlyList<IRepositoryIncludable<TEntity>> Includes => _includes;
 
-        public String Name { get; set; }
+        /// <inheritdoc/>
+        public string Name { get; set; }
 
         //TODO: internal?
+        /// <inheritdoc/>
         public IRepositoryIncludable<TEntity> Previous => throw new NotImplementedException();
     }
 
+    /// <inheritdoc/>
     public interface IRepositoryIncludable<out T> where T : class {
-        String Name { get; set; }
+        /// <inheritdoc/>
+        string Name { get; set; }
+        /// <inheritdoc/>
         IRepositoryIncludable<T> Previous { get; }
     }
 
+    /// <inheritdoc/>
     public interface IRepositoryIncludable<out T, out P> : IRepositoryIncludable<T> where T : class {
     }
 
-
+    /// <inheritdoc/>
     public interface IRepositoryIncludeExpression<T, out P> : IRepositoryIncludable<T, P> where T : class {
+        /// <inheritdoc/>
         IRepositoryIncludable<T> Next { get; set; }
     }
 
+    /// <inheritdoc/>
     public class RepositoryIncludeExpression<T, P> : IRepositoryIncludeExpression<T, P> where T : class {
+        /// <inheritdoc/>
         public IRepositoryIncludable<T> Previous { get; private set; }
-
+        /// <inheritdoc/>
         public RepositoryIncludeExpression(IRepositoryIncludable<T> previous) {
             Previous = previous;
             Name = Previous.Name;
-
-            //Next = _queryable;
         }
 
-        public String Name { get; set; }
-        //public Expression Expression { get; set; }
+        /// <inheritdoc/>
+        public string Name { get; set; }
 
+        /// <inheritdoc/>
         public override string ToString() {
             return (Name + "." + Next?.ToString()).TrimEnd('.');
         }
 
+        /// <inheritdoc/>
         public IRepositoryIncludable<T> Next { get; set; }
     }
 
+    /// <inheritdoc/>
     public static class RepositoryIncludeExtensions {
+        /// <inheritdoc/>
         public static IRepositoryIncludable<TEntity, TProperty> Include<TEntity, TProperty>(this IRepositoryIncludable<TEntity> source, Expression<Func<TEntity, TProperty>> navigationPropertyPath) where TEntity : class {
             // find root (in case of Include after ThenInclude)
-            while (!(source is RepositoryInclude<TEntity>)) {
+            while (source is not RepositoryInclude<TEntity>) {
                 source = source.Previous;
             }
 
@@ -78,7 +94,7 @@ namespace Aeon.Core.Repository {
 
             return rootInc;
         }
-
+        /// <inheritdoc/>
         public static IRepositoryIncludable<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(this IRepositoryIncludable<TEntity, TPreviousProperty> source, Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath) where TEntity : class {
             var sourceInt = (IRepositoryIncludeExpression<TEntity, TPreviousProperty>)source;
 
@@ -87,6 +103,7 @@ namespace Aeon.Core.Repository {
             return inc;
         }
 
+        /// <inheritdoc/>
         public static IRepositoryIncludable<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(this IRepositoryIncludable<TEntity, IEnumerable<TPreviousProperty>> source, Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath) where TEntity : class {
             var sourceInt = (IRepositoryIncludeExpression<TEntity, IEnumerable<TPreviousProperty>>)source;
 

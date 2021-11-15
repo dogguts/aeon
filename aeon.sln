@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2647F36-C482-486E-856B-129312A899CF}"
 	ProjectSection(SolutionItems) = preProject
@@ -58,9 +58,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomSimple", "samples\Uni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLogging", "samples\UnitOfWork\CustomLogging\CustomLogging.csproj", "{B9BDE54B-C226-435C-928A-3C0E6BC7B5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default", "samples\UnitOfWork\Default\Default.csproj", "{16D40EA0-F01F-470B-B8CC-620B50009378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Default", "samples\UnitOfWork\Default\Default.csproj", "{16D40EA0-F01F-470B-B8CC-620B50009378}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftDelete", "samples\Extend\SoftDelete\SoftDelete.csproj", "{B99A8DA8-AEE5-4C5A-9518-9381BB0DB1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftDelete", "samples\Extend\SoftDelete\SoftDelete.csproj", "{B99A8DA8-AEE5-4C5A-9518-9381BB0DB1BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

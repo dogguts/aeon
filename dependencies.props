@@ -1,7 +1,19 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <AspNetCoreVersion>3.1</AspNetCoreVersion>
-    <EntityFrameworkVersion>3.1</EntityFrameworkVersion>
-    <SourceLinkGithubVersion>1.0.0</SourceLinkGithubVersion>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' or '$(TargetFramework)' == 'netcoreapp3.1'">
+		<NetCoreVersion>3.1</NetCoreVersion>
+		<EntityFrameworkVersion>3.1</EntityFrameworkVersion>
+		<SourceLinkGithubVersion>1</SourceLinkGithubVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net5.0'">
+		<NetCoreVersion>5</NetCoreVersion>
+		<EntityFrameworkVersion>5</EntityFrameworkVersion>
+		<SourceLinkGithubVersion>1</SourceLinkGithubVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<NetCoreVersion>6</NetCoreVersion>
+		<EntityFrameworkVersion>6</EntityFrameworkVersion>
+		<SourceLinkGithubVersion>1</SourceLinkGithubVersion>
+	</PropertyGroup>
 </Project>

@@ -83,7 +83,7 @@ namespace Chinook.Repository {
             _context.SaveChanges();
         }
 
-        private bool OnAfterSaveChanges(List<UnitOfWorkAuditItem> auditEntries) {
+        private static bool OnAfterSaveChanges(List<UnitOfWorkAuditItem> auditEntries) {
             if (auditEntries == null || auditEntries.Count == 0)
                 return false;
 

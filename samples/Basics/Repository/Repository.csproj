@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Aeon.Samples.Basics.Repository</AssemblyName>
-    <RootNamespace>Aeon.Samples.Basics.Repository</RootNamespace>
-    <StartupObject>Aeon.Samples.Basics.Repository.Program</StartupObject>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+		<AssemblyName>Aeon.Samples.Basics.Repository</AssemblyName>
+		<RootNamespace>Aeon.Samples.Basics.Repository</RootNamespace>
+		<StartupObject>Aeon.Samples.Basics.Repository.Program</StartupObject>
+	</PropertyGroup>
 
 </Project>

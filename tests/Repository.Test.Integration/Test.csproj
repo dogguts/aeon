@@ -1,32 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Chinook.Repository.Integration.Tests</AssemblyName>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+		<AssemblyName>Chinook.Repository.Integration.Tests</AssemblyName>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Update="Chinook_DataSqlite.sql" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="Chinook_DataSqlite.sql" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="../Repository.Test.Integration.Chinook/Chinook.csproj" />
+	<ItemGroup>
+		<ProjectReference Include="../../src/Aeon.Core.Repository/Aeon.Core.Repository.csproj">
+			<SetTargetFramework>TargetFramework=$(TargetFramework)</SetTargetFramework>
+		</ProjectReference>
+		<ProjectReference Include="../../src/Aeon.Core.Repository.Extensions/Aeon.Core.Repository.Extensions.csproj">
+			<SetTargetFramework>TargetFramework=$(TargetFramework)</SetTargetFramework>
+		</ProjectReference>
+		<ProjectReference Include="../Repository.Test.Integration.Chinook/Chinook.csproj">
+			<SetTargetFramework>TargetFramework=$(TargetFramework)</SetTargetFramework>
+		</ProjectReference>
+	</ItemGroup>
 
-    <PackageReference Include="GitHub.TestLogger" Version="1.0.1" />
+	<ItemGroup>
+		<PackageReference Include="GitHub.TestLogger" Version="1.0.1" />
 
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="Xunit.Priority" Version="1.1.6" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+		<PackageReference Include="xunit" Version="2.4.1" />
+		<PackageReference Include="Xunit.Priority" Version="1.1.6" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(AspNetCoreVersion)" />
-    
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(EntityFrameworkVersion)" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EntityFrameworkVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(NetCoreVersion)" />
 
-  </ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EntityFrameworkVersion)" />
 
+	</ItemGroup>
 </Project>

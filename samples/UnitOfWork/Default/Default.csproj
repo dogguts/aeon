@@ -1,11 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Aeon.Samples.UnitOfWork.Default</AssemblyName>
-    <RootNamespace>Aeon.Samples.UnitOfWork.Default</RootNamespace>
-    <StartupObject>Aeon.Samples.UnitOfWork.Default.Program</StartupObject>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+		<AssemblyName>Aeon.Samples.UnitOfWork.Default</AssemblyName>
+		<RootNamespace>Aeon.Samples.UnitOfWork.Default</RootNamespace>
+		<StartupObject>Aeon.Samples.UnitOfWork.Default.Program</StartupObject>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
 
 </Project>

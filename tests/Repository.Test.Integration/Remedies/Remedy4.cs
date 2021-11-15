@@ -18,11 +18,13 @@ namespace Chinook.Repository.Integration.Tests.Remedies {
         }
 
         private static int MemoryCacheEntryCount(ServiceProvider _serviceProvider) {
-            var compiledQueryCache = (Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache)_serviceProvider.GetRequiredService<Microsoft.EntityFrameworkCore.Query.Internal.ICompiledQueryCache>();
+#pragma warning disable EF1001 // internal API that supports the Entity Framework Core infrastructure and not subject to the same compatibility standards as public APIs
+            var compiledQueryCache = _serviceProvider.GetRequiredService<Microsoft.EntityFrameworkCore.Query.Internal.ICompiledQueryCache>();
             var memoryCacheFieldInfo = compiledQueryCache.GetType().GetField("_memoryCache", BindingFlags.Instance | BindingFlags.NonPublic);
             var memoryCache = (Microsoft.Extensions.Caching.Memory.MemoryCache)memoryCacheFieldInfo.GetValue(compiledQueryCache);
             Console.WriteLine($"Cached #{memoryCache.Count}");
             return memoryCache.Count;
+#pragma warning restore EF1001 // internal API that supports the Entity Framework Core infrastructure and not subject to the same compatibility standards as public APIs
         }
 
         private static int? InitialCacheEntryCount = null;

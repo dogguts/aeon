@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Linq;
 
-#pragma warning disable 1591 //docs are in interface specifications
-
 namespace Aeon.Core.Repository {
+    /// <inheritdoc/>
     public class Repository<TEntity, TDbContext> : ReadonlyRepository<TEntity, TDbContext>, IRepository<TEntity>
             where TEntity : class
             where TDbContext : DbContext {
 
+        /// <inheritdoc/>
         public Repository(TDbContext context) : base(context) {
-          
+
         }
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace Aeon.Core.Repository {
         public virtual EntityEntry<TEntity> Add(TEntity entity) {
             return _dbSet.Add(entity);
         }
- 
+
         private TEntity GetExisting(TEntity entity) {
             var primaryKey = _context.Model.FindEntityType(typeof(TEntity)).FindPrimaryKey();
             var primaryKeyValues = primaryKey.Properties.Select(p => typeof(TEntity).GetProperty(p.Name).GetValue(entity, null)).ToArray();
@@ -30,6 +30,7 @@ namespace Aeon.Core.Repository {
             return _dbSet.Find(primaryKeyValues);
         }
 
+        /// <inheritdoc/>
         public virtual void Update(TEntity entity) {
             var existing = GetExisting(entity);
             if (existing != null) {
@@ -44,6 +45,7 @@ namespace Aeon.Core.Repository {
             }
         }
 
+        /// <inheritdoc/>
         public virtual void Delete(TEntity entity) {
             var existing = GetExisting(entity);
             if (existing != null) {

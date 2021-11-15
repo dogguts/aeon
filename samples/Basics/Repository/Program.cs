@@ -69,7 +69,7 @@ namespace Aeon.Samples.Basics.Repository {
             var blogsPaged = await _blogRepository.GetWithFilterAsync(filter: null, sorts: null, (currentPage, 5));
             // print out result
             Console.WriteLine($"Total items: {blogsPaged.Total}");
-            while (blogsPaged.Data.Count() > 0) {
+            while (blogsPaged.Data.Any()) {
                 Console.WriteLine($"Page: {currentPage}");
                 foreach (var blog in blogsPaged.Data) {
                     Console.WriteLine($"\t{blog.BlogId}: {blog.Url}");
@@ -89,7 +89,7 @@ namespace Aeon.Samples.Basics.Repository {
             var blogsPaged = await _blogRepository.GetWithFilterAsync(filter: null, sorts: blogsUrlAscSort, (currentPage, 5));
             // print out result
             Console.WriteLine($"Total items: {blogsPaged.Total}");
-            while (blogsPaged.Data.Count() > 0) {
+            while (blogsPaged.Data.Any()) {
                 Console.WriteLine($"Page: {currentPage}");
                 foreach (var blog in blogsPaged.Data) {
                     Console.WriteLine($"\t{blog.BlogId}: {blog.Url}");
@@ -110,11 +110,11 @@ namespace Aeon.Samples.Basics.Repository {
     }
 
     class Program {
-          static void Main() {
+        static void Main() {
             var services = new ServiceCollection().AddSingleton<Runnable>();
 
             services.AddDbContext<BloggingContext>(options => options.UseSqlite("Filename=./blog.db"));
-             
+
             services.AddScoped<IRepository<Blog>, Repository<Blog, BloggingContext>>();
             services.AddScoped<IRepository<Post>, Repository<Post, BloggingContext>>();
 

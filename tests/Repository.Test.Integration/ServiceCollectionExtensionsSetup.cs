@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace Chinook.Repository.Integration.Tests {
     public class ServiceCollectionExtensionsSetup {
 
-        public static ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
+        private static readonly ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {
             builder.AddFilter((category, level) => level >= LogLevel.Warning)
                    .AddConsole();
         });
