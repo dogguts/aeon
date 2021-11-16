@@ -53,6 +53,8 @@ internal sealed class ConsoleApplication : IHostedService {
                 Console.WriteLine($" ** {post.PostId}: {post.Title}");
             }
         }
+
+        await Task.CompletedTask;
     }
 
     public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;

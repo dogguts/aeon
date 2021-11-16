@@ -24,8 +24,8 @@ Host.CreateDefaultBuilder(args)
 
         services.AddHostedService<ConsoleApplication>();
     })
-    .ConfigureLogging(logging => logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Warning))
-    .Build()
-    .Run();
+    .ConfigureLogging(logging => logging.AddFilter(level => level > LogLevel.Information))
+    .RunConsoleAsync(new CancellationToken());
+
 
 
