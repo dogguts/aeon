@@ -52,7 +52,7 @@ jobs:
     strategy:
       matrix:
         #framework: [netcoreapp3.1, net5.0, net6.0]
-        framework: [ {tfm: netcoreapp3.1, version: 3.1.x }, {tfm: net5.0, version: 5.0.x }, {tfm: net6.0, version: 6.0.x } ]
+        framework: [ {tfm: 'netcoreapp3.1', 'version: 3.1.x' }, {tfm: 'net5.0', version: '5.0.x' }, {tfm: 'net6.0', version: '6.0.x' } ]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
@@ -78,7 +78,7 @@ jobs:
 #        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Run Samples ${{ matrix.framework.tfm }}
       run: |
-        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run --framework '${{ matrix.framework.tfm }}' {} +
+        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run --framework ${{ matrix.framework.tfm }} {} +
 
   pack:
     needs: [build, runsamples]
