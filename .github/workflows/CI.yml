@@ -16,9 +16,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-     
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
@@ -42,35 +40,81 @@ jobs:
         source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - name: Nuget sources 
+    - name: Build
+      run: dotnet build aeon.sln --configuration Release
+    - name: Test
       run: |
-        dotnet nuget list source
-        ls /home/runner/work/aeon/
-        cat /home/runner/work/aeon/nuget.config
-          
+        dotnet test tests/Repository.Test.Integration --logger "github;name=test-report;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
+
+  runsamples:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        framework: [netcoreapp3.1, net5.0, net6.0]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET Core 3.1
+      with: 
+        dotnet-version: '3.1.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 5
+      with:
+        dotnet-version: '5.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 6
+      with:
+        dotnet-version: '6.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Run Samples netcoreapp3.1
+      run: |
+        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run --framework ${{ matrix.framework }} {} +
+
+  pack:
+    needs: [build, runsamples]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET Core 3.1
+      with:
+        dotnet-version: '3.1.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 5
+      with:
+        dotnet-version: '5.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 6
+      with:
+        dotnet-version: '6.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Runtime environment
       shell: bash
       env:
         WORKSPACE: ${{ github.workspace }}
       run: |
         echo GH_SHORT_SHA="`git rev-parse --short "$GITHUB_SHA"`" >> $GITHUB_ENV
-    
-    - name: Build
-      run: dotnet build aeon.sln --configuration Release
- 
-    - name: Test
-      run: |
-        dotnet test tests/Repository.Test.Integration --logger "github;name=test-report;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
-    
-    - name: Run Samples
-      run: |
-        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
-
     - name: Pack
       run: |
         dotnet pack src/Aeon.Core.Repository --configuration Release -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-${{ env.GH_SHORT_SHA }} /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
         dotnet pack src/Aeon.Core.Repository.Extensions --configuration Release -o packages /p:VersionSuffix=$GITHUB_WORKFLOW-$GITHUB_RUN_NUMBER-${{ env.GH_SHORT_SHA }} /p:PackageProjectUrl=https://github.com/dogguts/aeon/tree/$GITHUB_SHA
-
     - name: Publish packages to GPR
       run: | 
         ls packages/*.*nupkg
