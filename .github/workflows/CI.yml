@@ -58,7 +58,7 @@ jobs:
     - uses: actions/setup-dotnet@v1
       name: Setup .NET  ${{ matrix.framework.tfm }}
       with: 
-        dotnet-version:  ${{ matrix.framework.version }}
+        dotnet-version:  '${{ matrix.framework.version }}'
         source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -78,7 +78,7 @@ jobs:
 #        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Run Samples ${{ matrix.framework.tfm }}
       run: |
-        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run --framework ${{ matrix.framework.tfm }} {} +
+        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run --framework '${{ matrix.framework.tfm }}' -v n {} +
 
   pack:
     needs: [build, runsamples]
