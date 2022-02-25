@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 
@@ -23,15 +24,14 @@ namespace Aeon.Samples.Basics.ReadonlyRepository.Models {
                 entity.HasOne(p => p.Blog)
                     .WithMany(b => b.Posts)
                     .HasForeignKey(p => p.BlogId);
+#if NET
+                entity.HasIndex(e => e.BlogId, "IX_Post_BlogId");
+#endif
             });
-
 
             modelBuilder.Entity<PostCountByBlogs>(entity => {
-                entity.ToView("PostCountByBlogs")
-                    .HasNoKey();
-
+                entity.ToView("PostCountByBlogs");
             });
-            //.ToView("PostCountByBlogs").HasNoKey();
 
             // "Blog" seed
             modelBuilder.Entity<Blog>().HasData(new Blog { BlogId = 1, Url = "http://www.surfbirds.com/index.php" });
@@ -79,7 +79,7 @@ namespace Aeon.Samples.Basics.ReadonlyRepository.Models {
                 Title = "Identification Summary Of Vaux's and Chimney Swifts",
                 Content = "Back in 2010, David Sibley illustrated a very useful chart highlighting the structural differences in the shape of the wings between Vaux's and Chimney Swift.",
             });
-         }
+        }
 
     }
     [Table(nameof(Blog))]
@@ -87,27 +87,25 @@ namespace Aeon.Samples.Basics.ReadonlyRepository.Models {
         public int BlogId { get; set; }
         public string Url { get; set; }
 
-        public List<Post> Posts { get; set; } = new List<Post>();
+        public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();
     }
 
-    [Table(nameof(Post))]
+    [Table("Post")]
     public class Post {
         public int PostId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-
         public int BlogId { get; set; }
-        public Blog Blog { get; set; }
-
+        public virtual Blog Blog { get; set; }
     }
 
     [DebuggerDisplay("Blog:{BlogUrl} #Posts:{Total}")]
     public class PostCountByBlogs {
-
-        public int BlogId { get; set; }
+        [Key]
+        public int? BlogId { get; set; }
 
         [ForeignKey("BlogId")]
-        public Blog Blog { get; set; }
+        public virtual Blog Blog { get; set; }
         [Column("Url")]
         public string BlogUrl { get; set; }
         public int Total { get; set; }
