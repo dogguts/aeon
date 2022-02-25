@@ -21,11 +21,26 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
+      name: Setup .NET '3.1.x'
+      with: 
+        dotnet-version: '3.1.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 5
+      with:
+        dotnet-version: '5.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 6.0
       with:
         dotnet-version: '6.0.x'
-        source-url: https://api.nuget.org/v3/index.json
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.NUGET_KEY}}
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Set release version
       run: | 
         REL_GITHUB_REF=$GITHUB_REF
@@ -63,7 +78,8 @@ jobs:
         pwd
         ls $NUPKGPATH 
 
-    - name: Publish packages to NuGet.org
-      run: |
-        dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
+# temp disabld
+#    - name: Publish packages to NuGet.org
+#      run: |
+#        dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
         
