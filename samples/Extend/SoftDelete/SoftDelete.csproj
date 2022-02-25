@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Aeon.Samples.Extend.SoftDelete</AssemblyName>
     <RootNamespace>Aeon.Samples.Extend.SoftDelete</RootNamespace>
     <StartupObject>Aeon.Samples.Extend.SoftDelete.Program</StartupObject>

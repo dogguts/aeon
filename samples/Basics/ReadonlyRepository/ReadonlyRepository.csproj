@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Aeon.Samples.Basics.ReadonlyRepository</AssemblyName>
     <RootNamespace>Aeon.Samples.Basics.ReadonlyRepository</RootNamespace>
     <StartupObject>Aeon.Samples.Basics.ReadonlyRepository.Program</StartupObject>

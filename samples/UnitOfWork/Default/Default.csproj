@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Aeon.Samples.UnitOfWork.Default</AssemblyName>
     <RootNamespace>Aeon.Samples.UnitOfWork.Default</RootNamespace>
     <StartupObject>Aeon.Samples.UnitOfWork.Default.Program</StartupObject>

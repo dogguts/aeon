@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Aeon.Samples.Basics.Repository</AssemblyName>
     <RootNamespace>Aeon.Samples.Basics.Repository</RootNamespace>
     <StartupObject>Aeon.Samples.Basics.Repository.Program</StartupObject>

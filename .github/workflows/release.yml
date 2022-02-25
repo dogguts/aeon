@@ -6,12 +6,12 @@ on:
 #    branches:     #TEST emulate release on push on master
 #      - master    #TEST emulate release on push on master
 
-# To publish a release; tag "v" + "VersionSuffix(Mandatory)" + "-" + "VersionSuffix(Optional)"
+# To publish a release; tag "v" + "Version(Mandatory)" + "-" + "VersionSuffix(Optional)"
 # Tag: v5.0.0-preview1   or v5.0.0
 
 jobs:
   build:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
       DOTNET_NOLOGO: 1
@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.x
+        dotnet-version: '6.0.x'
         source-url: https://api.nuget.org/v3/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_KEY}}
