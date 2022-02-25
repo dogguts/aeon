@@ -1,15 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net5.0;net6.0</TargetFrameworks>
     <AssemblyTitle>Repository</AssemblyTitle>
     <Description>Aeon repository pattern extension methods</Description>
     <AssemblyName>Aeon.Core.Repository.Extensions</AssemblyName>
     <RootNamespace>Aeon.Core.Repository</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-  </PropertyGroup>  
-  
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\src\Aeon.Core.Repository\Aeon.Core.Repository.csproj" />
-  </ItemGroup>  
+  </ItemGroup>
 
 </Project>

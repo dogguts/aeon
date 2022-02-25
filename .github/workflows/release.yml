@@ -6,12 +6,12 @@ on:
 #    branches:     #TEST emulate release on push on master
 #      - master    #TEST emulate release on push on master
 
-# To publish a release; tag "v" + "VersionSuffix(Mandatory)" + "-" + "VersionSuffix(Optional)"
+# To publish a release; tag "v" + "Version(Mandatory)" + "-" + "VersionSuffix(Optional)"
 # Tag: v5.0.0-preview1   or v5.0.0
 
 jobs:
   build:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
       DOTNET_NOLOGO: 1
@@ -21,11 +21,26 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.x
-        source-url: https://api.nuget.org/v3/index.json
+      name: Setup .NET '3.1.x'
+      with: 
+        dotnet-version: '3.1.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.NUGET_KEY}}
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 5
+      with:
+        dotnet-version: '5.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/setup-dotnet@v1
+      name: Setup .NET 6.0
+      with:
+        dotnet-version: '6.0.x'
+        source-url: https://nuget.pkg.github.com/dogguts/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Set release version
       run: | 
         REL_GITHUB_REF=$GITHUB_REF
@@ -63,7 +78,8 @@ jobs:
         pwd
         ls $NUPKGPATH 
 
-    - name: Publish packages to NuGet.org
-      run: |
-        dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
+# temp disabld
+#    - name: Publish packages to NuGet.org
+#      run: |
+#        dotnet nuget push $NUPKGPATH'/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_KEY}}
         
