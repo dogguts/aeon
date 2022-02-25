@@ -63,10 +63,6 @@ jobs:
     - name: Run Tests
       run: |
         dotnet test tests/Repository.Test.Integration --logger "github;name=test-report;GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" 
-    
-    - name: Run Samples
-      run: |
-        find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run {} +
 
     - name: Pack
       run: |
