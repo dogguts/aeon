@@ -85,7 +85,7 @@ jobs:
         find samples/ -name *.csproj -type f -exec ls -l {} \; -execdir dotnet run --framework '${{ matrix.framework.tfm }}' -v n {} +
 
   pack:
-    needs: [build, test, runsamples]
+    needs: [build, runsamples]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
