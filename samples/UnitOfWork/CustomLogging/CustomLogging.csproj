@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
     <AssemblyName>Aeon.Samples.UnitOfWork.CustomLogging</AssemblyName>
     <RootNamespace>Aeon.Samples.UnitOfWork.CustomLogging</RootNamespace>
     <StartupObject>Aeon.Samples.UnitOfWork.CustomLogging.Program</StartupObject>
