@@ -28,12 +28,13 @@ namespace Aeon.Core.Repository {
             {(ListSortDirection.Descending ,false ),"ThenByDescending"}
         };
 
+        /// <inheritdoc/>
         public ReadonlyRepository(TDbContext context) {
             _context = context;
             _dbSet = context.Set<TEntity>();
         }
 
-        protected IQueryable<TEntity> WithIncludes(IRepositoryInclude<TEntity> includes) {
+        private IQueryable<TEntity> WithIncludes(IRepositoryInclude<TEntity> includes) {
             var queryWithIncludes = _dbSet.AsQueryable();
             if (includes != null) {
                 //   including all expression includes
@@ -43,14 +44,18 @@ namespace Aeon.Core.Repository {
             return queryWithIncludes;
         }
         // ****** Get ******
+        /// <inheritdoc/>
         public TEntity Get(params object[] keyValues) => GetAsync(keyValues).Result;
 
+        /// <inheritdoc/>
         public TEntity Get(IRepositoryInclude<TEntity> includes, params object[] keyValues) {
             return GetAsync(includes, keyValues).Result;
         }
 
+        /// <inheritdoc/>
         public async Task<TEntity> GetAsync(params object[] keyValues) => await GetAsync(null, keyValues);
 
+        /// <inheritdoc/>
         public async Task<TEntity> GetAsync(IRepositoryInclude<TEntity> includes, params object[] keyValues) {
             var entityType = _context.Model.FindEntityType(typeof(TEntity));
             var primaryKeyProperties = entityType.FindPrimaryKey()?.Properties;
@@ -89,17 +94,23 @@ namespace Aeon.Core.Repository {
         }
 
         // ****** All ******
+        /// <inheritdoc/>
         public IEnumerable<TEntity> All() => AllAsync().Result;
+
+        /// <inheritdoc/>
         public IEnumerable<TEntity> All(IRepositoryInclude<TEntity> includes) {
             return AllAsync(includes).Result;
         }
 
+        /// <inheritdoc/>
         public virtual async Task<IEnumerable<TEntity>> AllAsync(IRepositoryInclude<TEntity> includes) {
             return (await GetWithFilterAsync(new RepositoryFilter<TEntity>(null, includes))).Data;
         }
-        public async Task<IEnumerable<TEntity>> AllAsync() => await AllAsync(null);
 
-        protected static void DynamicOrderBy(ref IQueryable<TEntity> query, Expression<Func<TEntity, object>> expression, ListSortDirection direction, bool isFirst) {
+        /// <inheritdoc/>
+        public async Task<IEnumerable<TEntity>> AllAsync() =>  await AllAsync(null);
+
+        private static void DynamicOrderBy(ref IQueryable<TEntity> query, Expression<Func<TEntity, object>> expression, ListSortDirection direction, bool isFirst) {
             string sortCall = sortCallSelection[(direction, isFirst)];
 
             var resultExpression = Expression.Call(typeof(Queryable), sortCall, new Type[] { typeof(TEntity), typeof(object) },
@@ -110,32 +121,26 @@ namespace Aeon.Core.Repository {
 
         // ****** GetWithFilter ******
 
-        /// <summary>
-        /// Retrieve Entities with a filter
-        /// </summary>
+        /// <inheritdoc/>
         [Obsolete("Use GetWithFilter(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, (int Page, int PageSize)?)")]
         public (IEnumerable<TEntity> Data, int Total) GetWithFilter(
                 (IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts) specification,
                 (int Page, int PageSize)? paging = null) => GetWithFilter(specification.filter, specification.sorts, paging);
 
 
-        /// <summary>
-        /// Retrieve Entities with a filter
-        /// </summary>
+        /// <inheritdoc/>
         public (IEnumerable<TEntity> Data, int Total) GetWithFilter(
                 IRepositoryFilter<TEntity> filter,
                 IRepositorySort<TEntity> sorts = null,
                 (int Page, int PageSize)? paging = null) => GetWithFilterAsync(filter, sorts, paging).Result;
 
-        /// <summary>
-        /// Retrieve Entities with a filter
-        /// </summary>
+        /// <inheritdoc/>
         [Obsolete("Use GetWithFilterAsync(IRepositoryFilter<TEntity>, IRepositorySort<TEntity>, (int Page, int PageSize)?)")]
         public async Task<(IEnumerable<TEntity> Data, int Total)> GetWithFilterAsync(
                 (IRepositoryFilter<TEntity> filter, IRepositorySort<TEntity> sorts) specification,
                 (int Page, int PageSize)? paging = null) => await GetWithFilterAsync(specification.filter, specification.sorts, paging);
 
-
+        /// <inheritdoc/>
         public virtual async Task<(IEnumerable<TEntity> Data, int Total)> GetWithFilterAsync(
                 IRepositoryFilter<TEntity> filter,
                 IRepositorySort<TEntity> sorts = null,
@@ -143,6 +148,11 @@ namespace Aeon.Core.Repository {
 
             // expression includes
             IQueryable<TEntity> queryWithIncludes = WithIncludes(filter);
+
+            // add tags
+            foreach (string tag in filter?.Tags?? Array.Empty<string>()) {
+                queryWithIncludes = queryWithIncludes.TagWith(tag);
+            }
 
             // return the result filtered by Criteria
             IQueryable<TEntity> queryWithCriteria;
